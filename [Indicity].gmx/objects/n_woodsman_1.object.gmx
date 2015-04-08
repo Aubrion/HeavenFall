@@ -230,14 +230,6 @@ if attack=0
 
 
 ///image
-if direction=180
-{
- image_xscale=-1
-}
- if direction=0
-{
- image_xscale=1
-}
 </string>
           </argument>
         </arguments>
