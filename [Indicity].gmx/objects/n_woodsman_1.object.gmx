@@ -43,12 +43,27 @@ int=1
 will=1
 mspeed=0.8
 damage=4
-
-
-
-
-
-///init
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///init
 attack=0
 attacked=false
 starty=y
@@ -62,9 +77,7 @@ image_index=floor(random(20))
 xx=x
 yy=y
 
-
-
-
+state = "idle";
 </string>
           </argument>
         </arguments>
@@ -112,10 +125,8 @@ xx=x
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///create laser
-instance_create(x,y,n_bot_1_laser)
-if image_xscale=1  {effect_create_above(ef_flare,x+2,y-8,0,c_red)}
-if image_xscale=-1 {effect_create_above(ef_flare,x-2,y-8,0,c_red)}
+            <string>/// Start animation
+image_speed = 1;
 </string>
           </argument>
         </arguments>
@@ -162,44 +173,8 @@ if global.attack=0 {attacked=false}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///attacking
-if attack=0
-{
- if distance_to_point(obj_player_shadow.x,obj_player_shadow.y+12)&lt;=10
- {
-  attack=1
-  if obj_player_shadow.x&lt;x
-  {
-   image_xscale=1
-  }
-  if obj_player_shadow.x&gt;x
-  {
-   image_xscale=1
-  }
-  sprite_index=attacking
-  
- }
-}
-
-if attack=1
-{
- if sprite_index=attacking
- {
-  if ev_animation_end{attack=0}
-  if distance_to_point(obj_player_shadow.x,obj_player_shadow.y+12)&lt;=3
-  {   
-   if image_index&gt;=15 and image_index&lt;=20
-   {
-    n_attacking(punch_2)
-   }
-  }
- }
-}
-
-
-
-
-
+            <string>/// depth
+depth = 1 * -(y);
 </string>
           </argument>
         </arguments>
@@ -220,16 +195,130 @@ if attack=1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///walking &amp; depth &amp; image
-depth=1*-(y)
-
-if attack=0
+            <string>/// AI Calculations
+var distanceToPlayerX = abs(point_distance(x, y, obj_player.x, y));
+var distanceToPlayerY = abs(point_distance(x, y, x, obj_player.y));
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Idle state
+if (state == "idle")
 {
-
+    // Check if player is in range
+    if (distanceToPlayerX &lt; 125 &amp;&amp; distanceToPlayerY &lt; 40)
+        state = "follow";
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Follow state
+if (state == "follow")
+{
+    // Go idle if player is not in range
+    if (distanceToPlayerX &gt; 150 || distanceToPlayerY &gt; 40)
+        state = "idle";
+    
+    // Move towards player
+    else
+    {
+        // Find goal location
+        if (obj_player.x &lt; x)
+            goalX = obj_player.x + 24;
+        else
+            goalX = obj_player.x - 24;
+        var goalY = obj_player.y + 12;
+        
+        // Face player
+        if (obj_player.x &lt; x)
+            image_xscale = -1;
+        else
+            image_xscale = 1;
+        
+        // Move
+        if (point_distance(x, y, goalX, goalY) &gt; mspeed)
+        {
+            var directionToGoal = point_direction(x, y, goalX, goalY);
+            x = x + lengthdir_x(mspeed, directionToGoal);
+            y = y + lengthdir_y(mspeed/2, directionToGoal);
+        }
+        
+        // Attack
+        else
+        {
+            state = "attack";
+            sprite_index = attacking;
+            image_index = 0;
+            image_speed = 0;
+            alarm[0] = room_speed * 0.25;
+        }
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Attack state
 
-
-///image
+if (state == "attack")
+{
+    // Check for attack frame
+    if (image_index == 20)
+        n_attacking(punch_2);
+    
+    // Check if animation is finished
+    if (image_index == (sprite_get_number(sprite_index)-1))
+        state = "idle";
+}
 </string>
           </argument>
         </arguments>
@@ -296,21 +385,21 @@ attacked_weapons()
           <argument>
             <kind>1</kind>
             <string>///moving
-if attack=0
+if (state != "attack")
 {
- if xx=x and yy=y
- {
-  sprite_index=still
- }
-  else
- {
-  sprite_index=walking
-  if alarm[11]=-1 {alarm[11]=10}
- }
+    if xx=x and yy=y
+    {
+        sprite_index=still
+    }
+    else
+    {
+        sprite_index=walking
+        if alarm[11]=-1 {alarm[11]=10}
+    }
 }
- else
+else
 {
- alarm[11]=-1
+    alarm[11]=-1
 }
 </string>
           </argument>
