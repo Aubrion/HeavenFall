@@ -112,6 +112,7 @@
         <sprite>sprites\n_woodsman_still</sprite>
         <sprite>sprites\n_woodsman_attack</sprite>
         <sprite>sprites\n_woodsman_walk</sprite>
+        <sprite>sprites\n_woodsman_without_shader</sprite>
       </sprites>
       <sprites name="ranged">
         <sprite>sprites\bot_1</sprite>
