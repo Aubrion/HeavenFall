@@ -18,7 +18,10 @@ Added Features
 + Custom Username (No login yet)
 + Chat Optimized
 + Multiplayer updated (RuneSnake)
-+ Optimized Movement more 
++ Optimized Movement more
++ Added Better Enemy AI
++ Added Lightning effect
+ 
 
 Bug fixes
 = Walking up to a wall no longer gets u stuck into it.
@@ -27,14 +30,11 @@ Bug fixes
 
 Known Bugs
 - Laser Shadow is incorrect when moving left
-- Sometimes when u attack, the weapon shows it incorrect in y_scale.
 - Combo Meter is a little buggy
 
 Recources added
 ~ Special Test server added
 ~ More weapons and helmets added.
-~ User Content, Thanks to:
-
-  Nick Gerrets 
+~ User Content, Thanks so much guys! 
   
   

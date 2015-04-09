@@ -127,6 +127,7 @@
       <sprites name="design">
         <sprite>sprites\ui_normal</sprite>
         <sprite>sprites\ui_hit</sprite>
+        <sprite>sprites\ui_block</sprite>
         <sprite>sprites\ui_hp_bar</sprite>
         <sprite>sprites\ui_gs</sprite>
         <sprite>sprites\ui_sparkle</sprite>
@@ -143,6 +144,9 @@
     </sprites>
     <sprites name="animated backs">
       <sprite>sprites\lava_1</sprite>
+    </sprites>
+    <sprites name="lights">
+      <sprite>sprites\spr_light</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -189,6 +193,7 @@
       <script>scripts\play_sound.gml</script>
       <script>scripts\set_shake.gml</script>
       <script>scripts\hit_.gml</script>
+      <script>scripts\block_.gml</script>
     </scripts>
     <scripts name="particle">
       <script>scripts\scr_dash1_left.gml</script>
@@ -251,8 +256,10 @@
       <objects name="obj_regelaar+">
         <object>objects\obj_background</object>
         <object>objects\obj_gui</object>
+        <object>objects\obj_light_control</object>
       </objects>
     </objects>
+    <object>objects\obj_light</object>
     <object>objects\obj_shadow</object>
     <object>objects\obj_shadow_props</object>
     <object>objects\obj_counter</object>
@@ -272,8 +279,8 @@
     <timeline>timelines\polearm_attack_1</timeline>
   </timelines>
   <rooms name="rooms">
-    <room>rooms\room3</room>
     <room>rooms\room2</room>
+    <room>rooms\room3</room>
     <room>rooms\room0</room>
   </rooms>
   <help>

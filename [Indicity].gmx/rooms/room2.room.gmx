@@ -26,9 +26,9 @@
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>0</deleteUnderlyingTiles>
-    <page>0</page>
-    <xoffset>6185</xoffset>
-    <yoffset>2501</yoffset>
+    <page>4</page>
+    <xoffset>-42</xoffset>
+    <yoffset>105</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="tile_forest_back" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -132,7 +132,7 @@
     <instance objName="n_woodsman_1" x="1116" y="480" name="inst_1B9DFA31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="n_woodsman_1" x="1068" y="468" name="inst_3CAD77BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="n_woodsman_1" x="1092" y="420" name="inst_5CC3D023" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1140" y="444" name="inst_BA076FD0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="n_woodsman_1" x="336" y="468" name="inst_BA076FD0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="n_woodsman_1" x="1059" y="503" name="inst_3356070E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="n_woodsman_1" x="1092" y="476" name="inst_8DC31FF6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="n_woodsman_1" x="1113" y="509" name="inst_B47734A1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -157,6 +157,7 @@
     <instance objName="n_woodsman_1" x="1098" y="436" name="inst_979C8F79" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="n_woodsman_1" x="1045" y="402" name="inst_71C457F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="n_woodsman_1" x="1126" y="379" name="inst_E8F1FDF5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_light" x="156" y="444" name="inst_883AFA42" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
