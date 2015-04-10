@@ -112,7 +112,7 @@ if obj_player.jump=true
           <argument>
             <kind>1</kind>
             <string>///depth
-depth=(1*-(y+12))+1000
+depth=(1*-(y+12))+100
 </string>
           </argument>
         </arguments>

@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>361</xoffset>
-    <yoffset>555</yoffset>
+    <xoffset>447</xoffset>
+    <yoffset>464</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -61,6 +61,9 @@
     <instance objName="obj_floor" x="276" y="348" name="inst_C7F9D3C1" locked="0" code="" scaleX="6" scaleY="6" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="288" y="444" name="inst_B6A49DF5" locked="0" code="" scaleX="4" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="348" y="372" name="inst_D301ECDC" locked="0" code="" scaleX="6" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_light" x="300" y="372" name="inst_E1A26B28" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_light" x="300" y="456" name="inst_980316E1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_light" x="456" y="372" name="inst_5D03A20A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="vulcano_1" x="288" y="336" w="12" h="12" xo="12" yo="36" id="10003548" name="inst_DE2C02C1" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
