@@ -196,11 +196,11 @@ depth = 1 * -(y);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Change to dead state
+            <string>/// Change to dead state when hp=0
 if (state != "dead" &amp;&amp; hp &lt;= 0)
 {
     state = "dead";
-    sprite_index = n_woodsman_death;
+    sprite_index = death;
 }
 </string>
           </argument>
@@ -223,8 +223,8 @@ if (state != "dead" &amp;&amp; hp &lt;= 0)
           <argument>
             <kind>1</kind>
             <string>/// AI Calculations
-var distanceToPlayerX = abs(point_distance(x, y, obj_player.x, y));
-var distanceToPlayerY = abs(point_distance(x, y, x, obj_player.y));
+var distanceToPlayerX = abs(point_distance(x, y, obj_player_shadow.x, y));
+var distanceToPlayerY = abs(point_distance(x, y, x, obj_player_shadow.y+12));
 </string>
           </argument>
         </arguments>
@@ -283,14 +283,14 @@ if (state == "follow")
     else
     {
         // Find goal location
-        if (obj_player.x &lt; x)
-            goalX = obj_player.x + 24;
+        if (obj_player_shadow.x &lt; x)
+            goalX = obj_player_shadow.x + 24;
         else
-            goalX = obj_player.x - 24;
-        var goalY = obj_player.y + 12;
+            goalX = obj_player_shadow.x - 24;
+        var goalY = obj_player_shadow.y + 12;
         
         // Face player
-        if (obj_player.x &lt; x)
+        if (obj_player_shadow.x &lt; x)
             image_xscale = -1;
         else
             image_xscale = 1;
@@ -340,7 +340,11 @@ if (state == "attack")
 {
     // Check for attack frame
     if (image_index == 20)
-        n_attacking(punch_2);
+    {
+        // If player is in reach
+        if (distanceToPlayerX &lt; 32 &amp;&amp; distanceToPlayerY &lt; 12)
+            n_attacking(punch_2);
+    }
     
     // Check if animation is finished
     if (image_index == (sprite_get_number(sprite_index)-1))
