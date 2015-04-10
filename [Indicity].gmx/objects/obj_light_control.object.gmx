@@ -119,7 +119,7 @@ draw_clear(c_black)
 
 with(obj_light)
 {
- draw_set_blend_mode(bm_src_color)
+ draw_set_blend_mode(bm_subtract)
  draw_sprite_ext(spr_light_2,0,x,y,lightsize,lightsize,0,c_white,lightstrengt)
  draw_set_blend_mode(bm_normal)
 }
