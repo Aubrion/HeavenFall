@@ -55,7 +55,7 @@ darkness=0.8
           </argument>
           <argument>
             <kind>0</kind>
-            <string>-0.01</string>
+            <string>-0.1</string>
           </argument>
         </arguments>
       </action>
@@ -81,7 +81,7 @@ darkness=0.8
           </argument>
           <argument>
             <kind>0</kind>
-            <string>0.01</string>
+            <string>0.1</string>
           </argument>
         </arguments>
       </action>
@@ -110,7 +110,6 @@ if !surface_exists(surf)
 }
  else
 {
- surface_reset_target()
  draw_surface_ext(surf,0,0,1,1,0,c_white,darkness)
 }
 
@@ -121,7 +120,7 @@ draw_clear(c_black)
 with(obj_light)
 {
  draw_set_blend_mode(bm_src_color)
- draw_sprite_ext(spr_light,0,x,y,lightsize,lightsize,0,c_white,lightstrengt)
+ draw_sprite_ext(spr_light_2,0,x,y,lightsize,lightsize,0,c_white,lightstrengt)
  draw_set_blend_mode(bm_normal)
 }
 

@@ -5,7 +5,8 @@ Patch Notes:
 --- 0.0.0.4
 
 Added Features
-+ Added Hit animation
++ Added Hit UI animation
++ Added Block UI animation
 + Added Screenshake
 + Added a graphic update: Pixel softer
 + Added 2 new attacks that follow the first basic one.
