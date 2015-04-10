@@ -29,6 +29,7 @@
     <sprite>sprites\spr_player_jump</sprite>
     <sprites name="helmets">
       <sprite>sprites\helm_example</sprite>
+      <sprite>sprites\sprite90</sprite>
       <sprite>sprites\helm_gravity_1</sprite>
       <sprite>sprites\helm_zabuza_1</sprite>
       <sprite>sprites\helm_encript_1</sprite>
@@ -106,12 +107,17 @@
         <sprite>sprites\sp_user5_1</sprite>
         <sprite>sprites\sp_user5_2</sprite>
       </sprites>
+      <sprites name="keyblade">
+        <sprite>sprites\kb_test</sprite>
+      </sprites>
     </sprites>
     <sprites name="enemies">
       <sprites name="melee">
         <sprite>sprites\n_woodsman_still</sprite>
         <sprite>sprites\n_woodsman_attack</sprite>
         <sprite>sprites\n_woodsman_walk</sprite>
+        <sprite>sprites\n_woodsman_hurt</sprite>
+        <sprite>sprites\n_woodsman_death</sprite>
         <sprite>sprites\n_woodsman_without_shader</sprite>
       </sprites>
       <sprites name="ranged">

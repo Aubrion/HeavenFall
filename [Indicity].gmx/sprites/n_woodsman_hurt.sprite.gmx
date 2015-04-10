@@ -20,6 +20,6 @@
   <width>24</width>
   <height>20</height>
   <frames>
-    <frame index="0">images\n_woodsman_without_shader_0.png</frame>
+    <frame index="0">images\n_woodsman_hurt_0.png</frame>
   </frames>
 </sprite>
