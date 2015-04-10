@@ -224,7 +224,7 @@ if (state != "dead" &amp;&amp; hp &lt;= 0)
             <kind>1</kind>
             <string>/// AI Calculations
 var distanceToPlayerX = abs(point_distance(x, y, obj_player_shadow.x, y));
-var distanceToPlayerY = abs(point_distance(x, y, x, obj_player_shadow.y));
+var distanceToPlayerY = abs(point_distance(x, y, x, obj_player_shadow.y+12));
 </string>
           </argument>
         </arguments>
@@ -340,7 +340,11 @@ if (state == "attack")
 {
     // Check for attack frame
     if (image_index == 20)
-        n_attacking(punch_2);
+    {
+        // If player is in reach
+        if (distanceToPlayerX &lt; 32 &amp;&amp; distanceToPlayerY &lt; 12)
+            n_attacking(punch_2);
+    }
     
     // Check if animation is finished
     if (image_index == (sprite_get_number(sprite_index)-1))
