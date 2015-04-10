@@ -48,6 +48,7 @@ window_set_cursor(cr_none)
           <argument>
             <kind>1</kind>
             <string>///window full
+/*
 window=1
 window_set_size(display_get_width(),display_get_height())
 window_set_position(0,0)
@@ -204,6 +205,7 @@ if global.attack=1
           <argument>
             <kind>1</kind>
             <string>///chat UI
+/*
 draw_set_alpha(1);
 draw_set_color(c_white);
 hyChatDraw_fixed(0,0+view_hview[0]-132);
@@ -228,8 +230,10 @@ hyChatDraw_fixed(0,0+view_hview[0]-132);
           <argument>
             <kind>1</kind>
             <string>///draw FPS
+draw_set_font(global.normalfont)
+draw_set_color(c_white)
 draw_set_halign(fa_right)
-draw_text(400,0,fps)
+draw_text(400,5,fps)
 </string>
           </argument>
         </arguments>
@@ -255,18 +259,18 @@ if global.attack=0
 {
  if obj_player.alarm[0]=-1 and obj_player.alarm[1]=-1
  {
-  draw_sprite(mouse_normal,0,mouse_x-view_xview[0],mouse_y-view_yview[0])
+  draw_sprite(mouse_normal,0,(mouse_x-view_xview)/view_wview*400,(mouse_y-view_yview)/view_hview*220)
  }
   else
  {
-  if obj_player.alarm[0]!=-1 {draw_sprite(mouse_stun,0,mouse_x-view_xview[0],mouse_y-view_yview[0])}
-  if obj_player.alarm[1]!=-1 {draw_sprite(mouse_root,0,mouse_x-view_xview[0],mouse_y-view_yview[0])}
+  if obj_player.alarm[0]!=-1 {draw_sprite(mouse_stun,0,(mouse_x-view_xview)/view_wview*400,(mouse_y-view_yview)/view_hview*220)}
+  if obj_player.alarm[1]!=-1 {draw_sprite(mouse_root,0,(mouse_x-view_xview)/view_wview*400,(mouse_y-view_yview)/view_hview*220)}
  }
 }
  else
 {
- if global.attack&gt;0 {draw_sprite(mouse_attack,0,mouse_x-view_xview[0],mouse_y-view_yview[0])}
- if global.attack=-1{draw_sprite(mouse_block,0,mouse_x-view_xview[0],mouse_y-view_yview[0])}
+ if global.attack&gt;0 {draw_sprite(mouse_attack,0,(mouse_x-view_xview)/view_wview*400,(mouse_y-view_yview)/view_hview*220)}
+ if global.attack=-1{draw_sprite(mouse_block,0,(mouse_x-view_xview)/view_wview*400,(mouse_y-view_yview)/view_hview*220)}
 }
 </string>
           </argument>
@@ -290,7 +294,9 @@ if global.attack=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if window=1
+            <string>///Windowed fullscreen
+/*
+if window=1
 {
  window=0
  window_set_size(400,220)
@@ -302,6 +308,26 @@ if global.attack=0
  window_set_position(0,0)
 }
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>531</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_fullscreen</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>

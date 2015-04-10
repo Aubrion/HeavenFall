@@ -30,9 +30,9 @@ range=10
 still=n_woodsman_still
 walking=n_woodsman_walk
 attacking=n_woodsman_attack
-death = n_woodsman_death
+death=n_woodsman_death
 name="LV.3"
-mhp=80
+mhp=30
 hp=mhp
 msp=30
 sp=msp
@@ -150,8 +150,9 @@ image_speed = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///reset attacked
+            <string>///reset attacked and hp minimum
 if global.attack=0 {attacked=false}
+if hp&lt;0 {hp=0}
 </string>
           </argument>
         </arguments>
@@ -468,24 +469,27 @@ if (state != "dead")
           <argument>
             <kind>1</kind>
             <string>///move out collision
-var a,xoff,yoff,om,mm,mag;
-
-a = point_direction(x, y, other.x, other.y);    //Get the direction from the colliding object
-xoff = lengthdir_x(1, a);                       //Get the offset vector
-yoff = lengthdir_y(1, a);
-om = other.mass / mass;                         //start the fake "physics mass" calculations
-mm = mass / other.mass;
-mag = sqrt((om * om) + (mm * mm));
-om /= mag;
-mm /= mag;
-
-//Move out of collision
-while (place_meeting(x, y, other))
+if (state!="dead")
 {
-x -= xoff * om; //Move the instance out of collision
-y -= yoff * om;
-other.x += xoff * mm; //Move the other instance out of the collision
-other.y += yoff * mm;
+ var a,xoff,yoff,om,mm,mag;
+ 
+ a = point_direction(x, y, other.x, other.y);    //Get the direction from the colliding object
+ xoff = lengthdir_x(1, a);                       //Get the offset vector
+ yoff = lengthdir_y(1, a);
+ om = other.mass / mass;                         //start the fake "physics mass" calculations
+ mm = mass / other.mass;
+ mag = sqrt((om * om) + (mm * mm));
+ om /= mag;
+ mm /= mag;
+ 
+ //Move out of collision
+ while (place_meeting(x, y, other))
+ {
+ x -= xoff * om; //Move the instance out of collision
+ y -= yoff * om;
+ other.x += xoff * mm; //Move the other instance out of the collision
+ other.y += yoff * mm;
+ }
 }
 </string>
           </argument>

@@ -187,7 +187,7 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\Ideas.gml</script>
+    <script>scripts\Must_be_Implemented.gml</script>
     <script>scripts\Patch_Notes.gml</script>
     <script>scripts\User_Content.gml</script>
     <script>scripts\scr_controls_mouse.gml</script>
@@ -235,10 +235,10 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_cam</object>
-    <object>objects\obj_player</object>
     <object>objects\obj_player_other</object>
-    <object>objects\obj_helm</object>
+    <object>objects\obj_player</object>
     <object>objects\obj_player_shadow</object>
+    <object>objects\obj_helm</object>
     <objects name="critter">
       <object>objects\critter_frog</object>
     </objects>
