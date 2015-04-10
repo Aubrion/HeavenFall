@@ -20,6 +20,7 @@ var i;
     for(i=0; i<10; i+=1){
         draw_text(xx+2, yy+i*20, global.hychat_row[i]);
     }
+draw_set_alpha(1);
 if(global.hyChatActive){
     if(global.hyChatId){
         draw_text(xx+2, yy+10*20, keyboard_string+"|");
