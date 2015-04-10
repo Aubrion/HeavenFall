@@ -147,6 +147,7 @@
     </sprites>
     <sprites name="lights">
       <sprite>sprites\spr_light</sprite>
+      <sprite>sprites\spr_light_2</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
