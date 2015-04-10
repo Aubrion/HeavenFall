@@ -207,12 +207,14 @@
       <script>scripts\hyChatInit.gml</script>
       <script>scripts\hyChatAdd.gml</script>
       <script>scripts\hyChatDraw.gml</script>
+      <script>scripts\hyChatDraw_fixed.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\small_font</font>
     <font>fonts\font_normal</font>
     <font>fonts\font_hud</font>
+    <font>fonts\font_hud_small</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_cam</object>
