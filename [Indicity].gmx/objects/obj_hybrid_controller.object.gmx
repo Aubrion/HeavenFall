@@ -167,7 +167,7 @@ alarm[0] = 15;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//hyChatDraw(0, display_get_gui_height()-20*12);
+            <string>///hyChatDraw(0, display_get_gui_height()-20*12);
 </string>
           </argument>
         </arguments>
