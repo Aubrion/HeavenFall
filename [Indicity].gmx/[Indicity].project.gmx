@@ -12,12 +12,15 @@
       <sound>sound\fight2</sound>
     </sounds>
     <sounds name="effects">
+      <sound>sound\block_2</sound>
+      <sound>sound\block_1</sound>
       <sound>sound\jump_5</sound>
       <sound>sound\swing_3</sound>
       <sound>sound\laser_2</sound>
       <sound>sound\laser_1</sound>
       <sound>sound\laser_3</sound>
       <sound>sound\punch_2</sound>
+      <sound>sound\roar_1</sound>
     </sounds>
     <sounds name="music_fx">
       <sound>sound\m_frog_forest</sound>
@@ -147,6 +150,7 @@
       <sprite>sprites\spr_lake_1</sprite>
       <sprite>sprites\spr_tree_1</sprite>
       <sprite>sprites\spr_tree</sprite>
+      <sprite>sprites\spr_torch_1</sprite>
     </sprites>
     <sprites name="critter">
       <sprite>sprites\spr_frog</sprite>
@@ -226,6 +230,7 @@
       <script>scripts\hyChatDraw.gml</script>
       <script>scripts\hyChatDraw_fixed.gml</script>
     </scripts>
+    <script>scripts\create_light.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\small_font</font>
@@ -250,6 +255,7 @@
     </objects>
     <objects name="level_design">
       <object>objects\obj_tree_1</object>
+      <object>objects\obj_torch_1</object>
       <object>objects\obj_lake_1</object>
     </objects>
     <objects name="Weapons">

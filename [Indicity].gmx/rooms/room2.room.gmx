@@ -26,9 +26,9 @@
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>0</deleteUnderlyingTiles>
-    <page>4</page>
-    <xoffset>-116</xoffset>
-    <yoffset>154</yoffset>
+    <page>0</page>
+    <xoffset>-100</xoffset>
+    <yoffset>203</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="tile_forest_back" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -157,7 +157,11 @@
     <instance objName="n_woodsman_1" x="1098" y="436" name="inst_979C8F79" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="n_woodsman_1" x="1045" y="402" name="inst_71C457F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="n_woodsman_1" x="1126" y="379" name="inst_E8F1FDF5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_light" x="276" y="396" name="inst_883AFA42" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_torch_1" x="168" y="420" name="inst_1DEFAAFE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_torch_1" x="276" y="516" name="inst_7BF57B43" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_torch_1" x="396" y="384" name="inst_8C7A45BA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_torch_1" x="684" y="492" name="inst_CEF4C04A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_torch_1" x="876" y="396" name="inst_520839E6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
