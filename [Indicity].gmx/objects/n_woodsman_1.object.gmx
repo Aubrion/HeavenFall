@@ -30,6 +30,7 @@ range=10
 still=n_woodsman_still
 walking=n_woodsman_walk
 attacking=n_woodsman_attack
+death = n_woodsman_death
 name="LV.3"
 mhp=80
 hp=mhp
@@ -195,6 +196,32 @@ depth = 1 * -(y);
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>/// Change to dead state
+if (state != "dead" &amp;&amp; hp &lt;= 0)
+{
+    state = "dead";
+    sprite_index = n_woodsman_death;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>/// AI Calculations
 var distanceToPlayerX = abs(point_distance(x, y, obj_player.x, y));
 var distanceToPlayerY = abs(point_distance(x, y, x, obj_player.y));
@@ -339,8 +366,17 @@ if (state == "attack")
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///stats
-if hp&lt;0 {hp=0}
+            <string>/// Dead state
+if (state == "dead")
+{
+    show_debug_message(sprite_get_name(sprite_index));
+
+    if (sprite_index != n_woodsman_death)
+        sprite_index = n_woodsman_death;
+
+    if (image_index == sprite_get_number(death)-1)
+        instance_destroy();
+}
 </string>
           </argument>
         </arguments>
@@ -385,21 +421,24 @@ attacked_weapons()
           <argument>
             <kind>1</kind>
             <string>///moving
-if (state != "attack")
+if (state != "dead")
 {
-    if xx=x and yy=y
+    if (state != "attack")
     {
-        sprite_index=still
+        if xx=x and yy=y
+        {
+            sprite_index=still
+        }
+        else
+        {
+            sprite_index=walking
+            if alarm[11]=-1 {alarm[11]=10}
+        }
     }
     else
     {
-        sprite_index=walking
-        if alarm[11]=-1 {alarm[11]=10}
+        alarm[11]=-1
     }
-}
-else
-{
-    alarm[11]=-1
 }
 </string>
           </argument>
