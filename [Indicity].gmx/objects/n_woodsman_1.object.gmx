@@ -402,7 +402,8 @@ if (state == "dead")
           <argument>
             <kind>1</kind>
             <string>///attacked
-attacked_weapons()
+if (state != "dead")
+    attacked_weapons()
 
 </string>
           </argument>
@@ -510,7 +511,11 @@ other.y += yoff * mm;
             <kind>1</kind>
             <string>///draw self and information
 draw_self()
-draw_bar(x-(sprite_width/2),y-22,sprite_width,1,hp,mhp,c_red)
+
+// Draw Healthbar
+if (state != "dead")
+    draw_bar(x-(sprite_width/2),y-22,sprite_width,1,hp,mhp,c_red)
+
 draw_set_font(global.normalfont)
 draw_set_halign(fa_middle)
 </string>
