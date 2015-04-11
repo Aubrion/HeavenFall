@@ -63,7 +63,12 @@
     <instance objName="obj_floor" x="348" y="372" name="inst_D301ECDC" locked="0" code="" scaleX="6" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="300" y="420" name="inst_1225B3A8" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="516" y="336" name="inst_9A875E31" locked="0" code="" scaleX="3" scaleY="6" colour="4294967295" rotation="0"/>
-    <instance objName="obj_floor" x="552" y="240" name="inst_E22E8E23" locked="0" code="" scaleX="21" scaleY="21" colour="4294967295" rotation="0"/>
+    <instance objName="obj_floor" x="552" y="240" name="inst_E22E8E23" locked="0" code="" scaleX="20" scaleY="20" colour="4294967295" rotation="0"/>
+    <instance objName="n_bot_1" x="708" y="276" name="inst_6870EA7C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="n_bot_1" x="756" y="360" name="inst_9BB5C4CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="n_bot_1" x="708" y="456" name="inst_A5A43E35" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="n_bot_1" x="732" y="408" name="inst_044DDEBE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="n_bot_1" x="732" y="312" name="inst_C3DBAD25" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="vulcano_1" x="336" y="432" w="12" h="12" xo="24" yo="72" id="10003760" name="inst_34BF3CD6" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

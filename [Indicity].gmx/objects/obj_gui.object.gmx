@@ -233,7 +233,7 @@ hyChatDraw_fixed(0,0+view_hview[0]-132);
 draw_set_font(global.normalfont)
 draw_set_color(c_white)
 draw_set_halign(fa_right)
-draw_text(400,5,fps)
+draw_text(400,8,fps)
 </string>
           </argument>
         </arguments>
