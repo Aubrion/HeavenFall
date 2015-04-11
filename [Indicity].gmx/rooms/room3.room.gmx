@@ -61,11 +61,37 @@
     <instance objName="obj_floor" x="276" y="348" name="inst_C7F9D3C1" locked="0" code="" scaleX="6" scaleY="6" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="288" y="444" name="inst_B6A49DF5" locked="0" code="" scaleX="4" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="348" y="372" name="inst_D301ECDC" locked="0" code="" scaleX="6" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_light" x="300" y="372" name="inst_E1A26B28" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_light" x="300" y="456" name="inst_980316E1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_light" x="456" y="372" name="inst_5D03A20A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
+    <tile bgName="vulcano_1" x="336" y="432" w="12" h="12" xo="24" yo="72" id="10003760" name="inst_34BF3CD6" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="312" y="432" w="12" h="12" xo="24" yo="72" id="10003761" name="inst_B849BB4C" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="288" y="432" w="12" h="12" xo="24" yo="72" id="10003762" name="inst_7D09E49D" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="276" y="432" w="12" h="12" xo="24" yo="72" id="10003763" name="inst_34F4BEF1" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="348" y="408" w="12" h="12" xo="24" yo="72" id="10003764" name="inst_469BAB8B" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="372" y="408" w="12" h="12" xo="24" yo="72" id="10003765" name="inst_8DF93251" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="396" y="408" w="12" h="12" xo="24" yo="72" id="10003766" name="inst_26378AFA" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="420" y="420" w="12" h="12" xo="24" yo="72" id="10003767" name="inst_99C95CB9" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="456" y="420" w="12" h="12" xo="24" yo="72" id="10003768" name="inst_EF961EED" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="480" y="420" w="12" h="12" xo="24" yo="72" id="10003770" name="inst_7F79F212" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="300" y="432" w="12" h="12" xo="12" yo="72" id="10003771" name="inst_BC290D03" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="360" y="408" w="12" h="12" xo="12" yo="72" id="10003772" name="inst_D4A176A5" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="408" y="408" w="12" h="12" xo="12" yo="72" id="10003773" name="inst_9B6E75F2" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="432" y="420" w="12" h="12" xo="12" yo="72" id="10003774" name="inst_3F75A063" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="468" y="420" w="12" h="12" xo="12" yo="72" id="10003775" name="inst_9E4AA7EA" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="324" y="432" w="12" h="12" xo="24" yo="72" id="10003776" name="inst_7E4D2754" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="444" y="420" w="12" h="12" xo="24" yo="72" id="10003778" name="inst_DE0A2CE2" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="312" y="504" w="12" h="12" xo="24" yo="72" id="10003779" name="inst_A74CE6E1" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="288" y="504" w="12" h="12" xo="24" yo="72" id="10003780" name="inst_88BC448C" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="300" y="504" w="12" h="12" xo="12" yo="72" id="10003781" name="inst_A3484BDF" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="324" y="504" w="12" h="12" xo="0" yo="72" id="10003782" name="inst_3922DCAE" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="384" y="408" w="12" h="12" xo="0" yo="72" id="10003783" name="inst_FB8CEE4B" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="492" y="420" w="12" h="12" xo="0" yo="72" id="10003784" name="inst_8E33600D" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="264" y="432" w="12" h="12" xo="48" yo="72" id="10003785" name="inst_DCD21EEF" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="408" y="420" w="12" h="12" xo="48" yo="72" id="10003786" name="inst_E0B8E726" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="504" y="420" w="12" h="12" xo="36" yo="72" id="10003787" name="inst_BD8F2185" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="348" y="432" w="12" h="12" xo="36" yo="72" id="10003788" name="inst_0CF4BF26" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="336" y="504" w="12" h="12" xo="36" yo="72" id="10003789" name="inst_C803172E" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vulcano_1" x="276" y="504" w="12" h="12" xo="48" yo="72" id="10003790" name="inst_C3A2BCC6" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="vulcano_1" x="288" y="336" w="12" h="12" xo="12" yo="36" id="10003548" name="inst_DE2C02C1" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="vulcano_1" x="300" y="336" w="12" h="12" xo="12" yo="36" id="10003549" name="inst_C4A5F85F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="vulcano_1" x="312" y="336" w="12" h="12" xo="12" yo="36" id="10003550" name="inst_D96CF33E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

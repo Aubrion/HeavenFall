@@ -302,8 +302,8 @@
     <timeline>timelines\polearm_attack_1</timeline>
   </timelines>
   <rooms name="rooms">
-    <room>rooms\room2</room>
     <room>rooms\room3</room>
+    <room>rooms\room2</room>
     <room>rooms\room0</room>
   </rooms>
   <help>
