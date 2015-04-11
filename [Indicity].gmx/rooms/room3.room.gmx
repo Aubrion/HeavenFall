@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>447</xoffset>
-    <yoffset>464</yoffset>
+    <xoffset>396</xoffset>
+    <yoffset>125</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -62,13 +62,23 @@
     <instance objName="obj_floor" x="288" y="444" name="inst_B6A49DF5" locked="0" code="" scaleX="4" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="348" y="372" name="inst_D301ECDC" locked="0" code="" scaleX="6" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="300" y="420" name="inst_1225B3A8" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_floor" x="516" y="336" name="inst_9A875E31" locked="0" code="" scaleX="3" scaleY="6" colour="4294967295" rotation="0"/>
-    <instance objName="obj_floor" x="552" y="240" name="inst_E22E8E23" locked="0" code="" scaleX="20" scaleY="20" colour="4294967295" rotation="0"/>
-    <instance objName="n_bot_1" x="708" y="276" name="inst_6870EA7C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_bot_1" x="756" y="360" name="inst_9BB5C4CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_bot_1" x="708" y="456" name="inst_A5A43E35" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_bot_1" x="732" y="408" name="inst_044DDEBE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_bot_1" x="732" y="312" name="inst_C3DBAD25" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_floor" x="516" y="336" name="inst_9A875E31" locked="0" code="" scaleX="2" scaleY="6" colour="4294967295" rotation="0"/>
+    <instance objName="obj_floor" x="540" y="240" name="inst_E22E8E23" locked="0" code="" scaleX="22" scaleY="21" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="528" y="192" name="inst_FAA018E7" locked="0" code="" scaleX="24" scaleY="4" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="528" y="240" name="inst_C9D31E7F" locked="0" code="" scaleX="1" scaleY="8" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="528" y="408" name="inst_3468C7EA" locked="0" code="" scaleX="1" scaleY="11" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="540" y="492" name="inst_8C55A76D" locked="0" code="" scaleX="23" scaleY="4" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="804" y="240" name="inst_63A03E93" locked="0" code="" scaleX="1" scaleY="21" colour="4294967295" rotation="0"/>
+    <instance objName="obj_firefly" x="288" y="372" name="inst_95EA9D50" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="n_woodsman_1" x="744" y="336" name="inst_2EE8D03E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="n_woodsman_1" x="696" y="444" name="inst_8281FA79" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="n_woodsman_1" x="612" y="456" name="inst_08084384" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="n_woodsman_1" x="600" y="276" name="inst_608C6E14" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="n_woodsman_1" x="732" y="276" name="inst_92E6B130" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="n_woodsman_1" x="780" y="408" name="inst_E4890C41" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="n_woodsman_1" x="672" y="300" name="inst_BC342A13" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="n_woodsman_1" x="744" y="468" name="inst_FB1804A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="n_woodsman_1" x="732" y="396" name="inst_F01E6193" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="vulcano_1" x="336" y="432" w="12" h="12" xo="24" yo="72" id="10003760" name="inst_34BF3CD6" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
