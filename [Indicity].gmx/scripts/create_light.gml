@@ -1,9 +1,11 @@
-//create_light(lightsize,lightstrengt)
+//create_light(lightsize,lightstrengt,xx,yy)
 i=instance_create(x,y,obj_light)
 with(i)
 {
  creator=other.id
  lightsize=argument0
+ mlightsize=argument0
  lightstrengt=argument1
+ xx=argument2
+ yy=argument3
 }
-

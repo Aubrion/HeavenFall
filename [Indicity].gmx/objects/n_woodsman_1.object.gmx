@@ -31,6 +31,7 @@ still=n_woodsman_still
 walking=n_woodsman_walk
 attacking=n_woodsman_attack
 death=n_woodsman_death
+attacksound=roar_1
 name="LV.3"
 mhp=30
 hp=mhp
@@ -340,11 +341,15 @@ if (state == "follow")
 if (state == "attack")
 {
     // Check for attack frame
+    if (image_index == 15)
+    {
+        play_sound(attacksound) 
+    }
     if (image_index == 20)
     {
         // If player is in reach
         if (distanceToPlayerX &lt; 50 &amp;&amp; distanceToPlayerY &lt; 12)
-            n_attacking(roar_1,block_1);
+            n_attacking(punch_1,swordhit_2);
     }
     
     // Check if animation is finished

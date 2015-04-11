@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///set depth
-create_light(1,1)
+create_light(1,1,0,-16)
 depth=1*-y
 
 

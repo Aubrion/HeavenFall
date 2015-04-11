@@ -20,6 +20,7 @@
           <argument>
             <kind>1</kind>
             <string>///init
+audio_play_sound(swing_1,1,0)
 airattack=true
 image_yscale=1
 y=player.y

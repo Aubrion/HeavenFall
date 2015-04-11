@@ -15,12 +15,16 @@
       <sound>sound\block_2</sound>
       <sound>sound\block_1</sound>
       <sound>sound\jump_5</sound>
+      <sound>sound\swing_1</sound>
+      <sound>sound\swing_2</sound>
       <sound>sound\swing_3</sound>
       <sound>sound\laser_2</sound>
       <sound>sound\laser_1</sound>
+      <sound>sound\punch_1</sound>
       <sound>sound\laser_3</sound>
       <sound>sound\punch_2</sound>
       <sound>sound\roar_1</sound>
+      <sound>sound\swordhit_2</sound>
     </sounds>
     <sounds name="music_fx">
       <sound>sound\m_frog_forest</sound>
@@ -154,7 +158,7 @@
     </sprites>
     <sprites name="critter">
       <sprite>sprites\spr_frog</sprite>
-      <sprite>sprites\spr_g</sprite>
+      <sprite>sprites\spr_firefly</sprite>
     </sprites>
     <sprites name="animated backs">
       <sprite>sprites\lava_1</sprite>
@@ -246,6 +250,7 @@
     <object>objects\obj_helm</object>
     <objects name="critter">
       <object>objects\critter_frog</object>
+      <object>objects\obj_firefly</object>
     </objects>
     <objects name="room_design">
       <object>objects\obj_wall</object>
@@ -288,7 +293,6 @@
       <timeline>timelines\greatsword_attack_1</timeline>
       <timeline>timelines\greatsword_attack_2</timeline>
       <timeline>timelines\greatsword_attack_3</timeline>
-      <timeline>timelines\timeline9</timeline>
       <timeline>timelines\greatsword_attack_air</timeline>
     </timelines>
     <timeline>timelines\scythe_attack_1</timeline>

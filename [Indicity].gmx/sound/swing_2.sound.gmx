@@ -2,7 +2,7 @@
 <sound>
   <kind>0</kind>
   <extension>.WAV</extension>
-  <origname>sound\audio\swing_3.WAV</origname>
+  <origname>sound\audio\swing_2.WAV</origname>
   <effects>0</effects>
   <volume>
     <volume>1</volume>
@@ -21,7 +21,7 @@
     <bitDepth>16</bitDepth>
   </bitDepths>
   <preload>-1</preload>
-  <data>swing_3.WAV</data>
+  <data>swing_2.WAV</data>
   <compressed>1</compressed>
   <streamed>1</streamed>
   <uncompressOnLoad>0</uncompressOnLoad>

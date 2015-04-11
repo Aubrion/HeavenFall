@@ -20,6 +20,7 @@
           <argument>
             <kind>1</kind>
             <string>///0
+audio_play_sound(swing_3,1,0)
 y=obj_player.y+6
 if look=1
 {
