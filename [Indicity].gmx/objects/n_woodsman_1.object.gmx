@@ -222,9 +222,13 @@ if (state != "dead" &amp;&amp; hp &lt;= 0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// AI Calculations
-var distanceToPlayerX = abs(point_distance(x, y, obj_player_shadow.x, y));
-var distanceToPlayerY = abs(point_distance(x, y, x, obj_player_shadow.y+12));
+            <string>/// Idle state
+if (state == "idle")
+{
+    // Check if player is in range
+    if (AI_player_in_range(125, 40))
+        state = "follow";
+}
 </string>
           </argument>
         </arguments>
@@ -276,7 +280,7 @@ if (state == "idle")
 if (state == "follow")
 {
     // Go idle if player is not in range
-    if (distanceToPlayerX &gt; 150 || distanceToPlayerY &gt; 40)
+    if (!AI_player_in_range(150, 40))
         state = "idle";
     
     // Move towards player
@@ -342,7 +346,7 @@ if (state == "attack")
     if (image_index == 20)
     {
         // If player is in reach
-        if (distanceToPlayerX &lt; 32 &amp;&amp; distanceToPlayerY &lt; 12)
+        if (AI_player_in_range(32, 12))
             n_attacking(punch_2);
     }
     

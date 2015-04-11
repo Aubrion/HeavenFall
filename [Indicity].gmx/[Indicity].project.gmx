@@ -222,6 +222,9 @@
       <script>scripts\hyChatDraw.gml</script>
       <script>scripts\hyChatDraw_fixed.gml</script>
     </scripts>
+    <scripts name="Enemy AI">
+      <script>scripts\AI_player_in_range.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\small_font</font>
