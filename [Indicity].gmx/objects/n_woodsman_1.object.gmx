@@ -32,6 +32,7 @@ walking=n_woodsman_walk
 attacking=n_woodsman_attack
 death=n_woodsman_death
 attacksound=roar_1
+expgained=5
 name="LV.3"
 mhp=30
 hp=mhp
@@ -153,7 +154,7 @@ image_speed = 1;
             <kind>1</kind>
             <string>///reset attacked and hp minimum
 if global.attack=0 {attacked=false}
-if hp&lt;0 {hp=0}
+if hp&lt;=0 {hp=0}
 </string>
           </argument>
         </arguments>
@@ -201,6 +202,7 @@ depth = 1 * -(y);
             <string>/// Change to dead state when hp=0
 if (state != "dead" &amp;&amp; hp &lt;= 0)
 {
+    global.xp+=expgained
     state = "dead";
     sprite_index = death;
 }
@@ -383,7 +385,6 @@ if (state == "dead")
 
     if (sprite_index != n_woodsman_death)
         sprite_index = n_woodsman_death;
-
     if (image_index == sprite_get_number(death)-1)
         instance_destroy();
 }

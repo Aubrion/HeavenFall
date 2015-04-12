@@ -273,10 +273,7 @@ if global.xp&gt;= global.mxp and global.lvl&lt;99
  global.int+=1
  global.will+=1
 }
- else
-{
- if global.lvl=99 {global.xp=0}
-}
+if global.lvl=99 {global.xp=0}
 
 
 
@@ -501,7 +498,7 @@ if jump=false
           <argument>
             <kind>1</kind>
             <string>///draw
-//draw_text_colour(x+32,y,global.agi,c_white,c_white,c_white,c_white,1)
+//draw_text_colour(x+32,y,global.xp,c_white,c_white,c_white,c_white,1)
 //draw_text_colour(x-32,y,global.mhp,c_white,c_white,c_white,c_white,1)
 draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,c_lime,1)
 </string>

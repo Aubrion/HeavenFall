@@ -3,7 +3,7 @@
   <spriteName>spr_firefly</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1000</depth>
+  <depth>-10000</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>create_light(0.2,0.5,0,0)
+            <string>create_light(0.3,0.5,0,0)
 </string>
           </argument>
         </arguments>

@@ -5,6 +5,7 @@ Patch Notes:
 --- 0.0.0.4
 
 Added Features
++ Added Enemie death
 + Added Hit UI animation
 + Added Block UI animation
 + Added Screenshake
