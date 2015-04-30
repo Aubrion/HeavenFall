@@ -56,6 +56,39 @@ window_set_position(0,0)
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///variables
+if (instance_exists(obj_greatsword))
+    {
+    weapon = obj_greatsword;
+    }
+else if (instance_exists(obj_orb))
+    {
+    weapon = obj_orb;
+    }
+else
+    {
+    weapon = noone;
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="2" enumb="1">
       <action>
@@ -168,21 +201,21 @@ draw_set_alpha(1)
           <argument>
             <kind>1</kind>
             <string>///weapon UI
-if instance_exists(obj_greatsword)
+if instance_exists(weapon)
 {
  draw_sprite(ui_gs,-1,0,0)
-}
 
-if global.attack=1
-{
- //stack0
- draw_sprite(ui_sparkle,0,0+40,0+20)
- //stack1
- if obj_greatsword.stack&gt;=1 {draw_sprite(ui_sparkle,0,0+71,0+20)
- draw_line_colour(0+40,0+20,0+71,0+20,c_white,c_white)}
- //sack2
- if obj_greatsword.stack&gt;=2 {draw_sprite(ui_sparkle,0,0+102,0+20)
- draw_line_colour(0+71,0+20,0+102,0+20,c_white,c_white)}
+    if global.attack=1
+    {
+    //stack0
+    draw_sprite(ui_sparkle,0,0+40,0+20)
+    //stack1
+    if weapon.stack&gt;=1 {draw_sprite(ui_sparkle,0,0+71,0+20)
+    draw_line_colour(0+40,0+20,0+71,0+20,c_white,c_white)}
+    //sack2
+    if weapon.stack&gt;=2 {draw_sprite(ui_sparkle,0,0+102,0+20)
+    draw_line_colour(0+71,0+20,0+102,0+20,c_white,c_white)}
+    }
 }
 </string>
           </argument>

@@ -7,4 +7,5 @@ i.image_angle=image_angle
 i.image_xscale=image_xscale
 i.image_yscale=image_yscale
 i.image_index=image_index
+i.image_blend = image_blend
 i.depth=depth+1
