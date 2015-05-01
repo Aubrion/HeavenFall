@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///init scripts and other
 //audio_set_master_gain(0,0)
-debug=true
+debug=false
 global.musicplaying=-1
 randomize()
 zoomfactor=1
@@ -58,29 +58,6 @@ global.normalfont=font_add_sprite  (spr_font_2,ord(" "),0,-1)
 instance_create(x,y,obj_background)
 instance_create(x,y,obj_gui)
 instance_create(x,y,obj_light_control)
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///window full
-window_set_size(display_get_width(),display_get_height())
-window_set_position(0,0)
 </string>
           </argument>
         </arguments>
@@ -186,28 +163,6 @@ if debug=true
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-      </action>
-    </event>
-    <event eventtype="9" enumb="115">
-      <action>
-        <libid>1</libid>
-        <id>531</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_fullscreen</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
       </action>
     </event>
     <event eventtype="9" enumb="27">

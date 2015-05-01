@@ -12,12 +12,19 @@
       <sound>sound\fight2</sound>
     </sounds>
     <sounds name="effects">
+      <sound>sound\block_2</sound>
+      <sound>sound\block_1</sound>
       <sound>sound\jump_5</sound>
+      <sound>sound\swing_1</sound>
+      <sound>sound\swing_2</sound>
       <sound>sound\swing_3</sound>
       <sound>sound\laser_2</sound>
       <sound>sound\laser_1</sound>
+      <sound>sound\punch_1</sound>
       <sound>sound\laser_3</sound>
       <sound>sound\punch_2</sound>
+      <sound>sound\roar_1</sound>
+      <sound>sound\swordhit_2</sound>
     </sounds>
     <sounds name="music_fx">
       <sound>sound\m_frog_forest</sound>
@@ -110,6 +117,10 @@
       <sprites name="keyblade">
         <sprite>sprites\kb_test</sprite>
       </sprites>
+      <sprites name="Orb">
+        <sprite>sprites\or_fire</sprite>
+      </sprites>
+      <sprite>sprites\spr_orb_projectile</sprite>
     </sprites>
     <sprites name="enemies">
       <sprites name="melee">
@@ -128,8 +139,12 @@
     <sprites name="UI">
       <sprite>sprites\spr_font</sprite>
       <sprite>sprites\spr_font_2</sprite>
-      <sprite>sprites\spr_mouse</sprite>
       <sprite>sprites\spr_mouse_2</sprite>
+      <sprite>sprites\mouse_normal</sprite>
+      <sprite>sprites\mouse_attack</sprite>
+      <sprite>sprites\mouse_block</sprite>
+      <sprite>sprites\mouse_stun</sprite>
+      <sprite>sprites\mouse_root</sprite>
       <sprites name="design">
         <sprite>sprites\ui_normal</sprite>
         <sprite>sprites\ui_hit</sprite>
@@ -143,10 +158,11 @@
       <sprite>sprites\spr_lake_1</sprite>
       <sprite>sprites\spr_tree_1</sprite>
       <sprite>sprites\spr_tree</sprite>
+      <sprite>sprites\spr_torch_1</sprite>
     </sprites>
     <sprites name="critter">
       <sprite>sprites\spr_frog</sprite>
-      <sprite>sprites\spr_g</sprite>
+      <sprite>sprites\spr_firefly</sprite>
     </sprites>
     <sprites name="animated backs">
       <sprite>sprites\lava_1</sprite>
@@ -183,7 +199,6 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\Ideas.gml</script>
     <script>scripts\Patch_Notes.gml</script>
     <script>scripts\User_Content.gml</script>
     <script>scripts\scr_controls_mouse.gml</script>
@@ -225,6 +240,7 @@
     <scripts name="Enemy AI">
       <script>scripts\AI_player_in_range.gml</script>
     </scripts>
+    <script>scripts\create_light.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\small_font</font>
@@ -234,12 +250,13 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_cam</object>
-    <object>objects\obj_player</object>
     <object>objects\obj_player_other</object>
-    <object>objects\obj_helm</object>
+    <object>objects\obj_player</object>
     <object>objects\obj_player_shadow</object>
+    <object>objects\obj_helm</object>
     <objects name="critter">
       <object>objects\critter_frog</object>
+      <object>objects\obj_firefly</object>
     </objects>
     <objects name="room_design">
       <object>objects\obj_wall</object>
@@ -249,6 +266,7 @@
     </objects>
     <objects name="level_design">
       <object>objects\obj_tree_1</object>
+      <object>objects\obj_torch_1</object>
       <object>objects\obj_lake_1</object>
     </objects>
     <objects name="Weapons">
@@ -256,8 +274,12 @@
       <object>objects\obj_axe</object>
       <object>objects\obj_scythe</object>
       <object>objects\obj_weapontrail</object>
+      <object>objects\obj_orb</object>
+      <object>objects\obj_orb_projectile</object>
+      <object>objects\obj_orb_followeffect</object>
     </objects>
     <objects name="enemies">
+      <object>objects\n_parent</object>
       <object>objects\n_bot_1</object>
       <object>objects\n_woodsman_1</object>
       <object>objects\n_bot_1_laser</object>
@@ -281,8 +303,12 @@
       <timeline>timelines\greatsword_attack_1</timeline>
       <timeline>timelines\greatsword_attack_2</timeline>
       <timeline>timelines\greatsword_attack_3</timeline>
-      <timeline>timelines\timeline9</timeline>
       <timeline>timelines\greatsword_attack_air</timeline>
+    </timelines>
+    <timelines name="orb">
+      <timeline>timelines\orb_attack_1</timeline>
+      <timeline>timelines\orb_attack_2</timeline>
+      <timeline>timelines\orb_attack_3</timeline>
     </timelines>
     <timeline>timelines\scythe_attack_1</timeline>
     <timeline>timelines\axe_attack_1</timeline>
@@ -291,8 +317,8 @@
     <timeline>timelines\polearm_attack_1</timeline>
   </timelines>
   <rooms name="rooms">
-    <room>rooms\room3</room>
     <room>rooms\room2</room>
+    <room>rooms\room3</room>
     <room>rooms\room0</room>
   </rooms>
   <help>

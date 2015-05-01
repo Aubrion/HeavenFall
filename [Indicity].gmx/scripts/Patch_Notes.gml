@@ -5,6 +5,7 @@ Patch Notes:
 --- 0.0.0.4
 
 Added Features
++ Added Enemie death
 + Added Hit UI animation
 + Added Block UI animation
 + Added Screenshake
@@ -21,7 +22,9 @@ Added Features
 + Multiplayer updated (RuneSnake)
 + Optimized Movement more
 + Added Better Enemy AI
++ Added new Enemy: Woodman
 + Added Lightning effect
++ Added FPS
  
 
 Bug fixes
@@ -30,12 +33,10 @@ Bug fixes
 = Sometimes when u jump, the weapon_x position is not correct placed (Fixed)
 
 Known Bugs
-- Laser Shadow is incorrect when moving left
 - Combo Meter is a little buggy
+- Mouse is bugging when view is moving
 
 Recources added
-~ Special Test server added
-~ More weapons and helmets added.
-~ User Content, Thanks so much guys! 
+~ Player Content, Thanks so much guys! You are Amazing! 
   
   

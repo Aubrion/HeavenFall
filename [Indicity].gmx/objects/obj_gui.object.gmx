@@ -8,6 +8,88 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///insivible cursor
+window_set_cursor(cr_none)
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///window full
+/*
+window=1
+window_set_size(display_get_width(),display_get_height())
+window_set_position(0,0)
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///variables
+if (instance_exists(obj_greatsword))
+    {
+    weapon = obj_greatsword;
+    }
+else if (instance_exists(obj_orb))
+    {
+    weapon = obj_orb;
+    }
+else
+    {
+    weapon = noone;
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
@@ -55,31 +137,7 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="73">
-      <action>
-        <libid>1</libid>
-        <id>801</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_cursor</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>5</kind>
-            <sprite>nosprite</sprite>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
+    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -97,16 +155,18 @@
           <argument>
             <kind>1</kind>
             <string>///draw_UI
+//d3d_set_projection_ortho(0, 0,400,220, 0)
+display_set_gui_size(400,220)
 draw_set_alpha(1)
-if alarm[0]&gt;0 {draw_sprite(ui_hit,0,view_xview[0],view_yview[0])}
-if alarm[1]&gt;0 {draw_sprite(ui_block,0,view_xview[0],view_yview[0])}
-draw_sprite(ui_normal,0,view_xview[0],view_yview[0])
-draw_sprite(ui_hp_bar,100*(global.hp/global.mhp),view_xview[0],view_yview[0])
+if alarm[0]&gt;0 {draw_sprite(ui_hit,0,0,0)}
+if alarm[1]&gt;0 {draw_sprite(ui_block,0,0,0)}
+draw_sprite(ui_normal,0,0,0)
+draw_sprite(ui_hp_bar,100*(global.hp/global.mhp),0,0)
 draw_set_font(global.counterfont)
 draw_set_halign(fa_middle)
 draw_set_valign(fa_middle)
-if global.lvl&lt;99 {draw_text_colour(view_xview[0]+17,view_yview[0]+16,global.lvl,c_white,c_white,c_white,c_white,1)}
-else {draw_text_colour(view_xview[0]+17,view_yview[0]+16,global.lvl,c_red,c_red,c_red,c_red,1)}
+if global.lvl&lt;99 {draw_text_colour(0+17,0+16,global.lvl,c_white,c_white,c_white,c_white,1)}
+else {draw_text_colour(0+17,0+16,global.lvl,c_red,c_red,c_red,c_red,1)}
 
 
 
@@ -117,24 +177,6 @@ else {draw_text_colour(view_xview[0]+17,view_yview[0]+16,global.lvl,c_red,c_red,
 
 //
 //if keyboard_check(vk_anykey) {draw_set_alpha(1)} else {draw_set_alpha(1)}
-
-if global.attack=0
-{
- if obj_player.alarm[0]=-1 and obj_player.alarm[1]=-1
- {
- draw_sprite(spr_mouse_2,0,mouse_x,mouse_y) 
- }
-  else
- {
-  if obj_player.alarm[0]!=-1 {draw_sprite(spr_mouse_2,3,mouse_x,mouse_y)}
-  if obj_player.alarm[1]!=-1 {draw_sprite(spr_mouse_2,4,mouse_x,mouse_y)}
- }
-}
- else
-{
- if global.attack&gt;0 {draw_sprite(spr_mouse_2,1,mouse_x,mouse_y)}
- if global.attack=-1{draw_sprite(spr_mouse_2,2,mouse_x,mouse_y)}
-}
 
 
 draw_set_alpha(1)
@@ -159,25 +201,21 @@ draw_set_alpha(1)
           <argument>
             <kind>1</kind>
             <string>///weapon UI
-if instance_exists(obj_greatsword)
+if instance_exists(weapon)
 {
- draw_sprite(ui_gs,-1,view_xview[0],view_yview[0])
-}
+ draw_sprite(ui_gs,-1,0,0)
 
-
-
-
-
-if global.attack=1
-{
- //stack0
- draw_sprite(ui_sparkle,0,view_xview[0]+40,view_yview[0]+20)
- //stack1
- if obj_greatsword.stack&gt;=1 {draw_sprite(ui_sparkle,0,view_xview[0]+71,view_yview[0]+20)
- draw_line_colour(view_xview[0]+40,view_yview[0]+20,view_xview[0]+71,view_yview[0]+20,c_white,c_white)}
- //sack2
- if obj_greatsword.stack&gt;=2 {draw_sprite(ui_sparkle,0,view_xview[0]+102,view_yview[0]+20)
- draw_line_colour(view_xview[0]+71,view_yview[0]+20,view_xview[0]+102,view_yview[0]+20,c_white,c_white)}
+    if global.attack=1
+    {
+    //stack0
+    draw_sprite(ui_sparkle,0,0+40,0+20)
+    //stack1
+    if weapon.stack&gt;=1 {draw_sprite(ui_sparkle,0,0+71,0+20)
+    draw_line_colour(0+40,0+20,0+71,0+20,c_white,c_white)}
+    //sack2
+    if weapon.stack&gt;=2 {draw_sprite(ui_sparkle,0,0+102,0+20)
+    draw_line_colour(0+71,0+20,0+102,0+20,c_white,c_white)}
+    }
 }
 </string>
           </argument>
@@ -200,10 +238,129 @@ if global.attack=1
           <argument>
             <kind>1</kind>
             <string>///chat UI
+/*
 draw_set_alpha(1);
 draw_set_color(c_white);
-hyChatDraw_fixed(view_xview[0], view_yview[0]+view_hview[0]-132);
+hyChatDraw_fixed(0,0+view_hview[0]-132);
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///draw FPS
+draw_set_font(global.normalfont)
+draw_set_color(c_white)
+draw_set_halign(fa_right)
+draw_text(400,8,fps)
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///mouse
+if global.attack=0
+{
+ if obj_player.alarm[0]=-1 and obj_player.alarm[1]=-1
+ {
+  draw_sprite(mouse_normal,0,(mouse_x-view_xview)/view_wview*400,(mouse_y-view_yview)/view_hview*220)
+ }
+  else
+ {
+  if obj_player.alarm[0]!=-1 {draw_sprite(mouse_stun,0,(mouse_x-view_xview)/view_wview*400,(mouse_y-view_yview)/view_hview*220)}
+  if obj_player.alarm[1]!=-1 {draw_sprite(mouse_root,0,(mouse_x-view_xview)/view_wview*400,(mouse_y-view_yview)/view_hview*220)}
+ }
+}
+ else
+{
+ if global.attack&gt;0 {draw_sprite(mouse_attack,0,(mouse_x-view_xview)/view_wview*400,(mouse_y-view_yview)/view_hview*220)}
+ if global.attack=-1{draw_sprite(mouse_block,0,(mouse_x-view_xview)/view_wview*400,(mouse_y-view_yview)/view_hview*220)}
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="115">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Windowed fullscreen
+/*
+if window=1
+{
+ window=0
+ window_set_size(400,220)
+}
+ else
+{
+ window=1
+ window_set_size(display_get_width(),display_get_height())
+ window_set_position(0,0)
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>531</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_fullscreen</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>

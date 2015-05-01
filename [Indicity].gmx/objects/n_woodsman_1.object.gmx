@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_collision_parent</parentName>
+  <parentName>n_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -30,9 +30,11 @@ range=10
 still=n_woodsman_still
 walking=n_woodsman_walk
 attacking=n_woodsman_attack
-death = n_woodsman_death
+death=n_woodsman_death
+attacksound=roar_1
+expgained=5
 name="LV.3"
-mhp=80
+mhp=30
 hp=mhp
 msp=30
 sp=msp
@@ -150,8 +152,9 @@ image_speed = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///reset attacked
+            <string>///reset attacked and hp minimum
 if global.attack=0 {attacked=false}
+if hp&lt;=0 {hp=0}
 </string>
           </argument>
         </arguments>
@@ -199,6 +202,7 @@ depth = 1 * -(y);
             <string>/// Change to dead state when hp=0
 if (state != "dead" &amp;&amp; hp &lt;= 0)
 {
+    global.xp+=expgained
     state = "dead";
     sprite_index = death;
 }
@@ -222,13 +226,9 @@ if (state != "dead" &amp;&amp; hp &lt;= 0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Idle state
-if (state == "idle")
-{
-    // Check if player is in range
-    if (AI_player_in_range(125, 40))
-        state = "follow";
-}
+            <string>/// AI Calculations
+var distanceToPlayerX = abs(point_distance(x, y, obj_player_shadow.x, y));
+var distanceToPlayerY = abs(point_distance(x, y, x, obj_player_shadow.y+12));
 </string>
           </argument>
         </arguments>
@@ -280,7 +280,7 @@ if (state == "idle")
 if (state == "follow")
 {
     // Go idle if player is not in range
-    if (!AI_player_in_range(150, 40))
+    if (distanceToPlayerX &gt; 150 || distanceToPlayerY &gt; 40)
         state = "idle";
     
     // Move towards player
@@ -343,11 +343,15 @@ if (state == "follow")
 if (state == "attack")
 {
     // Check for attack frame
+    if (image_index == 15)
+    {
+        play_sound(attacksound) 
+    }
     if (image_index == 20)
     {
         // If player is in reach
-        if (AI_player_in_range(32, 12))
-            n_attacking(punch_2);
+        if (distanceToPlayerX &lt; 50 &amp;&amp; distanceToPlayerY &lt; 12)
+            n_attacking(punch_1,swordhit_2);
     }
     
     // Check if animation is finished
@@ -377,6 +381,10 @@ if (state == "attack")
             <string>/// Dead state
 if (state == "dead")
 {
+    show_debug_message(sprite_get_name(sprite_index));
+
+    if (sprite_index != n_woodsman_death)
+        sprite_index = n_woodsman_death;
     if (image_index == sprite_get_number(death)-1)
         instance_destroy();
 }
@@ -467,24 +475,27 @@ if (state != "dead")
           <argument>
             <kind>1</kind>
             <string>///move out collision
-var a,xoff,yoff,om,mm,mag;
-
-a = point_direction(x, y, other.x, other.y);    //Get the direction from the colliding object
-xoff = lengthdir_x(1, a);                       //Get the offset vector
-yoff = lengthdir_y(1, a);
-om = other.mass / mass;                         //start the fake "physics mass" calculations
-mm = mass / other.mass;
-mag = sqrt((om * om) + (mm * mm));
-om /= mag;
-mm /= mag;
-
-//Move out of collision
-while (place_meeting(x, y, other))
+if (state!="dead")
 {
-x -= xoff * om; //Move the instance out of collision
-y -= yoff * om;
-other.x += xoff * mm; //Move the other instance out of the collision
-other.y += yoff * mm;
+ var a,xoff,yoff,om,mm,mag;
+ 
+ a = point_direction(x, y, other.x, other.y);    //Get the direction from the colliding object
+ xoff = lengthdir_x(1, a);                       //Get the offset vector
+ yoff = lengthdir_y(1, a);
+ om = other.mass / mass;                         //start the fake "physics mass" calculations
+ mm = mass / other.mass;
+ mag = sqrt((om * om) + (mm * mm));
+ om /= mag;
+ mm /= mag;
+ 
+ //Move out of collision
+ while (place_meeting(x, y, other))
+ {
+ x -= xoff * om; //Move the instance out of collision
+ y -= yoff * om;
+ other.x += xoff * mm; //Move the other instance out of the collision
+ other.y += yoff * mm;
+ }
 }
 </string>
           </argument>
