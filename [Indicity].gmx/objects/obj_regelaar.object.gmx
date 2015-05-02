@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///init scripts and other
 //audio_set_master_gain(0,0)
-debug=false
+debug=true
 global.musicplaying=-1
 randomize()
 zoomfactor=1
