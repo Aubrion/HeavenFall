@@ -26,8 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>///player init
+randomize()
 global.color=make_colour_rgb(random(255),random(255),random(255))
-global.gender="f"
 mass=sprite_width+sprite_height
 look=1
 global.look=1
@@ -38,9 +38,8 @@ global.sub=0
 jump=false
 global.weapondmg=5
 global.dmg=0
-if global.gender="m" {sprite_normal=spr_player sprite_jump=spr_player_jump}
-if global.gender="f" {sprite_normal=spr_player_f sprite_jump=spr_player_jump_f}
-
+sprite_normal=spr_player
+sprite_jump=spr_player_jump
 
 ///player stats
 global.movespeed=1
@@ -393,29 +392,6 @@ if jump=false
 {
  depth=obj_player_shadow.depth-1000
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///gender
-if global.gender="m" {sprite_normal=spr_player sprite_jump=spr_player_jump}
-if global.gender="f" {sprite_normal=spr_player_f sprite_jump=spr_player_jump_f}
 </string>
           </argument>
         </arguments>

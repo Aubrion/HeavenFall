@@ -103,6 +103,7 @@ if distance_to_point(obj_player.x,obj_player.y)&gt;=1
 
 //animation
 image_speed=0.8+(distance_to_point(obj_player.x,obj_player.y)/200)
+depth=(1*-y)+3
 
 
 </string>
