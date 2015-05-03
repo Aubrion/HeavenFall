@@ -37,12 +37,13 @@
       <sprite>sprites\spr_player_jump</sprite>
       <sprites name="hair">
         <sprite>sprites\example_hair</sprite>
-        <sprite>sprites\spr_hair_4</sprite>
         <sprite>sprites\spr_hair_1</sprite>
         <sprite>sprites\spr_hair_2</sprite>
         <sprite>sprites\spr_hair_2_helm</sprite>
         <sprite>sprites\spr_hair_3</sprite>
         <sprite>sprites\spr_hair_3_helm</sprite>
+        <sprite>sprites\spr_hair_4</sprite>
+        <sprite>sprites\spr_hair_5</sprite>
       </sprites>
       <sprites name="eyes">
         <sprite>sprites\spr_eyes_1</sprite>
