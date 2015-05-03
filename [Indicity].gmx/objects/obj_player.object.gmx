@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///player init
+global.color=make_colour_rgb(random(255),random(255),random(255))
 global.gender="f"
 mass=sprite_width+sprite_height
 look=1
@@ -39,6 +40,7 @@ global.weapondmg=5
 global.dmg=0
 if global.gender="m" {sprite_normal=spr_player sprite_jump=spr_player_jump}
 if global.gender="f" {sprite_normal=spr_player_f sprite_jump=spr_player_jump_f}
+
 
 ///player stats
 global.movespeed=1
@@ -249,7 +251,7 @@ y-=zspeed
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///stats
+            <string>///stats and level up
 global.mhp=100+((global.lvl*3)+(global.str*1.5))
 global.msp=80+((global.lvl*2)+(global.agi*0.8))
 global.attspeed=1+(global.agi/5)
@@ -276,6 +278,7 @@ if global.xp&gt;= global.mxp and global.lvl&lt;99
  global.def+=1
  global.int+=1
  global.will+=1
+ effect_create_above(ef_firework,x,y,0,global.color)
 }
 if global.lvl=99 {global.xp=0}
 
@@ -575,7 +578,7 @@ if obj_regelaar.debug=true {global.gender="f"}
             <string>///draw
 //draw_text_colour(x+32,y,global.xp,c_white,c_white,c_white,c_white,1)
 //draw_text_colour(x-32,y,global.mhp,c_white,c_white,c_white,c_white,1)
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,c_lime,1)
+draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,global.color,1)
 </string>
           </argument>
         </arguments>
