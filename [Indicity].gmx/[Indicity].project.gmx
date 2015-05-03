@@ -47,9 +47,21 @@
       <sprites name="eyes">
         <sprite>sprites\spr_eyes_1</sprite>
         <sprite>sprites\spr_eyes_2</sprite>
+        <sprite>sprites\spr_eyes_3</sprite>
+        <sprite>sprites\spr_eyes_4</sprite>
+        <sprite>sprites\spr_eyes_5</sprite>
+        <sprite>sprites\spr_eyes_6</sprite>
+        <sprite>sprites\spr_eyes_7</sprite>
+        <sprite>sprites\spr_eyes_8</sprite>
+        <sprite>sprites\spr_eyes_9</sprite>
+        <sprite>sprites\spr_eyes_10</sprite>
+        <sprite>sprites\spr_eyes_11</sprite>
+        <sprite>sprites\spr_eyes_12</sprite>
+        <sprite>sprites\spr_eyes_13</sprite>
+        <sprite>sprites\spr_eyes_14</sprite>
+        <sprite>sprites\spr_eyes_15</sprite>
       </sprites>
     </sprites>
-    <sprite>sprites\spr_player_eyes</sprite>
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_player_f</sprite>
     <sprite>sprites\spr_player_jump</sprite>
