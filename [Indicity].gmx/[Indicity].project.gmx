@@ -32,13 +32,25 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\nosprite</sprite>
-    <sprite>sprites\spr_player</sprite>
-    <sprite>sprites\spr_player_f</sprite>
-    <sprite>sprites\spr_player_jump</sprite>
-    <sprite>sprites\spr_player_jump_f</sprite>
+    <sprites name="player">
+      <sprite>sprites\spr_player</sprite>
+      <sprite>sprites\spr_player_jump</sprite>
+      <sprites name="hair">
+        <sprite>sprites\example_hair</sprite>
+        <sprite>sprites\spr_hair_4</sprite>
+        <sprite>sprites\spr_hair_1</sprite>
+        <sprite>sprites\spr_hair_2</sprite>
+        <sprite>sprites\spr_hair_2_helm</sprite>
+        <sprite>sprites\spr_hair_3</sprite>
+        <sprite>sprites\spr_hair_3_helm</sprite>
+      </sprites>
+      <sprites name="eyes">
+        <sprite>sprites\spr_eyes_1</sprite>
+        <sprite>sprites\spr_eyes_2</sprite>
+      </sprites>
+    </sprites>
     <sprites name="helmets">
       <sprite>sprites\helm_example</sprite>
-      <sprite>sprites\sprite90</sprite>
       <sprite>sprites\helm_gravity_1</sprite>
       <sprite>sprites\helm_zabuza_1</sprite>
       <sprite>sprites\helm_encript_1</sprite>
