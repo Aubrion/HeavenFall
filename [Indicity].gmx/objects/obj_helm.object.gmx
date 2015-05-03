@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>///init
 yy=0
-eyes=spr_eyes_2
-hair=spr_hair_4
+eyes=spr_eyes_1
+hair=spr_hair_2
 hairhelm=(string(hair)+"_helm")
 </string>
           </argument>
