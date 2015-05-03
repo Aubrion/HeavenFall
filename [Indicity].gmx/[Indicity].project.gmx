@@ -76,7 +76,7 @@
       <sprite>sprites\spr_block_3</sprite>
     </sprites>
     <sprites name="weapons">
-      <sprites name="user content">
+      <sprites name="User Content">
         <sprite>sprites\gs_user1_1</sprite>
         <sprite>sprites\gs_user3_1</sprite>
         <sprite>sprites\gs_user4_1</sprite>
@@ -110,6 +110,8 @@
         <sprite>sprites\gs_wood_2</sprite>
         <sprite>sprites\gs_goon_1</sprite>
         <sprite>sprites\sprite77</sprite>
+        <sprite>sprites\gs_lighting</sprite>
+        <sprite>sprites\gs_megnetion</sprite>
       </sprites>
       <sprites name="Spear">
         <sprite>sprites\sp_user7_1</sprite>
@@ -118,6 +120,9 @@
       </sprites>
       <sprites name="keyblade">
         <sprite>sprites\kb_test</sprite>
+      </sprites>
+      <sprites name="Hammers">
+        <sprite>sprites\hm_justice</sprite>
       </sprites>
     </sprites>
     <sprites name="enemies">
