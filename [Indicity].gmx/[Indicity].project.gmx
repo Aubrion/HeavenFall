@@ -32,7 +32,6 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\nosprite</sprite>
-<<<<<<< HEAD
     <sprites name="player">
       <sprite>sprites\spr_player</sprite>
       <sprite>sprites\spr_player_jump</sprite>
@@ -50,13 +49,11 @@
         <sprite>sprites\spr_eyes_2</sprite>
       </sprites>
     </sprites>
-=======
     <sprite>sprites\spr_player_eyes</sprite>
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_player_f</sprite>
     <sprite>sprites\spr_player_jump</sprite>
     <sprite>sprites\spr_player_jump_f</sprite>
->>>>>>> origin/Stan
     <sprites name="helmets">
       <sprite>sprites\helm_example</sprite>
       <sprite>sprites\helm_gravity_1</sprite>
