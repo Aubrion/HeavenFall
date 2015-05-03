@@ -112,6 +112,7 @@
         <sprite>sprites\sprite77</sprite>
         <sprite>sprites\gs_lighting</sprite>
         <sprite>sprites\gs_megnetion</sprite>
+        <sprite>sprites\gs_slicer</sprite>
       </sprites>
       <sprites name="Spear">
         <sprite>sprites\sp_user7_1</sprite>
@@ -123,6 +124,7 @@
       </sprites>
       <sprites name="Hammers">
         <sprite>sprites\hm_justice</sprite>
+        <sprite>sprites\hm_purplun</sprite>
       </sprites>
     </sprites>
     <sprites name="enemies">
