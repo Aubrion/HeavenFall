@@ -32,6 +32,7 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\nosprite</sprite>
+    <sprite>sprites\spr_player_eyes</sprite>
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_player_f</sprite>
     <sprite>sprites\spr_player_jump</sprite>
