@@ -198,6 +198,7 @@
       <sprite>sprites\spr_tree_1</sprite>
       <sprite>sprites\spr_tree</sprite>
       <sprite>sprites\spr_torch_1</sprite>
+      <sprite>sprites\deco_esylia_flowers</sprite>
     </sprites>
     <sprites name="critter">
       <sprite>sprites\spr_frog</sprite>
@@ -222,7 +223,6 @@
         <background>background\tile_forest_2</background>
         <background>background\background11</background>
         <background>background\tile_forest_back</background>
-        <background>background\tile_decorations</background>
       </backgrounds>
       <backgrounds name="Hydra">
         <background>background\vulcano_1</background>
@@ -303,9 +303,14 @@
       <object>objects\obj_collision_parent</object>
     </objects>
     <objects name="level_design">
-      <object>objects\obj_tree_1</object>
-      <object>objects\obj_torch_1</object>
-      <object>objects\obj_lake_1</object>
+      <objects name="Decoration">
+        <objects name="Esylia">
+          <object>objects\obj_torch_1</object>
+          <object>objects\obj_lake_1</object>
+          <object>objects\obj_tree_1</object>
+          <object>objects\obj_deco_Esylia_flowers1</object>
+        </objects>
+      </objects>
     </objects>
     <objects name="Weapons">
       <object>objects\obj_greatsword</object>
