@@ -196,6 +196,7 @@
           <sprite>sprites\spr_tree_1</sprite>
           <sprite>sprites\spr_tree</sprite>
           <sprite>sprites\deco_esylia_flowers</sprite>
+          <sprite>sprites\deco_esylia_rocks</sprite>
         </sprites>
       </sprites>
     </sprites>
@@ -308,6 +309,7 @@
           <object>objects\obj_lake_1</object>
           <object>objects\obj_tree_1</object>
           <object>objects\obj_deco_Esylia_flowers</object>
+          <object>objects\obj_deco_Esylia_rocks</object>
         </objects>
       </objects>
     </objects>
