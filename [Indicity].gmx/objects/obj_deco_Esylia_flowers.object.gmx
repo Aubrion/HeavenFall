@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>image_speed=0
-image_index=random_range(0,4)
+image_index=random_range(0,14)
 </string>
           </argument>
         </arguments>

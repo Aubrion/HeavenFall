@@ -201,8 +201,6 @@
           <sprite>sprites\spr_tree_1</sprite>
           <sprite>sprites\spr_tree</sprite>
           <sprite>sprites\deco_esylia_flowers</sprite>
-          <sprite>sprites\deco_esylia_flowers2</sprite>
-          <sprite>sprites\deco_esylia_flowers3</sprite>
         </sprites>
       </sprites>
     </sprites>
@@ -314,9 +312,7 @@
           <object>objects\obj_torch_1</object>
           <object>objects\obj_lake_1</object>
           <object>objects\obj_tree_1</object>
-          <object>objects\obj_deco_Esylia_flowers1</object>
-          <object>objects\obj_deco_Esylia_flowers2</object>
-          <object>objects\obj_deco_Esylia_flowers3</object>
+          <object>objects\obj_deco_Esylia_flowers</object>
         </objects>
       </objects>
     </objects>
