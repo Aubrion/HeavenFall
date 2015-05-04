@@ -44,6 +44,8 @@
         <sprite>sprites\spr_hair_3_helm</sprite>
         <sprite>sprites\spr_hair_4</sprite>
         <sprite>sprites\spr_hair_5</sprite>
+        <sprite>sprites\spr_hair_6</sprite>
+        <sprite>sprites\spr_hair_7</sprite>
       </sprites>
       <sprites name="eyes">
         <sprite>sprites\spr_eyes_1</sprite>
