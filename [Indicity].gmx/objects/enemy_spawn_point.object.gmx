@@ -36,7 +36,7 @@ area_width = 200;
 enemy_type = noone;
 
 // Max enemies (will not spawn more when reached)
-enemy_max = 25;
+enemy_max = 15;
 </string>
           </argument>
         </arguments>

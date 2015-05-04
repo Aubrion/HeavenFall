@@ -81,6 +81,14 @@ xx=x
 yy=y
 
 state = "idle";
+
+// Wandering
+wander_interval_min = room_speed * 3;
+wander_interval_max = room_speed * 10;
+wander_distance_min = 10;
+wander_distance_max = 25;
+wander_goalX = x;
+wander_goalY = y;
 </string>
           </argument>
         </arguments>
@@ -106,6 +114,39 @@ state = "idle";
             <string>///moving
 yy=y
 xx=x
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Start wandering
+var wander_dir, wander_dist;
+
+// Find location
+wander_dir = irandom(360);
+wander_dist = irandom_range(wander_distance_min, wander_distance_max);
+wander_goalX = x + lengthdir_x(wander_dist, wander_dir);
+wander_goalY = y + lengthdir_y(wander_dist, wander_dir);
+
+// Change state
+state = "wander";
 </string>
           </argument>
         </arguments>
@@ -199,7 +240,7 @@ depth = 1 * -(y);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Change to dead state when hp=0
+            <string>/// Change to dead state
 if (state != "dead" &amp;&amp; hp &lt;= 0)
 {
     global.xp+=expgained
@@ -255,7 +296,62 @@ if (state == "idle")
     // Check if player is in range
     if (distanceToPlayerX &lt; 125 &amp;&amp; distanceToPlayerY &lt; 40)
         state = "follow";
+    
+    // Set wander timer
+    else if (alarm[1] == -1)
+        alarm[1] = irandom_range(wander_interval_min, wander_interval_max);
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Wander state
+
+if (state == "wander")
+{
+    // Arrived at destination
+    if (point_distance(x, y, wander_goalX, wander_goalY) &lt; mspeed)
+    {
+        x = wander_goalX;
+        y = wander_goalY;
+        state = "idle";
+    }
+    
+    // Move to goal
+    else
+    {
+        // Face direction
+        if (wander_goalX &lt; x)
+            image_xscale = -1;
+        else
+            image_xscale = 1;
+    
+        // Move
+        var wander_direction = point_direction(x, y, wander_goalX, wander_goalY);
+        x += lengthdir_x(mspeed, wander_direction);
+        y += lengthdir_y(mspeed, wander_direction);
+    }
+}
+
+// Stop wander timer
+if (state != "idle" &amp;&amp; alarm[1] &gt; -1)
+    alarm[1] = -1;
 </string>
           </argument>
         </arguments>
