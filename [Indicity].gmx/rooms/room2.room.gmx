@@ -10,7 +10,8 @@
   <persistent>0</persistent>
   <colour>32768</colour>
   <showcolour>-1</showcolour>
-  <code></code>
+  <code>// Config spawn point
+inst_E2D9C9A3.enemy_type = n_woodsman_1;</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -55,7 +56,6 @@
     <instance objName="obj_regelaar" x="-12" y="-12" name="inst_17C11852" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_helm" x="24" y="408" name="inst_3EE226D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cam" x="278" y="431" name="inst_C06D325B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1152" y="372" name="inst_0CA14E42" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="0" y="348" name="inst_3C6101C7" locked="0" code="" scaleX="100" scaleY="18" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="0" y="564" name="inst_8A5E3B4B" locked="0" code="" scaleX="100" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="-12" y="336" name="inst_1ED4CA83" locked="0" code="" scaleX="100" scaleY="1" colour="4294967295" rotation="0"/>
@@ -123,63 +123,14 @@
     <instance objName="obj_hybrid_controller" x="-24" y="-12" name="inst_F34F5844" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_musictouch" x="852" y="348" name="inst_24DB7460" locked="0" code="music=fight2&#xA;" scaleX="1" scaleY="18" colour="4294967295" rotation="0"/>
     <instance objName="obj_musictouch" x="360" y="348" name="inst_1DF98397" locked="0" code="music=m_frog_forest&#xA;" scaleX="1" scaleY="18" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1116" y="456" name="inst_8DD05CE2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1092" y="504" name="inst_9186036B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1140" y="480" name="inst_7EF97E4F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1152" y="420" name="inst_DBA1A008" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1080" y="456" name="inst_33962F49" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1140" y="504" name="inst_193AA1D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1116" y="480" name="inst_1B9DFA31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1068" y="468" name="inst_3CAD77BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1092" y="420" name="inst_5CC3D023" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1059" y="503" name="inst_3356070E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1092" y="476" name="inst_8DC31FF6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1113" y="509" name="inst_B47734A1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1158" y="458" name="inst_D6E58FA6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1117" y="432" name="inst_A34A907B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1060" y="430" name="inst_548F5EAD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1046" y="448" name="inst_E42DE125" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1034" y="481" name="inst_98EB8DC5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1148" y="524" name="inst_9AFF1A14" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1169" y="495" name="inst_6F7FF60B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1180" y="465" name="inst_C16E6277" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1170" y="432" name="inst_B26F3E9F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1127" y="409" name="inst_F228BB32" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1172" y="399" name="inst_FE2C9B91" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1145" y="392" name="inst_CA44FFFB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1101" y="399" name="inst_677D53F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1070" y="407" name="inst_71941C0D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1078" y="433" name="inst_D1E0E53D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1034" y="428" name="inst_769C5B5A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1068" y="384" name="inst_0F07EA77" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1059" y="476" name="inst_A243EEBA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1098" y="436" name="inst_979C8F79" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1045" y="402" name="inst_71C457F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1126" y="379" name="inst_E8F1FDF5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_firefly" x="168" y="504" name="inst_3800F510" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_firefly" x="204" y="384" name="inst_5E6DC0AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_firefly" x="384" y="504" name="inst_CDFA3D62" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_firefly" x="432" y="384" name="inst_3BE70768" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_firefly" x="660" y="504" name="inst_5226D36F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_firefly" x="684" y="420" name="inst_FDEF6330" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1128" y="540" name="inst_A13FF25C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1092" y="528" name="inst_B35FF9D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1056" y="528" name="inst_E2F13F17" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1080" y="552" name="inst_F8F85309" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1164" y="552" name="inst_BBA85C0F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1176" y="516" name="inst_71F54FDC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1140" y="444" name="inst_FF84ACA3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1164" y="372" name="inst_A8DA39B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1092" y="372" name="inst_80178B3C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1176" y="420" name="inst_F84CD0D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1176" y="444" name="inst_485BC61E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1164" y="468" name="inst_04EB26BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1128" y="456" name="inst_9A9CA639" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1068" y="516" name="inst_3F4F9BF8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1104" y="552" name="inst_89235863" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1140" y="552" name="inst_F6EEFE38" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1176" y="528" name="inst_06F0BAFE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_orb" x="-36" y="420" name="inst_0056C9DC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="enemy_spawn_point" x="1044" y="456" name="inst_E2D9C9A3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
