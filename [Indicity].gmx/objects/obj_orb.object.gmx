@@ -35,9 +35,13 @@ yy=0
 sheat=true
 player=obj_player
 
+//create orb follow effect
 i = instance_create(x,y,obj_orb_followeffect);
-i.ID = id;
-i.sprite_index = sprite_index;
+with (i)
+    {
+    ID = other.id;
+    sprite_index = other.sprite_index;
+    }
 </string>
           </argument>
         </arguments>
