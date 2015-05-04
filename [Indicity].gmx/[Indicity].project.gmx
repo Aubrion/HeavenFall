@@ -50,10 +50,6 @@
       </sprites>
     </sprites>
     <sprite>sprites\spr_player_eyes</sprite>
-    <sprite>sprites\spr_player</sprite>
-    <sprite>sprites\spr_player_f</sprite>
-    <sprite>sprites\spr_player_jump</sprite>
-    <sprite>sprites\spr_player_jump_f</sprite>
     <sprites name="helmets">
       <sprite>sprites\helm_example</sprite>
       <sprite>sprites\helm_gravity_1</sprite>
