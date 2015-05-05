@@ -33,6 +33,7 @@
   <sprites name="sprites">
     <sprite>sprites\nosprite</sprite>
     <sprites name="player">
+      <sprite>sprites\spr_levelup</sprite>
       <sprite>sprites\spr_player</sprite>
       <sprite>sprites\spr_player_jump</sprite>
       <sprites name="hair">
@@ -199,6 +200,7 @@
           <sprite>sprites\deco_esylia_rocks</sprite>
           <sprite>sprites\deco_esylia_grass</sprite>
           <sprite>sprites\deco_esylia_logs</sprite>
+          <sprite>sprites\deco_esylia_mushrooms</sprite>
         </sprites>
       </sprites>
     </sprites>
@@ -314,6 +316,7 @@
           <object>objects\obj_deco_Esylia_rocks</object>
           <object>objects\obj_deco_Esylia_grass</object>
           <object>objects\obj_deco_Estlia_logs</object>
+          <object>objects\obj_deco_Esylia_mushrooms</object>
         </objects>
       </objects>
     </objects>
