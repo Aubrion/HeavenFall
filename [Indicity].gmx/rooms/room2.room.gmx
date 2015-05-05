@@ -3,8 +3,8 @@
   <caption></caption>
   <width>1200</width>
   <height>564</height>
-  <vsnap>2</vsnap>
-  <hsnap>2</hsnap>
+  <vsnap>1</vsnap>
+  <hsnap>1</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -16,7 +16,7 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1061</w>
+    <w>1059</w>
     <h>695</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>0</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>58</xoffset>
-    <yoffset>897</yoffset>
+    <xoffset>-11</xoffset>
+    <yoffset>568</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="tile_forest_back" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -218,10 +218,10 @@
     <instance objName="obj_deco_Esylia_grass" x="112" y="418" name="inst_D8BF2C8B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Esylia_grass" x="104" y="406" name="inst_3EB92A14" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Esylia_grass" x="128" y="424" name="inst_4057A67E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_deco_Esylia_grass" x="124" y="466" name="inst_609D4373" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_grass" x="122" y="470" name="inst_609D4373" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Esylia_grass" x="138" y="456" name="inst_C63D2F69" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Esylia_grass" x="140" y="440" name="inst_DEA1A8D6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_deco_Estlia_logs" x="72" y="482" name="inst_FEF59AD1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Estlia_logs" x="70" y="486" name="inst_FEF59AD1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Estlia_logs" x="170" y="428" name="inst_0874286B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Estlia_logs" x="158" y="506" name="inst_61472399" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Esylia_mushrooms" x="112" y="480" name="inst_DF083814" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -238,6 +238,37 @@
     <instance objName="obj_deco_Esylia_mushrooms" x="136" y="476" name="inst_0F1EA84F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Esylia_mushrooms" x="60" y="466" name="inst_78952026" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Esylia_mushrooms" x="158" y="410" name="inst_799CEE2E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_grass" x="108" y="486" name="inst_E646CE9E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_grass" x="124" y="482" name="inst_1C8461A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_grass" x="90" y="481" name="inst_9CD79711" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_grass" x="119" y="504" name="inst_9C3AD7C5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_grass" x="44" y="466" name="inst_FCB2EE67" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_grass" x="128" y="491" name="inst_BF3AD625" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_grass" x="150" y="479" name="inst_5578B165" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_grass" x="147" y="489" name="inst_15ED788B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_grass" x="158" y="468" name="inst_CB68DCE4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_grass" x="264" y="512" name="inst_D52D7B23" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_grass" x="279" y="526" name="inst_FD3DDADE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_grass" x="265" y="534" name="inst_D64B1C4A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_grass" x="252" y="522" name="inst_964B8329" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_grass" x="267" y="524" name="inst_E7E0B92D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_grass" x="278" y="516" name="inst_D2CB0463" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_grass" x="251" y="504" name="inst_6119955C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_grass" x="282" y="502" name="inst_2F560F18" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_grass" x="239" y="510" name="inst_38BD4D10" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_flowers" x="121" y="504" name="inst_ED81ACA1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_flowers" x="110" y="492" name="inst_0224322A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_flowers" x="139" y="486" name="inst_CAA89323" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_flowers" x="160" y="479" name="inst_7BF4C3A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_flowers" x="170" y="488" name="inst_C9EFB9E5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_flowers" x="255" y="524" name="inst_8D18E157" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_flowers" x="266" y="530" name="inst_7095FDF6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_flowers" x="262" y="514" name="inst_A29EE648" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_flowers" x="281" y="535" name="inst_08C90863" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_flowers" x="283" y="510" name="inst_08D745DB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_flowers" x="241" y="507" name="inst_A3373844" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_flowers" x="273" y="505" name="inst_14F7810E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_flowers" x="245" y="518" name="inst_4772D15D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="&lt;undefined&gt;" x="60" y="420" w="16" h="16" xo="0" yo="16" id="10005666" name="inst_D33E5A4A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
