@@ -231,73 +231,9 @@
     <background>background\logo_1_giga</background>
     <background>background\logo_1_groot</background>
     <background>background\Firija_language</background>
-    <backgrounds name="tiles">
-      <backgrounds name="space">
-        <background>background\tile_space</background>
-      </backgrounds>
-      <backgrounds name="Esylia">
-        <background>background\tile_forest</background>
-        <background>background\tile_forest_1</background>
-        <background>background\tile_forest_2</background>
-        <background>background\background11</background>
-        <background>background\tile_forest_back</background>
-        <background>background\tile_decorations</background>
-      </backgrounds>
-      <backgrounds name="Hydra">
-        <background>background\vulcano_1</background>
-      </backgrounds>
-    </backgrounds>
-    <backgrounds name="background">
-      <background>background\background_stars_1</background>
-    </backgrounds>
-    <background>background\banner</background>
-    <background>background\logo_1_klein</background>
-    <background>background\logo_1_giga</background>
-    <background>background\logo_1_groot</background>
-    <background>background\Firija_language</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\Must_be_Implemented.gml</script>
-    <script>scripts\Patch_Notes.gml</script>
-    <script>scripts\User_Content.gml</script>
-    <script>scripts\scr_controls_mouse.gml</script>
-    <scripts name="attacked">
-      <script>scripts\attacked_weapons.gml</script>
-      <script>scripts\attacked_greatsword.gml</script>
-      <script>scripts\n_attacking.gml</script>
-    </scripts>
-    <scripts name="custom codes">
-      <script>scripts\weapontrail.gml</script>
-      <script>scripts\counter_.gml</script>
-      <script>scripts\start_timeline.gml</script>
-      <script>scripts\draw_bar.gml</script>
-      <script>scripts\play_sound.gml</script>
-      <script>scripts\set_shake.gml</script>
-      <script>scripts\hit_.gml</script>
-      <script>scripts\block_.gml</script>
-    </scripts>
-    <scripts name="particle">
-      <script>scripts\scr_dash1_left.gml</script>
-      <script>scripts\scr_impact1.gml</script>
-      <script>scripts\scr_launch_left.gml</script>
-      <script>scripts\scr_spark2.gml</script>
-      <script>scripts\scr_spin_2.gml</script>
-      <script>scripts\scr_dash1_right.gml</script>
-      <script>scripts\scr_comet2.gml</script>
-    </scripts>
-    <scripts name="hyCom">
-      <script>scripts\hyComEmit.gml</script>
-      <script>scripts\hyComRead.gml</script>
-      <script>scripts\hyComNetwork.gml</script>
-    </scripts>
-    <scripts name="hyChat">
-      <script>scripts\hyChatInit.gml</script>
-      <script>scripts\hyChatAdd.gml</script>
-      <script>scripts\hyChatDraw.gml</script>
-      <script>scripts\hyChatDraw_fixed.gml</script>
-    </scripts>
-    <script>scripts\create_light.gml</script>
     <script>scripts\Must_be_Implemented.gml</script>
     <script>scripts\Patch_Notes.gml</script>
     <script>scripts\User_Content.gml</script>
@@ -344,56 +280,8 @@
     <font>fonts\font_normal</font>
     <font>fonts\font_hud</font>
     <font>fonts\font_hud_small</font>
-    <font>fonts\small_font</font>
-    <font>fonts\font_normal</font>
-    <font>fonts\font_hud</font>
-    <font>fonts\font_hud_small</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_cam</object>
-    <object>objects\obj_player_other</object>
-    <object>objects\obj_player</object>
-    <object>objects\obj_player_shadow</object>
-    <object>objects\obj_helm</object>
-    <objects name="critter">
-      <object>objects\critter_frog</object>
-      <object>objects\obj_firefly</object>
-    </objects>
-    <objects name="room_design">
-      <object>objects\obj_wall</object>
-      <object>objects\obj_musictouch</object>
-      <object>objects\obj_floor</object>
-      <object>objects\obj_collision_parent</object>
-    </objects>
-    <objects name="level_design">
-      <object>objects\obj_tree_1</object>
-      <object>objects\obj_torch_1</object>
-      <object>objects\obj_lake_1</object>
-    </objects>
-    <objects name="Weapons">
-      <object>objects\obj_greatsword</object>
-      <object>objects\obj_axe</object>
-      <object>objects\obj_scythe</object>
-      <object>objects\obj_weapontrail</object>
-    </objects>
-    <objects name="enemies">
-      <object>objects\n_bot_1</object>
-      <object>objects\n_woodsman_1</object>
-      <object>objects\n_bot_1_laser</object>
-    </objects>
-    <objects name="controllers">
-      <object>objects\obj_hybrid_controller</object>
-      <object>objects\obj_regelaar</object>
-      <objects name="obj_regelaar+">
-        <object>objects\obj_background</object>
-        <object>objects\obj_gui</object>
-        <object>objects\obj_light_control</object>
-      </objects>
-    </objects>
-    <object>objects\obj_light</object>
-    <object>objects\obj_shadow</object>
-    <object>objects\obj_shadow_props</object>
-    <object>objects\obj_counter</object>
     <object>objects\obj_cam</object>
     <object>objects\obj_player_other</object>
     <object>objects\obj_player</object>
@@ -451,22 +339,8 @@
     <timeline>timelines\warhammer_attack_1</timeline>
     <timeline>timelines\warhammer_run_attack</timeline>
     <timeline>timelines\polearm_attack_1</timeline>
-    <timelines name="greatsword">
-      <timeline>timelines\greatsword_attack_1</timeline>
-      <timeline>timelines\greatsword_attack_2</timeline>
-      <timeline>timelines\greatsword_attack_3</timeline>
-      <timeline>timelines\greatsword_attack_air</timeline>
-    </timelines>
-    <timeline>timelines\scythe_attack_1</timeline>
-    <timeline>timelines\axe_attack_1</timeline>
-    <timeline>timelines\warhammer_attack_1</timeline>
-    <timeline>timelines\warhammer_run_attack</timeline>
-    <timeline>timelines\polearm_attack_1</timeline>
   </timelines>
   <rooms name="rooms">
-    <room>rooms\room2</room>
-    <room>rooms\room3</room>
-    <room>rooms\room0</room>
     <room>rooms\room2</room>
     <room>rooms\room3</room>
     <room>rooms\room0</room>
