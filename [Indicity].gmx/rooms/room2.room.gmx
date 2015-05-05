@@ -16,7 +16,7 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1061</w>
+    <w>1059</w>
     <h>695</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>0</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>58</xoffset>
-    <yoffset>897</yoffset>
+    <xoffset>-74</xoffset>
+    <yoffset>601</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="tile_forest_back" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
