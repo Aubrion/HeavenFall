@@ -317,13 +317,14 @@ globalvar movespeed
 //player movement
 if alarm[0]&lt;0 and alarm[1]&lt;0 and global.stun=false and global.root=false
 {
-if(!global.hyChatActive){
-if keyboard_check(global.key1up)   and !keyboard_check(global.key1down) {if (!place_free(x,y-(movespeed/2)-1) and jump=false and !place_meeting(obj_player_shadow.x,obj_player_shadow.y-(movespeed/2)-1,obj_wall)) or (jump=true and !place_meeting(obj_player_shadow.x,obj_player_shadow.y-(movespeed/2)-1,obj_wall)) {y-=((movespeed/2)) mspd=(movespeed/2)}}
-if keyboard_check(global.key1down) and !keyboard_check(global.key1up)   {if (!place_free(x,y+(movespeed/2)) and jump=false and !place_meeting(obj_player_shadow.x,obj_player_shadow.y+(movespeed/2),obj_wall)) or (jump=true and !place_meeting(obj_player_shadow.x,obj_player_shadow.y+(movespeed/2),obj_wall)) {y+=((movespeed/2)) mspd=(movespeed/2)}}
-if keyboard_check(global.key1right)and !keyboard_check(global.key1left) {if ((!place_free(x+(movespeed+24),y) and jump=false) and  !place_meeting(x+(movespeed),y,obj_wall)) or (jump=true and !place_meeting(obj_player_shadow.x+(movespeed),obj_player_shadow.y,obj_wall)) {if look=1 {x+=movespeed; mspd=movespeed} else {x+=movespeed/1.2 mspd=movespeed}}}
-if keyboard_check(global.key1left) and !keyboard_check(global.key1right){if ((!place_free(x-(movespeed+24),y) and jump=false) and  !place_meeting(x-(movespeed),y,obj_wall)) or (jump=true and !place_meeting(obj_player_shadow.x-(movespeed),obj_player_shadow.y,obj_wall)) {if look=1 {x-=movespeed/1.2; mspd=movespeed} else {x-=movespeed mspd=movespeed}}}
-if keyboard_check_pressed(global.key1jump) and global.attack=0 {if zspeed=0 and zgravity=0 {y-=5  zspeed=5;zgravity=.25 audio_play_sound(jump_5,0,0) hyComEmit("USER", "ANIMATION", "0")}}
-}
+    if(!global.hyChatActive &amp;&amp; !obj_inventory.active)
+    {
+        if keyboard_check(global.key1up)   and !keyboard_check(global.key1down) {if (!place_free(x,y-(movespeed/2)-1) and jump=false and !place_meeting(obj_player_shadow.x,obj_player_shadow.y-(movespeed/2)-1,obj_wall)) or (jump=true and !place_meeting(obj_player_shadow.x,obj_player_shadow.y-(movespeed/2)-1,obj_wall)) {y-=((movespeed/2)) mspd=(movespeed/2)}}
+        if keyboard_check(global.key1down) and !keyboard_check(global.key1up)   {if (!place_free(x,y+(movespeed/2)) and jump=false and !place_meeting(obj_player_shadow.x,obj_player_shadow.y+(movespeed/2),obj_wall)) or (jump=true and !place_meeting(obj_player_shadow.x,obj_player_shadow.y+(movespeed/2),obj_wall)) {y+=((movespeed/2)) mspd=(movespeed/2)}}
+        if keyboard_check(global.key1right)and !keyboard_check(global.key1left) {if ((!place_free(x+(movespeed+24),y) and jump=false) and  !place_meeting(x+(movespeed),y,obj_wall)) or (jump=true and !place_meeting(obj_player_shadow.x+(movespeed),obj_player_shadow.y,obj_wall)) {if look=1 {x+=movespeed; mspd=movespeed} else {x+=movespeed/1.2 mspd=movespeed}}}
+        if keyboard_check(global.key1left) and !keyboard_check(global.key1right){if ((!place_free(x-(movespeed+24),y) and jump=false) and  !place_meeting(x-(movespeed),y,obj_wall)) or (jump=true and !place_meeting(obj_player_shadow.x-(movespeed),obj_player_shadow.y,obj_wall)) {if look=1 {x-=movespeed/1.2; mspd=movespeed} else {x-=movespeed mspd=movespeed}}}
+        if keyboard_check_pressed(global.key1jump) and global.attack=0 {if zspeed=0 and zgravity=0 {y-=5  zspeed=5;zgravity=.25 audio_play_sound(jump_5,0,0) hyComEmit("USER", "ANIMATION", "0")}}
+    }
 }
 //image mirror and image sub_image
 if jump=false{ if global.attack=0 {if look=1 {image_xscale=1 global.look=1} else {image_xscale=-1 global.look=-1}}}

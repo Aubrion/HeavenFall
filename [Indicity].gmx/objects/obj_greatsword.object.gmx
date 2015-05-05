@@ -256,7 +256,7 @@ else
  depth=player.depth-3
 }
 
-if global.attack=0
+if (global.attack=0 &amp;&amp; !obj_inventory.active)
 {
  if mouse_check_button(global.key1attack) or mouse_check_button(global.key1defend)
  {
@@ -390,13 +390,13 @@ if airattack=true
           <argument>
             <kind>1</kind>
             <string>///weapon attack
-if sheat=false and obj_player.alarm[0]=-1
+if (sheat=false and obj_player.alarm[0]=-1)
 {
  if global.attack=0
  {
-  if mouse_check_button(global.key1attack) and alarm[1]=-1 and alarm[0]=-1
+  if (mouse_check_button(global.key1attack) and alarm[1]=-1 and alarm[0]=-1 and !obj_inventory.active)
   {
-   if obj_player.jump=false
+   if (obj_player.jump=false)
    {
     alarm[2]=-1
     image_angle=0

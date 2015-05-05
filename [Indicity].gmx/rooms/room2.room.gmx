@@ -180,6 +180,7 @@
     <instance objName="n_woodsman_1" x="1140" y="552" name="inst_F6EEFE38" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="n_woodsman_1" x="1176" y="528" name="inst_06F0BAFE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="n_woodsman_1" x="1152" y="372" name="inst_0CA14E42" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_inventory" x="132" y="612" name="inst_C708D85D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -67,9 +67,7 @@
       </sprites>
     </sprites>
     <sprite>sprites\spr_player_eyes</sprite>
-    <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_player_f</sprite>
-    <sprite>sprites\spr_player_jump</sprite>
     <sprite>sprites\spr_player_jump_f</sprite>
     <sprites name="helmets">
       <sprite>sprites\helm_example</sprite>
@@ -98,6 +96,9 @@
         <sprite>sprites\helm_user8_2</sprite>
         <sprite>sprites\helm_user8_3</sprite>
         <sprite>sprites\helm_user9_1</sprite>
+      </sprites>
+      <sprites name="icons">
+        <sprite>sprites\helm_gravity_1_ico</sprite>
       </sprites>
     </sprites>
     <sprites name="cam">
@@ -147,6 +148,9 @@
         <sprite>sprites\gs_lighting</sprite>
         <sprite>sprites\gs_megnetion</sprite>
         <sprite>sprites\gs_slicer</sprite>
+        <sprites name="icons">
+          <sprite>sprites\gs_slicer_ico</sprite>
+        </sprites>
       </sprites>
       <sprites name="Spear">
         <sprite>sprites\sp_user7_1</sprite>
@@ -210,6 +214,7 @@
       <sprite>sprites\spr_light</sprite>
       <sprite>sprites\spr_light_2</sprite>
     </sprites>
+    <sprite>sprites\spr_back_inv</sprite>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="tiles">
@@ -278,6 +283,17 @@
       <script>scripts\hyChatDraw.gml</script>
       <script>scripts\hyChatDraw_fixed.gml</script>
     </scripts>
+    <scripts name="item">
+      <script>scripts\it_init.gml</script>
+    </scripts>
+    <scripts name="inventory">
+      <script>scripts\inv_create.gml</script>
+      <script>scripts\inv_slot_add.gml</script>
+      <script>scripts\inv_draw.gml</script>
+      <script>scripts\inv_item_add.gml</script>
+      <script>scripts\inv_freeslot_create.gml</script>
+      <script>scripts\inv_freeslot_item_add.gml</script>
+    </scripts>
     <script>scripts\create_light.gml</script>
   </scripts>
   <fonts name="fonts">
@@ -325,12 +341,14 @@
         <object>objects\obj_background</object>
         <object>objects\obj_gui</object>
         <object>objects\obj_light_control</object>
+        <object>objects\ITEM</object>
       </objects>
     </objects>
     <object>objects\obj_light</object>
     <object>objects\obj_shadow</object>
     <object>objects\obj_shadow_props</object>
     <object>objects\obj_counter</object>
+    <object>objects\obj_inventory</object>
   </objects>
   <timelines name="timelines">
     <timelines name="greatsword">
