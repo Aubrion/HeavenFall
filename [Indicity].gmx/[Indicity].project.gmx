@@ -207,6 +207,7 @@
           <sprite>sprites\deco_esylia_grass</sprite>
           <sprite>sprites\deco_esylia_logs</sprite>
           <sprite>sprites\deco_esylia_mushrooms</sprite>
+          <sprite>sprites\deco_esylia_leaves</sprite>
         </sprites>
       </sprites>
     </sprites>
@@ -326,6 +327,7 @@
           <object>objects\obj_deco_Esylia_grass</object>
           <object>objects\obj_deco_Estlia_logs</object>
           <object>objects\obj_deco_Esylia_mushrooms</object>
+          <object>objects\obj_deco_Esylia_leaves</object>
         </objects>
       </objects>
     </objects>

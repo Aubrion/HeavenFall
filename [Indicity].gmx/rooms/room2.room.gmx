@@ -219,6 +219,17 @@ inst_E2D9C9A3.enemy_type = n_woodsman_1;</code>
     <instance objName="obj_deco_Esylia_flowers" x="245" y="518" name="inst_4772D15D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="enemy_spawn_point" x="1044" y="456" name="inst_E2D9C9A3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_greatsword" x="96" y="456" name="inst_C8922566" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_leaves" x="132" y="420" name="inst_BC6051B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_leaves" x="180" y="420" name="inst_E567A14D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_leaves" x="168" y="516" name="inst_3A667590" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_leaves" x="60" y="504" name="inst_02F20177" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_leaves" x="132" y="480" name="inst_4918C4FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_leaves" x="192" y="456" name="inst_5B8CC0D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_leaves" x="36" y="408" name="inst_2E806494" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_leaves" x="36" y="528" name="inst_8F676610" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_leaves" x="24" y="468" name="inst_A6992759" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_leaves" x="120" y="528" name="inst_C43E758D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_leaves" x="96" y="384" name="inst_7F7D03C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="&lt;undefined&gt;" x="60" y="420" w="16" h="16" xo="0" yo="16" id="10005666" name="inst_D33E5A4A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
