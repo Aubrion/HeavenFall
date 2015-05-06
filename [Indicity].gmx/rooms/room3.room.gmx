@@ -57,13 +57,13 @@
     <instance objName="obj_cam" x="468" y="432" name="inst_C06D325B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_greatsword" x="432" y="408" name="inst_26AE8AEB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_hybrid_controller" x="-24" y="-12" name="inst_E37838FA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_floor" x="420" y="360" name="inst_76AB14CC" locked="0" code="" scaleX="8" scaleY="4" colour="4294967295" rotation="0"/>
-    <instance objName="obj_floor" x="276" y="348" name="inst_C7F9D3C1" locked="0" code="" scaleX="6" scaleY="6" colour="4294967295" rotation="0"/>
-    <instance objName="obj_floor" x="288" y="444" name="inst_B6A49DF5" locked="0" code="" scaleX="4" scaleY="4" colour="4294967295" rotation="0"/>
-    <instance objName="obj_floor" x="348" y="372" name="inst_D301ECDC" locked="0" code="" scaleX="6" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_floor" x="300" y="420" name="inst_1225B3A8" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_floor" x="516" y="336" name="inst_9A875E31" locked="0" code="" scaleX="2" scaleY="6" colour="4294967295" rotation="0"/>
-    <instance objName="obj_floor" x="540" y="240" name="inst_E22E8E23" locked="0" code="" scaleX="22" scaleY="21" colour="4294967295" rotation="0"/>
+    <instance objName="obj_air" x="420" y="360" name="inst_76AB14CC" locked="0" code="" scaleX="8" scaleY="4" colour="4294967295" rotation="0"/>
+    <instance objName="obj_air" x="276" y="348" name="inst_C7F9D3C1" locked="0" code="" scaleX="6" scaleY="6" colour="4294967295" rotation="0"/>
+    <instance objName="obj_air" x="288" y="444" name="inst_B6A49DF5" locked="0" code="" scaleX="4" scaleY="4" colour="4294967295" rotation="0"/>
+    <instance objName="obj_air" x="348" y="372" name="inst_D301ECDC" locked="0" code="" scaleX="6" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_air" x="300" y="420" name="inst_1225B3A8" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_air" x="516" y="336" name="inst_9A875E31" locked="0" code="" scaleX="2" scaleY="6" colour="4294967295" rotation="0"/>
+    <instance objName="obj_air" x="540" y="240" name="inst_E22E8E23" locked="0" code="" scaleX="22" scaleY="21" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="528" y="192" name="inst_FAA018E7" locked="0" code="" scaleX="24" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="528" y="240" name="inst_C9D31E7F" locked="0" code="" scaleX="1" scaleY="8" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="528" y="408" name="inst_3468C7EA" locked="0" code="" scaleX="1" scaleY="11" colour="4294967295" rotation="0"/>

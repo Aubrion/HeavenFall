@@ -312,7 +312,7 @@
     <objects name="room_design">
       <object>objects\obj_wall</object>
       <object>objects\obj_musictouch</object>
-      <object>objects\obj_floor</object>
+      <object>objects\obj_air</object>
       <object>objects\obj_collision_parent</object>
     </objects>
     <objects name="level_design">

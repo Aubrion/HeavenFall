@@ -3,8 +3,8 @@
   <caption></caption>
   <width>1200</width>
   <height>564</height>
-  <vsnap>1</vsnap>
-  <hsnap>1</hsnap>
+  <vsnap>12</vsnap>
+  <hsnap>12</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -28,8 +28,8 @@ inst_E2D9C9A3.enemy_type = n_woodsman_1;</code>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>0</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>-14</xoffset>
-    <yoffset>177</yoffset>
+    <xoffset>-82</xoffset>
+    <yoffset>212</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="tile_forest_back" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -56,7 +56,6 @@ inst_E2D9C9A3.enemy_type = n_woodsman_1;</code>
     <instance objName="obj_regelaar" x="-12" y="-12" name="inst_17C11852" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_helm" x="24" y="408" name="inst_3EE226D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cam" x="278" y="431" name="inst_C06D325B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_floor" x="0" y="348" name="inst_3C6101C7" locked="0" code="" scaleX="100" scaleY="18" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="0" y="564" name="inst_8A5E3B4B" locked="0" code="" scaleX="100" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="-12" y="336" name="inst_1ED4CA83" locked="0" code="" scaleX="100" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tree_1" x="28" y="331" name="inst_C779ABCC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -92,7 +91,7 @@ inst_E2D9C9A3.enemy_type = n_woodsman_1;</code>
     <instance objName="critter_frog" x="773" y="347" name="inst_30122CB9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tree_1" x="1164" y="312" name="inst_DC21043E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="critter_frog" x="1017" y="346" name="inst_854BA10E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="-12" y="348" name="inst_ECAB85CE" locked="0" code="" scaleX="1" scaleY="17" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="-12" y="348" name="inst_ECAB85CE" locked="0" code="" scaleX="1" scaleY="19" colour="4294967295" rotation="0"/>
     <instance objName="critter_frog" x="863" y="340" name="inst_B0C870CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="critter_frog" x="1135" y="348" name="inst_942BF518" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="critter_frog" x="947" y="346" name="inst_3D618F1A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -218,8 +217,8 @@ inst_E2D9C9A3.enemy_type = n_woodsman_1;</code>
     <instance objName="obj_deco_Esylia_flowers" x="241" y="507" name="inst_A3373844" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Esylia_flowers" x="273" y="505" name="inst_14F7810E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Esylia_flowers" x="245" y="518" name="inst_4772D15D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_orb" x="-33" y="435" name="inst_0056C9DC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="enemy_spawn_point" x="1044" y="456" name="inst_E2D9C9A3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_greatsword" x="96" y="456" name="inst_C8922566" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="&lt;undefined&gt;" x="60" y="420" w="16" h="16" xo="0" yo="16" id="10005666" name="inst_D33E5A4A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

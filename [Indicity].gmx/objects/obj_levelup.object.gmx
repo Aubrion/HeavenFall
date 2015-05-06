@@ -89,7 +89,7 @@ if decay=true
 
 if alpha=0
 {
- effect_create_above(ef_flare,x,y,1,c_white)
+ effect_create_above(ef_ellipse,x,y,0,c_white)
  instance_destroy()
 }
 </string>
