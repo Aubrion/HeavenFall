@@ -149,7 +149,9 @@
         <sprite>sprites\gs_megnetion</sprite>
         <sprite>sprites\gs_slicer</sprite>
         <sprites name="icons">
+          <sprite>sprites\gs_zabuza_1_ico</sprite>
           <sprite>sprites\gs_slicer_ico</sprite>
+          <sprite>sprites\gs_gravity_1_ico</sprite>
         </sprites>
       </sprites>
       <sprites name="Spear">
@@ -215,6 +217,7 @@
       <sprite>sprites\spr_light_2</sprite>
     </sprites>
     <sprite>sprites\spr_back_inv</sprite>
+    <sprite>sprites\spr_coin</sprite>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="tiles">
@@ -285,6 +288,7 @@
     </scripts>
     <scripts name="item">
       <script>scripts\it_init.gml</script>
+      <script>scripts\it_gear_change.gml</script>
     </scripts>
     <scripts name="inventory">
       <script>scripts\inv_create.gml</script>
@@ -293,12 +297,14 @@
       <script>scripts\inv_item_add.gml</script>
       <script>scripts\inv_freeslot_create.gml</script>
       <script>scripts\inv_freeslot_item_add.gml</script>
+      <script>scripts\inv_freeslot_remove_empty.gml</script>
     </scripts>
     <script>scripts\create_light.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\small_font</font>
     <font>fonts\font_normal</font>
+    <font>fonts\font_inventory</font>
     <font>fonts\font_hud</font>
     <font>fonts\font_hud_small</font>
   </fonts>

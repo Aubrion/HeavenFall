@@ -39,14 +39,20 @@ inv_slot_add(72,24,"jewel");
 
 inv_item_add(2,1,1);
 
-inv_freeslot_item_add(0,1);
-inv_freeslot_item_add(0,1);
-inv_freeslot_item_add(1,1);
-inv_freeslot_item_add(1,1);
+inv_freeslot_item_add(2,40,60,60);
+
+inv_freeslot_item_add(0,8,8,1);
+inv_freeslot_item_add(0,24,8,1);
+inv_freeslot_item_add(1,8,24,1);
+inv_freeslot_item_add(1,24,24,1);
 
 //vars
 
 active = -1;
+m_slotID = -1;
+m_slotStack = 0;
+m_oldSlotT = 0;
+m_oldSlot = -1;
 </string>
           </argument>
         </arguments>
@@ -74,8 +80,96 @@ y = view_yview[0] + view_hview[0]/2 - sprite_height/2;
 
 if (keyboard_check_pressed(ord('I')))
 {
-active = -active;
+    active = -active;
 }
+
+//drag and drop
+
+if (mouse_check_button_pressed(mb_left) &amp;&amp; m_slotID == -1)
+{
+    for (i=0; i&lt;slots; i+=1)
+    {
+        if (slotStack[i] != 0 &amp;&amp; point_in_rectangle(mouse_x,mouse_y,x+slotX[i],y+slotY[i],x+slotX[i]+16,y+slotY[i]+16))
+        {
+            m_slotID = slotID[i];
+            m_slotStack = slotStack[i];
+            m_oldSlotT = 0;
+            m_oldSlot = i;
+            slotID[i] = -1;
+            slotStack[i] = 0;
+            break;
+        }       
+    }
+    
+    for (i=0; i&lt;fs_slots; i+=1)
+    {
+        if (fs_slotStack[i] != 0 &amp;&amp; point_in_rectangle(mouse_x,mouse_y,x+fs_x+fs_slotX[i],y+fs_y+fs_slotY[i],x+fs_x+fs_slotX[i]+16,y+fs_y+fs_slotY[i]+16))
+        {
+            m_slotID = fs_slotID[i];
+            m_slotStack = fs_slotStack[i];
+            m_oldSlotT = 1;
+            m_oldSlot = i;
+            fs_slotID[i] = -1;
+            fs_slotStack[i] = 0;
+            break;
+        }       
+    }
+}
+else if (mouse_check_button_released(mb_left) &amp;&amp; m_slotID != -1)
+{
+    for (i=0; i&lt;slots; i+=1)
+    {
+        if (slotStack[i] == 0 &amp;&amp; point_in_rectangle(mouse_x,mouse_y,x+slotX[i],y+slotY[i],x+slotX[i]+16,y+slotY[i]+16))
+        {
+            if (ITEM.item[m_slotID, 1] == slotType[i])
+            {
+                slotID[i] = m_slotID;
+                slotStack[i] = m_slotStack;
+                m_slotID = -1;
+                m_slotStack = 0;
+                it_gear_change();
+                break;
+            }
+        }       
+    }
+    
+    if (point_in_rectangle(mouse_x,mouse_y,x+fs_x,y+fs_y,x+fs_x+fs_w,y+fs_y+fs_h))
+    {
+        inv_freeslot_item_add(m_slotID,mouse_x-8-fs_x-x,mouse_y-8-fs_y-y,m_slotStack);
+        m_slotID = -1;
+        m_slotStack = 0;
+    }
+    /*for (i=0; i&lt;fs_slots; i+=1)
+    {
+        if (fs_slotStack[i] == 0 &amp;&amp; point_in_rectangle(mouse_x,mouse_y,x+fs_x+slotX[i],y+fs_y+slotY[i],x+fs_x+slotX[i]+16,y+fs_y+slotY[i]+16))
+        {
+            fs_slotID[i] = m_slotID;
+            fs_slotStack[i] = m_slotStack;
+            m_slotID = -1;
+            m_slotStack = 0;
+        }       
+    }*/
+    
+    if (m_slotID != -1)
+    {
+        if (m_oldSlotT == 0)
+        {
+            slotID[m_oldSlot] = m_slotID;
+            slotStack[m_oldSlot] = m_slotStack;
+            m_slotID = -1;
+            m_slotStack = 0;
+        }
+        else if (m_oldSlotT == 1)
+        {
+            fs_slotID[m_oldSlot] = m_slotID;
+            fs_slotStack[m_oldSlot] = m_slotStack;
+            m_slotID = -1;
+            m_slotStack = 0;
+        }
+    }
+}
+
+inv_freeslot_remove_empty();
 </string>
           </argument>
         </arguments>
@@ -100,7 +194,11 @@ active = -active;
             <kind>1</kind>
             <string>if (active)
 {
-inv_draw();
+    inv_draw();
+    if (m_slotID != -1)
+    {
+        draw_sprite(ITEM.item[m_slotID,3],0,mouse_x-8,mouse_y-8);
+    }
 }
 </string>
           </argument>
