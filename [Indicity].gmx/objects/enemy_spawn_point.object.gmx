@@ -29,14 +29,21 @@
 /// Change these in the creation code for different effect
 
 // Size of the area (total, not radius)
-area_height = 100;
-area_width = 200;
+area_height = 75;
+area_width = 150;
 
 // Enemy type
 enemy_type = noone;
 
 // Max enemies (will not spawn more when reached)
 enemy_max = 15;
+
+// Enable or disable respawning
+respawning = true;
+
+// Enemy respawn times
+respawn_time_min = room_speed * 5;
+respawn_time_max = room_speed * 15;
 </string>
           </argument>
         </arguments>
@@ -57,9 +64,54 @@ enemy_max = 15;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Vars
+            <string>/// Init
 
 initialised = false;
+
+// Init enemy array (in counts a an empty array now)
+enemies = false;
+
+// Start respawn timer
+if (respawning)
+    alarm[0] = irandom_range(respawn_time_min, respawn_time_max);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// Spawn one new enemy
+if (respawning)
+{
+    // Check array for dead enemies
+    for (var i = 0; i &lt; array_length_1d(enemies); i++)
+    {
+        if (!instance_exists(enemies[i]))
+        {
+            spawn_enemy(id, i);
+            break;
+        }
+    }
+    
+    // Reset alarm
+    alarm[0] = irandom_range(respawn_time_min, respawn_time_max);
+}
 </string>
           </argument>
         </arguments>
@@ -96,15 +148,7 @@ if (!initialised)
     else
     {
         for (var i = 0; i &lt; enemy_max; i++)
-        {
-            // Find position
-            spawnX = x + (choose(1, -1) * irandom_range(0, (area_width/2)));
-            spawnY = y + (choose(1, -1) * irandom_range(0, (area_height/2)));
-            
-            // Create enemy instance
-            enemy_instance = instance_create(spawnX, spawnY, enemy_type);
-            enemy_instance.territorium = id;
-        }
+            spawn_enemy(id, i);
     }
     
     // Do not init again

@@ -291,6 +291,8 @@
     </scripts>
     <scripts name="Enemy AI">
       <script>scripts\AI_player_in_range.gml</script>
+      <script>scripts\point_in_territorium.gml</script>
+      <script>scripts\spawn_enemy.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">

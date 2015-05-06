@@ -81,6 +81,7 @@ xx=x
 yy=y
 
 state = "idle";
+wait_time = room_speed * 5;
 
 // Wandering
 wander_interval_min = room_speed * 3;
@@ -119,6 +120,32 @@ xx=x
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Return to start position
+
+if (state == "waiting")
+    state = "return";
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
@@ -140,10 +167,13 @@ xx=x
 var wander_dir, wander_dist;
 
 // Find location
-wander_dir = irandom(360);
-wander_dist = irandom_range(wander_distance_min, wander_distance_max);
-wander_goalX = x + lengthdir_x(wander_dist, wander_dir);
-wander_goalY = y + lengthdir_y(wander_dist, wander_dir);
+do {
+    wander_dir = irandom(360);
+    wander_dist = irandom_range(wander_distance_min, wander_distance_max);
+    wander_goalX = x + lengthdir_x(wander_dist, wander_dir);
+    wander_goalY = y + lengthdir_y(wander_dist, wander_dir);
+}
+until (point_in_territorium(wander_goalX, wander_goalY, territorium));
 
 // Change state
 state = "wander";
@@ -290,15 +320,43 @@ var distanceToPlayerY = abs(point_distance(x, y, x, obj_player_shadow.y+12));
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Idle state
-if (state == "idle")
+            <string>/// Start following
+
+if (state == "idle" || state == "waiting" || state == "return")
 {
     // Check if player is in range
     if (distanceToPlayerX &lt; 125 &amp;&amp; distanceToPlayerY &lt; 40)
+    {
         state = "follow";
-    
+        exit;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Idle state
+
+if (state == "idle")
+{
     // Set wander timer
-    else if (alarm[1] == -1)
+    if (alarm[1] == -1)
         alarm[1] = irandom_range(wander_interval_min, wander_interval_max);
 }
 </string>
@@ -375,9 +433,17 @@ if (state != "idle" &amp;&amp; alarm[1] &gt; -1)
             <string>/// Follow state
 if (state == "follow")
 {
-    // Go idle if player is not in range
+    // Player not in range
     if (distanceToPlayerX &gt; 150 || distanceToPlayerY &gt; 40)
-        state = "idle";
+    {
+        if (point_in_territorium(x, y, territorium))
+            state = "idle";
+        else
+        {
+            state = "waiting";
+            alarm[2] = wait_time;
+        }
+    }
     
     // Move towards player
     else
@@ -412,6 +478,50 @@ if (state == "follow")
             image_speed = 0;
             alarm[0] = room_speed * 0.25;
         }
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Return state
+
+if (state == "return")
+{
+    // Face direction
+    if (startx &lt; x)
+        image_xscale = -1;
+    else
+        image_xscale = 1;
+    
+    // Move
+    if (point_distance(x, y, startx, starty) &gt; mspeed)
+    {
+        var directionToStart = point_direction(x, y, startx, starty);
+        x = x + lengthdir_x(mspeed, directionToStart);
+        y = y + lengthdir_y(mspeed/2, directionToStart);
+    }
+    else
+    {
+        x = startx;
+        y = starty;
+        state = "idle";
     }
 }
 </string>
