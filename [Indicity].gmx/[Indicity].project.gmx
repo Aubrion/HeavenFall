@@ -156,8 +156,13 @@
         <sprite>sprites\hm_justice</sprite>
         <sprite>sprites\hm_purplun</sprite>
       </sprites>
+      <sprites name="Orb">
+        <sprite>sprites\or_fire</sprite>
+      </sprites>
+      <sprite>sprites\spr_orb_projectile</sprite>
     </sprites>
     <sprites name="enemies">
+      <sprite>sprites\spawn_point_icon</sprite>
       <sprites name="melee">
         <sprite>sprites\n_woodsman_still</sprite>
         <sprite>sprites\n_woodsman_attack</sprite>
@@ -243,7 +248,6 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\Must_be_Implemented.gml</script>
     <script>scripts\Patch_Notes.gml</script>
     <script>scripts\User_Content.gml</script>
     <script>scripts\scr_controls_mouse.gml</script>
@@ -281,6 +285,9 @@
       <script>scripts\hyChatAdd.gml</script>
       <script>scripts\hyChatDraw.gml</script>
       <script>scripts\hyChatDraw_fixed.gml</script>
+    </scripts>
+    <scripts name="Enemy AI">
+      <script>scripts\AI_player_in_range.gml</script>
     </scripts>
     <script>scripts\create_light.gml</script>
   </scripts>
@@ -325,11 +332,22 @@
       <object>objects\obj_axe</object>
       <object>objects\obj_scythe</object>
       <object>objects\obj_weapontrail</object>
+      <object>objects\obj_orb</object>
+      <object>objects\obj_orb_projectile</object>
+      <object>objects\obj_orb_followeffect</object>
     </objects>
     <objects name="enemies">
-      <object>objects\n_bot_1</object>
-      <object>objects\n_woodsman_1</object>
-      <object>objects\n_bot_1_laser</object>
+      <object>objects\n_parent</object>
+      <object>objects\enemy_spawn_point</object>
+      <objects name="melee">
+        <object>objects\n_woodsman_1</object>
+      </objects>
+      <objects name="ranged">
+        <object>objects\n_bot_1</object>
+      </objects>
+      <objects name="projectiles">
+        <object>objects\n_bot_1_laser</object>
+      </objects>
     </objects>
     <objects name="controllers">
       <object>objects\obj_hybrid_controller</object>
@@ -351,6 +369,11 @@
       <timeline>timelines\greatsword_attack_2</timeline>
       <timeline>timelines\greatsword_attack_3</timeline>
       <timeline>timelines\greatsword_attack_air</timeline>
+    </timelines>
+    <timelines name="orb">
+      <timeline>timelines\orb_attack_1</timeline>
+      <timeline>timelines\orb_attack_2</timeline>
+      <timeline>timelines\orb_attack_3</timeline>
     </timelines>
     <timeline>timelines\scythe_attack_1</timeline>
     <timeline>timelines\axe_attack_1</timeline>
