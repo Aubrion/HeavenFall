@@ -25,6 +25,7 @@
       <sound>sound\punch_2</sound>
       <sound>sound\roar_1</sound>
       <sound>sound\swordhit_2</sound>
+      <sound>sound\levelup_1</sound>
     </sounds>
     <sounds name="music_fx">
       <sound>sound\m_frog_forest</sound>
@@ -265,6 +266,7 @@
       <script>scripts\set_shake.gml</script>
       <script>scripts\hit_.gml</script>
       <script>scripts\block_.gml</script>
+      <script>scripts\create_light.gml</script>
     </scripts>
     <scripts name="particle">
       <script>scripts\scr_dash1_left.gml</script>
@@ -289,7 +291,6 @@
     <scripts name="Enemy AI">
       <script>scripts\AI_player_in_range.gml</script>
     </scripts>
-    <script>scripts\create_light.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\small_font</font>
@@ -299,6 +300,7 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_cam</object>
+    <object>objects\obj_levelup</object>
     <object>objects\obj_player_other</object>
     <object>objects\obj_player</object>
     <object>objects\obj_player_shadow</object>

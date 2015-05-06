@@ -277,7 +277,7 @@ if global.xp&gt;= global.mxp and global.lvl&lt;99
  global.def+=1
  global.int+=1
  global.will+=1
- effect_create_above(ef_firework,x,y,0,global.color)
+ instance_create(x,y,obj_levelup)
 }
 if global.lvl=99 {global.xp=0}
 

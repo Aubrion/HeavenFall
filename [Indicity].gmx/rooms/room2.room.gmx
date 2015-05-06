@@ -28,8 +28,8 @@ inst_E2D9C9A3.enemy_type = n_woodsman_1;</code>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>0</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>-11</xoffset>
-    <yoffset>568</yoffset>
+    <xoffset>-14</xoffset>
+    <yoffset>177</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="tile_forest_back" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -129,24 +129,6 @@ inst_E2D9C9A3.enemy_type = n_woodsman_1;</code>
     <instance objName="obj_firefly" x="432" y="384" name="inst_3BE70768" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_firefly" x="660" y="504" name="inst_5226D36F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_firefly" x="684" y="420" name="inst_FDEF6330" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1128" y="540" name="inst_A13FF25C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1092" y="528" name="inst_B35FF9D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1056" y="528" name="inst_E2F13F17" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1080" y="552" name="inst_F8F85309" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1164" y="552" name="inst_BBA85C0F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1176" y="516" name="inst_71F54FDC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1140" y="444" name="inst_FF84ACA3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1164" y="372" name="inst_A8DA39B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1092" y="372" name="inst_80178B3C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1176" y="420" name="inst_F84CD0D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1176" y="444" name="inst_485BC61E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1164" y="468" name="inst_04EB26BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1128" y="456" name="inst_9A9CA639" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1068" y="516" name="inst_3F4F9BF8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1104" y="552" name="inst_89235863" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1140" y="552" name="inst_F6EEFE38" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1176" y="528" name="inst_06F0BAFE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="n_woodsman_1" x="1152" y="372" name="inst_0CA14E42" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Esylia_flowers" x="74" y="438" name="inst_DA52871B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Esylia_flowers" x="78" y="438" name="inst_F28BCEDB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Esylia_flowers" x="74" y="448" name="inst_8BE2EFFC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -236,7 +218,7 @@ inst_E2D9C9A3.enemy_type = n_woodsman_1;</code>
     <instance objName="obj_deco_Esylia_flowers" x="241" y="507" name="inst_A3373844" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Esylia_flowers" x="273" y="505" name="inst_14F7810E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Esylia_flowers" x="245" y="518" name="inst_4772D15D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_orb" x="-36" y="420" name="inst_0056C9DC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_orb" x="-33" y="435" name="inst_0056C9DC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="enemy_spawn_point" x="1044" y="456" name="inst_E2D9C9A3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
