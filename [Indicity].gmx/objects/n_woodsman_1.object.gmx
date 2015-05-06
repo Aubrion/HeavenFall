@@ -139,14 +139,20 @@ xx=x
             <string>/// Start wandering
 var wander_dir, wander_dist;
 
-// Find location
-wander_dir = irandom(360);
-wander_dist = irandom_range(wander_distance_min, wander_distance_max);
-wander_goalX = x + lengthdir_x(wander_dist, wander_dir);
-wander_goalY = y + lengthdir_y(wander_dist, wander_dir);
-
-// Change state
-state = "wander";
+if (point_in_territorium(x, y, territorium))
+{
+    // Find location
+    do {
+        wander_dir = irandom(360);
+        wander_dist = irandom_range(wander_distance_min, wander_distance_max);
+        wander_goalX = x + lengthdir_x(wander_dist, wander_dir);
+        wander_goalY = y + lengthdir_y(wander_dist, wander_dir);
+    }
+    until (point_in_territorium(wander_goalX, wander_goalY, territorium));
+    
+    // Change state
+    state = "wander";
+}
 </string>
           </argument>
         </arguments>

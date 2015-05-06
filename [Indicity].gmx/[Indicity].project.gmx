@@ -239,7 +239,9 @@
       <script>scripts\hyChatDraw_fixed.gml</script>
     </scripts>
     <scripts name="Enemy AI">
+      <script>scripts\spawn_enemy.gml</script>
       <script>scripts\AI_player_in_range.gml</script>
+      <script>scripts\point_in_territorium.gml</script>
     </scripts>
     <script>scripts\create_light.gml</script>
   </scripts>
