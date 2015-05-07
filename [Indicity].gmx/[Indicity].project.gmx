@@ -295,6 +295,12 @@
       <script>scripts\point_in_territorium.gml</script>
       <script>scripts\spawn_enemy.gml</script>
     </scripts>
+    <scripts name="stats">
+      <script>scripts\stats_set_basic.gml</script>
+      <script>scripts\stats_set_itembonus.gml</script>
+      <script>scripts\stats_update.gml</script>
+      <script>scripts\stats_draw.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\small_font</font>
@@ -369,6 +375,7 @@
     <object>objects\obj_shadow</object>
     <object>objects\obj_shadow_props</object>
     <object>objects\obj_counter</object>
+    <object>objects\obj_statwindow</object>
   </objects>
   <timelines name="timelines">
     <timelines name="greatsword">

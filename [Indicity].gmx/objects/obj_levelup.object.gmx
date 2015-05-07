@@ -160,5 +160,8 @@ draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,alpha)
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints/>
+  <PhysicsShapePoints>
+    <point>27,10</point>
+    <point>27,27</point>
+  </PhysicsShapePoints>
 </object>

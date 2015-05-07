@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>///player init
 randomize()
+global.class = 0; //warior
 global.color=make_colour_rgb(random(255),random(255),random(255))
 mass=48
 look=1
@@ -42,22 +43,23 @@ sprite_normal=spr_player
 sprite_jump=spr_player_jump
 
 ///player stats
-global.movespeed=1
-global.str=1 
-global.agi=1
-global.def=1
-global.int=1
-global.will=1
-global.attspeed=1
-global.hp=100
-global.mhp=100
-global.sp=80
-global.msp=80
-global.slow=0
-///player level
+//player level
 global.lvl=1
 global.xp=0
 global.mxp=10
+
+//class basic stats
+stats_set_basic();
+
+//Item bonus
+stats_set_itembonus();
+
+//players basic stats
+stats_update();
+
+//stuff based on stats
+global.hp = global.mhp;
+global.sp = global.msp;
 
 
 
@@ -251,35 +253,26 @@ y-=zspeed
           <argument>
             <kind>1</kind>
             <string>///stats and level up
-global.mhp=100+((global.lvl*3)+(global.str*1.5))
-global.msp=80+((global.lvl*2)+(global.agi*0.8))
-global.attspeed=1+(global.agi/5)
-global.movespeed=2+((global.agi/510))
-global.movespeed=global.movespeed-global.slow
-global.dmg=global.weapondmg+((global.agi/4)+(global.str/3))
-
 
 //dont empty stats
 if global.hp&gt;global.mhp {global.hp=global.mhp}
 if global.sp&gt;global.msp {global.sp=global.msp}
 
-if global.hp&lt;0 {global.hp=0}
+if global.hp&lt;0 {global.hp=0} //Die
 if global.sp&lt;0 {global.sp=0}
 
 //level up
-if global.xp&gt;= global.mxp and global.lvl&lt;99
+if (global.xp&gt;= global.mxp and global.lvl&lt;99)
 {
- global.xp-=global.mxp
- global.lvl+=1
- global.mxp+=global.lvl*5
- global.str+=1 
- global.agi+=1
- global.def+=1
- global.int+=1
- global.will+=1
- instance_create(x,y,obj_levelup)
+    global.xp -= global.mxp;
+    global.lvl += 1;
+    global.mxp += global.lvl*5;
+    instance_create(x,y,obj_levelup);
+    //update stats
+    stats_update();
 }
-if global.lvl=99 {global.xp=0}
+
+if (global.lvl=99) global.xp=0;
 
 
 
@@ -555,6 +548,30 @@ if obj_regelaar.debug=true {global.gender="f"}
 //draw_text_colour(x+32,y,global.xp,c_white,c_white,c_white,c_white,1)
 //draw_text_colour(x-32,y,global.mhp,c_white,c_white,c_white,c_white,1)
 draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,global.color,1)
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="107">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///increase level
+global.xp=global.mxp;
 </string>
           </argument>
         </arguments>
