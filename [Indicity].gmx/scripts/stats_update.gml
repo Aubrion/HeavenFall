@@ -13,13 +13,4 @@ global.movespeed = 1 + (global.agi*0.1);
 global.phyres = (1 - 100/(100+global.aeg*2.5))*100; //procent
 global.magres = (1 - 100/(100+global.anc*2.5))*100; //procent
 
-switch (global.class)
-{
-    case 0: //warior (baseer op strength, natuurlijk hoeft dit niet :P, het leek me gewoon logisch)
-    global.dmg = global.weapondmg + (global.str*1);
-    break;
-    
-    case 1: //mage (baseer op intelligence)
-    global.dmg = global.weapondmg + (global.int*1.2);
-    break;
-}
+global.dmg = global.weapondmg + (global.str*1);

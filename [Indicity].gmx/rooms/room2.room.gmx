@@ -52,8 +52,8 @@ inst_E2D9C9A3.enemy_type = n_woodsman_1;</code>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_player" x="37" y="428" name="inst_DA2DD330" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_regelaar" x="-12" y="-12" name="inst_17C11852" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player" x="37" y="428" name="inst_DA2DD330" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_helm" x="24" y="408" name="inst_3EE226D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cam" x="278" y="431" name="inst_C06D325B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="0" y="564" name="inst_8A5E3B4B" locked="0" code="" scaleX="100" scaleY="1" colour="4294967295" rotation="0"/>
