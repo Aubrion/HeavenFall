@@ -28,18 +28,18 @@
             <string>inv_create();
 inv_freeslot_create(6,52,84,120);
 
+inv_slot_add(24,24,"main");
 inv_slot_add(8,8,"jewel");
 inv_slot_add(8,24,"jewel");
 inv_slot_add(40,8,"helm");
 inv_slot_add(40,24,"jewel");
-inv_slot_add(24,24,"main");
 inv_slot_add(56,24,"off");
 inv_slot_add(72,8,"jewel");
 inv_slot_add(72,24,"jewel");
 
-inv_item_add(2,1,1);
-
 inv_freeslot_item_add(2,40,60,60);
+inv_freeslot_item_add(2,70,65,45);
+inv_freeslot_item_add(2,30,70,45);
 
 inv_freeslot_item_add(0,8,8,1);
 inv_freeslot_item_add(0,24,8,1);
@@ -97,6 +97,7 @@ if (mouse_check_button_pressed(mb_left) &amp;&amp; m_slotID == -1)
             m_oldSlot = i;
             slotID[i] = -1;
             slotStack[i] = 0;
+            it_gear_change();
             break;
         }       
     }
@@ -133,22 +134,32 @@ else if (mouse_check_button_released(mb_left) &amp;&amp; m_slotID != -1)
         }       
     }
     
-    if (point_in_rectangle(mouse_x,mouse_y,x+fs_x,y+fs_y,x+fs_x+fs_w,y+fs_y+fs_h))
+    for (i=0; i&lt;fs_slots; i+=1)
+    {
+        if (fs_slotID[i] == m_slotID &amp;&amp; point_in_rectangle(mouse_x,mouse_y,x+fs_x+fs_slotX[i],y+fs_y+fs_slotY[i],x+fs_x+fs_slotX[i]+16,y+fs_y+fs_slotY[i]+16))
+        {
+            if (fs_slotStack[i]+m_slotStack &gt;= ITEM.item[fs_slotID[i],4])
+            {
+                m_slotStack -= ITEM.item[fs_slotID[i],4] - fs_slotStack[i];
+                fs_slotStack[i] = ITEM.item[fs_slotID[i],4];
+                break;
+            }
+            else
+            {
+                fs_slotStack[i] += m_slotStack;
+                m_slotID = -1;
+                m_slotStack = 0;
+                break;
+            }
+        }       
+    }
+    
+    if (m_slotID != -1 &amp;&amp; point_in_rectangle(mouse_x,mouse_y,x+fs_x,y+fs_y,x+fs_x+fs_w,y+fs_y+fs_h))
     {
         inv_freeslot_item_add(m_slotID,mouse_x-8-fs_x-x,mouse_y-8-fs_y-y,m_slotStack);
         m_slotID = -1;
         m_slotStack = 0;
     }
-    /*for (i=0; i&lt;fs_slots; i+=1)
-    {
-        if (fs_slotStack[i] == 0 &amp;&amp; point_in_rectangle(mouse_x,mouse_y,x+fs_x+slotX[i],y+fs_y+slotY[i],x+fs_x+slotX[i]+16,y+fs_y+slotY[i]+16))
-        {
-            fs_slotID[i] = m_slotID;
-            fs_slotStack[i] = m_slotStack;
-            m_slotID = -1;
-            m_slotStack = 0;
-        }       
-    }*/
     
     if (m_slotID != -1)
     {

@@ -30,4 +30,4 @@ item[2,0] = "Coins"
 item[2,1] = "misc"
 item[2,2] = noone
 item[2,3] = spr_coin
-item[2,4] = 999
+item[2,4] = 100
