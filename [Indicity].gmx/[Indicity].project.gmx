@@ -237,6 +237,7 @@
         <background>background\tile_forest_2</background>
         <background>background\background11</background>
         <background>background\tile_forest_back</background>
+        <background>background\tile_bridge</background>
       </backgrounds>
       <backgrounds name="Hydra">
         <background>background\vulcano_1</background>
