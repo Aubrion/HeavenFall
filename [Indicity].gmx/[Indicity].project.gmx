@@ -198,6 +198,9 @@
     <sprites name="level_design">
       <sprites name="Decoration">
         <sprites name="Esylia">
+          <sprites name="Animations">
+            <sprite>sprites\deco_esylia_leaves_ani</sprite>
+          </sprites>
           <sprite>sprites\spr_torch_1</sprite>
           <sprite>sprites\spr_lake_1</sprite>
           <sprite>sprites\spr_tree_1</sprite>
@@ -292,6 +295,10 @@
     <scripts name="Enemy AI">
       <script>scripts\AI_player_in_range.gml</script>
     </scripts>
+    <scripts name="Effects">
+      <script>scripts\fade_out.gml</script>
+      <script>scripts\fade_in.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\small_font</font>
@@ -319,6 +326,9 @@
     <objects name="level_design">
       <objects name="Decoration">
         <objects name="Esylia">
+          <objects name="Animations">
+            <object>objects\obj_deco_Esylia_leaves_ani</object>
+          </objects>
           <object>objects\obj_torch_1</object>
           <object>objects\obj_lake_1</object>
           <object>objects\obj_tree_1</object>
