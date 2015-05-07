@@ -198,6 +198,9 @@
     <sprites name="level_design">
       <sprites name="Decoration">
         <sprites name="Esylia">
+          <sprites name="Animations">
+            <sprite>sprites\deco_esylia_leaves_ani</sprite>
+          </sprites>
           <sprite>sprites\spr_torch_1</sprite>
           <sprite>sprites\spr_lake_1</sprite>
           <sprite>sprites\spr_tree_1</sprite>
@@ -290,6 +293,10 @@
       <script>scripts\hyChatDraw.gml</script>
       <script>scripts\hyChatDraw_fixed.gml</script>
     </scripts>
+    <scripts name="Effects">
+      <script>scripts\fade_out.gml</script>
+      <script>scripts\fade_in.gml</script>
+    </scripts>
     <scripts name="Enemy AI">
       <script>scripts\AI_player_in_range.gml</script>
       <script>scripts\point_in_territorium.gml</script>
@@ -320,6 +327,7 @@
       <object>objects\obj_firefly</object>
     </objects>
     <objects name="room_design">
+      <object>objects\obj_deco_Esylia_leaves_ani</object>
       <object>objects\obj_wall</object>
       <object>objects\obj_musictouch</object>
       <object>objects\obj_air</object>
