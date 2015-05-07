@@ -331,7 +331,6 @@
       <script>scripts\inv_freeslot_item_add.gml</script>
       <script>scripts\inv_freeslot_remove_empty.gml</script>
     </scripts>
-    <script>scripts\create_light.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\small_font</font>
