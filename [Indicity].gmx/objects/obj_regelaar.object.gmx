@@ -34,6 +34,23 @@ zoomfactor=1
 scr_controls_mouse()
 global.counterfont=font_add_sprite (spr_font,ord(" "),0,-1)
 global.normalfont=font_add_sprite  (spr_font_2,ord(" "),0,-1)
+
+///player stats
+//player level
+global.lvl=1
+global.xp=0
+global.mxp=10
+global.weapondmg=5
+global.dmg=0
+
+//class basic stats
+stats_set_basic();
+
+//Item bonus
+stats_set_itembonus();
+
+//players basic stats
+stats_update();
 </string>
           </argument>
         </arguments>
@@ -58,6 +75,8 @@ global.normalfont=font_add_sprite  (spr_font_2,ord(" "),0,-1)
 instance_create(x,y,obj_background)
 instance_create(x,y,obj_gui)
 instance_create(x,y,obj_light_control)
+instance_create(0,0,obj_inventory)
+
 </string>
           </argument>
         </arguments>
