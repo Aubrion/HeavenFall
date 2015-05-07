@@ -198,6 +198,9 @@
     <sprites name="level_design">
       <sprites name="Decoration">
         <sprites name="Esylia">
+          <sprites name="Animations">
+            <sprite>sprites\deco_esylia_leaves_ani</sprite>
+          </sprites>
           <sprite>sprites\spr_torch_1</sprite>
           <sprite>sprites\spr_lake_1</sprite>
           <sprite>sprites\spr_tree_1</sprite>
@@ -234,6 +237,7 @@
         <background>background\tile_forest_2</background>
         <background>background\background11</background>
         <background>background\tile_forest_back</background>
+        <background>background\tile_bridge</background>
       </backgrounds>
       <backgrounds name="Hydra">
         <background>background\vulcano_1</background>
@@ -295,6 +299,10 @@
       <script>scripts\point_in_territorium.gml</script>
       <script>scripts\spawn_enemy.gml</script>
     </scripts>
+    <scripts name="Effects">
+      <script>scripts\fade_out.gml</script>
+      <script>scripts\fade_in.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\small_font</font>
@@ -322,6 +330,9 @@
     <objects name="level_design">
       <objects name="Decoration">
         <objects name="Esylia">
+          <objects name="Animations">
+            <object>objects\obj_deco_Esylia_leaves_ani</object>
+          </objects>
           <object>objects\obj_torch_1</object>
           <object>objects\obj_lake_1</object>
           <object>objects\obj_tree_1</object>
