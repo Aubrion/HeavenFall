@@ -32,6 +32,9 @@
 area_height = 75;
 area_width = 150;
 
+// How long they keep following the player after he has left the territorium
+defend_time = room_speed * 5;
+
 // Enemy type
 enemy_type = noone;
 
@@ -67,6 +70,7 @@ respawn_time_max = room_speed * 15;
             <string>/// Init
 
 initialised = false;
+defending = false;
 
 // Init enemy array (in counts a an empty array now)
 enemies = false;
@@ -74,6 +78,45 @@ enemies = false;
 // Start respawn timer
 if (respawning)
     alarm[0] = irandom_range(respawn_time_min, respawn_time_max);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Change defending enemies to waiting
+
+for (var i = 0; i &lt; array_length_1d(enemies); i++)
+{
+    var n = enemies[i];
+    
+    // Skip killed enemies
+    if (!instance_exists(n))
+        continue;
+    
+    // If defending, change to waiting state
+    if (n.state == "defend")
+    {
+        n.state = "waiting";
+        n.alarm[2] = n.wait_time;
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -96,7 +139,7 @@ if (respawning)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Spawn one new enemy
+            <string>/// Spawn one new enemy
 if (respawning)
 {
     // Check array for dead enemies
@@ -153,6 +196,54 @@ if (!initialised)
     
     // Do not init again
     initialised = true;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Defend territory
+
+if (point_in_territorium(obj_player_shadow.x, obj_player_shadow.y, id))
+{
+    defending = true;
+
+    // Give all enemies inside territorium agro
+    for (var i = 0; i &lt; array_length_1d(enemies); i++)
+    {
+        var n = enemies[i];
+        
+        // Skip killed enemies
+        if (!instance_exists(n))
+            continue;
+        
+        // If inside territorium, change to defend state
+        if (point_in_territorium(n.x, n.y, id))
+            n.state = "defend";
+    }
+}
+else
+{
+    if (defending &amp;&amp; alarm[1] == -1)
+    {
+        defending = false;
+        alarm[1] = defend_time;
+    }
 }
 </string>
           </argument>

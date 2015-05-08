@@ -430,11 +430,11 @@ if (state != "idle" &amp;&amp; alarm[1] &gt; -1)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Follow state
-if (state == "follow")
+            <string>/// Follow &amp; Defend states
+if (state == "follow" || state == "defend")
 {
     // Player not in range
-    if (distanceToPlayerX &gt; 150 || distanceToPlayerY &gt; 40)
+    if (state == "follow" &amp;&amp; (distanceToPlayerX &gt; 150 || distanceToPlayerY &gt; 40))
     {
         if (point_in_territorium(x, y, territorium))
             state = "idle";
