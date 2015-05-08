@@ -325,7 +325,7 @@ var distanceToPlayerY = abs(point_distance(x, y, x, obj_player_shadow.y+12));
 if (state == "idle" || state == "waiting" || state == "return")
 {
     // Check if player is in range
-    if (distanceToPlayerX &lt; 125 &amp;&amp; distanceToPlayerY &lt; 40)
+    if (AI_player_in_range(125, 40))
     {
         state = "follow";
         exit;
