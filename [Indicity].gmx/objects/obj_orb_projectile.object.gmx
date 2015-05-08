@@ -115,11 +115,17 @@ weapontrail(0.2,0.08)
             <kind>1</kind>
             <string>if (other.state != "dead")
 {
+    // Change target state
+    other.state = "hit";
+    other.alarm[3] = other.hit_follow_time;
+    
+    // Deal damage
     other.hp-=global.dmg
     counter_(round(global.dmg),c_orange,100,2,0,-1,global.normalfont,80,x,y-(other.sprite_height+5))
     audio_play_sound(punch_2,0,0)
     instance_destroy();
 }
+
 </string>
           </argument>
         </arguments>
