@@ -14,7 +14,7 @@
  while (place_meeting(x, y, other))
  {
  x -= xoff * om; //Move the instance out of collision
- y -= yoff * om;/*
+ y -= yoff * om;
  other.x += xoff * mm; //Move the other instance out of the collision
- other.y += yoff * mm;   */
+ other.y += yoff * mm; 
  }

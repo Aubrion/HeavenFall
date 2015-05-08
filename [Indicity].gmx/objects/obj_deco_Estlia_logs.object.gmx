@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///depth init
 depth=1*-y
-mass=100
+mass=120
 image_speed=0
 image_index=random_range(0,1)
 </string>

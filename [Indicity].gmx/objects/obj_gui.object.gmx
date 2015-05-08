@@ -48,7 +48,6 @@ window_set_cursor(cr_none)
           <argument>
             <kind>1</kind>
             <string>///window full
-/*
 window=1
 window_set_size(display_get_width(),display_get_height())
 window_set_position(0,0)
@@ -204,7 +203,7 @@ draw_set_alpha(1)
 if instance_exists(weapon)
 {
  draw_sprite(ui_gs,-1,0,0)
-
+ display_set_gui_size(400,220)
     if global.attack=1
     {
     //stack0

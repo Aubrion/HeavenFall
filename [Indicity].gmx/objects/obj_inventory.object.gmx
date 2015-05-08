@@ -228,6 +228,7 @@ inv_freeslot_remove_empty();
     inv_draw();
     if (m_slotID != -1)
     {
+        //
         draw_sprite_ext(ITEM.item[m_slotID,2],0,mouse_x-8,mouse_y-8,1.1,1.1,0,c_white,1);
     }
 }
