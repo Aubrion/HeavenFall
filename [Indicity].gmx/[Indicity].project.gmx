@@ -199,8 +199,11 @@
         <sprite>sprites\ui_hit</sprite>
         <sprite>sprites\ui_block</sprite>
         <sprite>sprites\ui_hp_bar</sprite>
+        <sprite>sprites\ui_mp_bar</sprite>
         <sprite>sprites\ui_gs</sprite>
         <sprite>sprites\ui_sparkle</sprite>
+        <sprite>sprites\ui_level</sprite>
+        <sprite>sprites\ui_name</sprite>
       </sprites>
     </sprites>
     <sprites name="level_design">
