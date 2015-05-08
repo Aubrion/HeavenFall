@@ -236,6 +236,7 @@
     </sprites>
     <sprite>sprites\spr_back_inv</sprite>
     <sprite>sprites\spr_coin</sprite>
+    <sprite>sprites\sprite144</sprite>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="tiles">
