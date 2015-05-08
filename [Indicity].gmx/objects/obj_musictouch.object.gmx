@@ -32,14 +32,11 @@ if global.musicplaying=music
 }
  else
 {
- if audio_exists(global.musicplaying)
- {
   audio_stop_sound(global.musicplaying)
   global.musicplaying=music
   audio_play_sound(global.musicplaying,2,0)
   audio_sound_gain(global.musicplaying,0,0);
   audio_sound_gain(global.musicplaying,1,5000)
- }
 }
 </string>
           </argument>
