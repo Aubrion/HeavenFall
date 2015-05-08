@@ -199,11 +199,13 @@
         <sprite>sprites\ui_normal</sprite>
         <sprite>sprites\ui_hit</sprite>
         <sprite>sprites\ui_block</sprite>
-        <sprite>sprites\ui_hp_bar</sprite>
-        <sprite>sprites\ui_mp_bar</sprite>
         <sprite>sprites\ui_gs</sprite>
         <sprite>sprites\ui_sparkle</sprite>
         <sprite>sprites\ui_level</sprite>
+        <sprite>sprites\ui_normal_1</sprite>
+        <sprite>sprites\ui_normal_1_exp</sprite>
+        <sprite>sprites\ui_normal_1_mana</sprite>
+        <sprite>sprites\ui_normal_1_health</sprite>
         <sprite>sprites\ui_name</sprite>
       </sprites>
     </sprites>
@@ -236,6 +238,9 @@
     <sprites name="lights">
       <sprite>sprites\spr_light</sprite>
       <sprite>sprites\spr_light_2</sprite>
+    </sprites>
+    <sprites name="Element Icons">
+      <sprite>sprites\e_water_icon</sprite>
     </sprites>
     <sprite>sprites\spr_back_inv</sprite>
     <sprite>sprites\spr_coin</sprite>
