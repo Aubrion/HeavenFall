@@ -82,6 +82,7 @@ yy=y
 
 state = "idle";
 wait_time = room_speed * 5;
+hit_follow_time = room_speed * 5;
 
 // Wandering
 wander_interval_min = room_speed * 3;
@@ -115,6 +116,32 @@ wander_goalY = y;
             <string>///moving
 yy=y
 xx=x
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Reset Hit state
+
+if (state == "hit")
+    state = "follow";
 </string>
           </argument>
         </arguments>
@@ -325,7 +352,7 @@ var distanceToPlayerY = abs(point_distance(x, y, x, obj_player_shadow.y+12));
 if (state == "idle" || state == "waiting" || state == "return")
 {
     // Check if player is in range
-    if (distanceToPlayerX &lt; 125 &amp;&amp; distanceToPlayerY &lt; 40)
+    if (AI_player_in_range(125, 40))
     {
         state = "follow";
         exit;
@@ -430,11 +457,11 @@ if (state != "idle" &amp;&amp; alarm[1] &gt; -1)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Follow state
-if (state == "follow")
+            <string>/// Follow, Hit &amp; Defend states
+if (state == "follow" || state == "defend" || state == "hit")
 {
     // Player not in range
-    if (distanceToPlayerX &gt; 150 || distanceToPlayerY &gt; 40)
+    if (state == "follow" &amp;&amp; (distanceToPlayerX &gt; 150 || distanceToPlayerY &gt; 40))
     {
         if (point_in_territorium(x, y, territorium))
             state = "idle";
@@ -556,8 +583,15 @@ if (state == "attack")
     if (image_index == 20)
     {
         // If player is in reach
-        if (distanceToPlayerX &lt; 50 &amp;&amp; distanceToPlayerY &lt; 12)
+        if (AI_player_in_range(50, 12))
             n_attacking(punch_1,swordhit_2);
+        
+        // Reset Hit state
+        if (state == "hit")
+        {
+            state = "follow";
+            alarm[3] = -1;
+        }
     }
     
     // Check if animation is finished
