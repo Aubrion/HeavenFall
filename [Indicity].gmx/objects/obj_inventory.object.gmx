@@ -124,7 +124,7 @@ if (mouse_check_button_pressed(mb_left) &amp;&amp; m_slotID == -1)
     
     for (i=0; i&lt;fs_slots; i+=1)
     {
-        if (fs_slotStack[i] != 0 &amp;&amp; point_in_rectangle(mouse_x,mouse_y,x+fs_x+fs_slotX[i],y+fs_y+fs_slotY[i],x+fs_x+fs_slotX[i]+16,y+fs_y+fs_slotY[i]+16))
+        if (fs_slotStack[i] != 0 &amp;&amp; point_in_rectangle(mouse_x,mouse_y,x+fs_x+fs_slotX[i],y+fs_y+fs_slotY[i],x+fs_x+fs_slotX[i]+sprite_get_width(ITEM.item[fs_slotID[i],2]),y+fs_y+fs_slotY[i]+sprite_get_height(ITEM.item[fs_slotID[i],2])))
         {
             m_slotID = fs_slotID[i];
             m_slotStack = fs_slotStack[i];
@@ -156,7 +156,7 @@ else if (mouse_check_button_released(mb_left) &amp;&amp; m_slotID != -1)
     
     for (i=0; i&lt;fs_slots; i+=1)
     {
-        if (fs_slotID[i] == m_slotID &amp;&amp; point_in_rectangle(mouse_x,mouse_y,x+fs_x+fs_slotX[i],y+fs_y+fs_slotY[i],x+fs_x+fs_slotX[i]+16,y+fs_y+fs_slotY[i]+16))
+        if (fs_slotID[i] != -1 &amp;&amp; fs_slotID[i] == m_slotID &amp;&amp; point_in_rectangle(mouse_x,mouse_y,x+fs_x+fs_slotX[i],y+fs_y+fs_slotY[i],x+fs_x+fs_slotX[i]+sprite_get_width(ITEM.item[fs_slotID[i],2]),y+fs_y+fs_slotY[i]+sprite_get_height(ITEM.item[fs_slotID[i],2])))
         {
             if (fs_slotStack[i]+m_slotStack &gt;= ITEM.item[fs_slotID[i],4])
             {
@@ -176,7 +176,7 @@ else if (mouse_check_button_released(mb_left) &amp;&amp; m_slotID != -1)
     
     if (m_slotID != -1 &amp;&amp; point_in_rectangle(mouse_x,mouse_y,x+fs_x,y+fs_y,x+fs_x+fs_w,y+fs_y+fs_h))
     {
-        inv_freeslot_item_add(m_slotID,mouse_x-8-fs_x-x,mouse_y-8-fs_y-y,m_slotStack);
+        inv_freeslot_item_add(m_slotID,mouse_x-sprite_get_width(ITEM.item[m_slotID,2])/2-fs_x-x,mouse_y-sprite_get_height(ITEM.item[m_slotID,2])/2-fs_y-y,m_slotStack);
         m_slotID = -1;
         m_slotStack = 0;
     }
@@ -228,8 +228,7 @@ inv_freeslot_remove_empty();
     inv_draw();
     if (m_slotID != -1)
     {
-        //
-        draw_sprite_ext(ITEM.item[m_slotID,2],0,mouse_x-8,mouse_y-8,1.1,1.1,0,c_white,1);
+        draw_sprite(ITEM.item[m_slotID,2],0,mouse_x-sprite_get_width(ITEM.item[m_slotID,2])/2+sprite_get_xoffset(ITEM.item[m_slotID,2]),mouse_y-sprite_get_height(ITEM.item[m_slotID,2])/2+sprite_get_yoffset(ITEM.item[m_slotID,2]));
     }
 }
 </string>
