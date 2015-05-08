@@ -39,10 +39,6 @@ jump=false
 sprite_normal=spr_player
 sprite_jump=spr_player_jump
 
-//stuff based on stats
-global.hp = global.mhp;
-global.sp = global.msp;
-
 
 
 //grav

@@ -18,7 +18,7 @@ inst_E2D9C9A3.enemy_type = n_woodsman_1;</code>
   <makerSettings>
     <isSet>-1</isSet>
     <w>1059</w>
-    <h>695</h>
+    <h>600</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
     <showTiles>-1</showTiles>
@@ -28,8 +28,8 @@ inst_E2D9C9A3.enemy_type = n_woodsman_1;</code>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>0</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>-168</xoffset>
-    <yoffset>286</yoffset>
+    <xoffset>80</xoffset>
+    <yoffset>185</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="tile_forest_back" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -210,14 +210,14 @@ inst_E2D9C9A3.enemy_type = n_woodsman_1;</code>
     <instance objName="obj_deco_Esylia_rocks" x="582" y="476" name="inst_038EB697" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Esylia_rocks" x="646" y="538" name="inst_9CBDD5F1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Esylia_rocks" x="670" y="384" name="inst_C4816872" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_deco_Estlia_logs" x="330" y="398" name="inst_B13CE4AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Estlia_logs" x="288" y="384" name="inst_B13CE4AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Estlia_logs" x="58" y="534" name="inst_5754CBF7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Estlia_logs" x="814" y="542" name="inst_BE8014EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Estlia_logs" x="1102" y="410" name="inst_E3CF13C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Esylia_leaves" x="528" y="352" name="inst_7AC00DC4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Esylia_leaves" x="160" y="352" name="inst_81D7FC1D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Esylia_leaves" x="224" y="352" name="inst_C64B0D5D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_deco_Esylia_leaves" x="304" y="352" name="inst_33F17432" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_Esylia_leaves" x="288" y="400" name="inst_33F17432" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Esylia_leaves" x="48" y="352" name="inst_FF2CA022" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Esylia_leaves" x="624" y="352" name="inst_E1309627" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Esylia_leaves" x="768" y="432" name="inst_E384E783" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

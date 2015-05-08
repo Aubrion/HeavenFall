@@ -202,11 +202,11 @@
         <sprite>sprites\ui_gs</sprite>
         <sprite>sprites\ui_sparkle</sprite>
         <sprite>sprites\ui_level</sprite>
+        <sprite>sprites\ui_name</sprite>
         <sprite>sprites\ui_normal_1</sprite>
         <sprite>sprites\ui_normal_1_exp</sprite>
         <sprite>sprites\ui_normal_1_mana</sprite>
         <sprite>sprites\ui_normal_1_health</sprite>
-        <sprite>sprites\ui_name</sprite>
       </sprites>
     </sprites>
     <sprites name="level_design">

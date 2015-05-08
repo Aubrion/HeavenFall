@@ -159,13 +159,17 @@ display_set_gui_size(400,220)
 draw_set_alpha(1)
 if alarm[0]&gt;0 {draw_sprite(ui_hit,0,0,0)}
 if alarm[1]&gt;0 {draw_sprite(ui_block,0,0,0)}
-draw_sprite(ui_normal,0,0,0)
-draw_sprite(ui_hp_bar,100*(global.hp/global.mhp),0,0)
-draw_set_font(global.counterfont)
+draw_sprite(ui_normal_1,0,(view_wview[0]/2),0)
+draw_sprite(ui_normal_1_exp,100*(global.xp/global.mxp),(view_wview[0]/2),0)
+draw_sprite(ui_normal_1_mana,100*(global.sp/global.msp),(view_wview[0]/2),0)
+draw_sprite(ui_normal_1_health,100*(global.hp/global.mhp),(view_wview[0]/2),0)
+draw_set_font(font_inventory)
 draw_set_halign(fa_middle)
 draw_set_valign(fa_middle)
-if global.lvl&lt;99 {draw_text_colour(0+17,0+16,global.lvl,c_white,c_white,c_white,c_white,1)}
-else {draw_text_colour(0+17,0+16,global.lvl,c_red,c_red,c_red,c_red,1)}
+draw_text_colour((view_wview[0]/2),46,obj_hybrid_controller.msghandle,c_white,c_white,c_white,c_white,1)
+draw_set_font(global.counterfont) 
+if global.lvl&lt;99 {draw_text_colour((view_wview[0]/2),18,global.lvl,c_white,c_white,c_white,c_white,1)}
+else {draw_text_colour((view_wview[0]/2),18,global.lvl,c_red,c_red,c_red,c_red,1)}
 
 
 
@@ -179,43 +183,6 @@ else {draw_text_colour(0+17,0+16,global.lvl,c_red,c_red,c_red,c_red,1)}
 
 
 draw_set_alpha(1)
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///weapon UI
-if instance_exists(weapon)
-{
- draw_sprite(ui_gs,-1,0,0)
- display_set_gui_size(400,220)
-    if global.attack=1
-    {
-    //stack0
-    draw_sprite(ui_sparkle,0,0+40,0+20)
-    //stack1
-    if weapon.stack&gt;=1 {draw_sprite(ui_sparkle,0,0+71,0+20)
-    draw_line_colour(0+40,0+20,0+71,0+20,c_white,c_white)}
-    //sack2
-    if weapon.stack&gt;=2 {draw_sprite(ui_sparkle,0,0+102,0+20)
-    draw_line_colour(0+71,0+20,0+102,0+20,c_white,c_white)}
-    }
-}
 </string>
           </argument>
         </arguments>
