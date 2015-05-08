@@ -14,152 +14,23 @@ lijst:
 10 -
 */
 
-l_elem[0,0] = "Fire"; //naam van element
-l_elem[0,1] = 20; //kracht (in damage) van element (per level)
-l_elem[0,2] = 1; //damage type: 0-physical, 1-magical
+l_elemN[0] = "Fire"; //naam van element
+l_elemD[0] = 20; //kracht (in damage) van element (per level)
 
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
+l_elemN[1] = "Water";
+l_elemD[1] = 20;
 
-l_elem[2,0] = "Earth";
-l_elem[2,1] = 15;
-l_elem[2,2] = 1;
+l_elemN[2] = "Earth";
+l_elemD[2] = 20;
 
-l_elem[3,0] = "Electro";
-l_elem[3,1] = 7;
-l_elem[3,2] = 1;
+l_elemN[3] = "Wind";
+l_elemD[3] = 20;
 
-l_elem[4,0] = "Wind";
-l_elem[4,1] = 10;
-l_elem[4,2] = 1;
+l_elemN[4] = "Electro";
+l_elemD[4] = 20;
 
-l_elem[5,0] = "Death";
-l_elem[5,1] = 20;
-l_elem[5,2] = 1;
+l_elemN[5] = "Life";
+l_elemD[5] = 20;
 
-l_elem[6,0] = "Life";
-l_elem[6,1] = 10;
-l_elem[6,2] = 1;
-
-/*
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
-l_elem[1,0] = "Water";
-l_elem[1,1] = 10;
-l_elem[1,2] = 1;
-
+l_elemN[6] = "Death";
+l_elemD[6] = 20;
