@@ -38,13 +38,12 @@ inv_slot_add(72,8,"jewel");
 inv_slot_add(72,24,"jewel");
 
 inv_freeslot_item_add(2,40,60,60);
-inv_freeslot_item_add(2,70,65,45);
-inv_freeslot_item_add(2,30,70,45);
 
 inv_freeslot_item_add(0,8,8,1);
-inv_freeslot_item_add(0,24,8,1);
-inv_freeslot_item_add(1,8,24,1);
+inv_freeslot_item_add(4,24,8,1);
+inv_freeslot_item_add(3,8,24,1);
 inv_freeslot_item_add(1,24,24,1);
+inv_freeslot_item_add(5,40,8,1);
 
 //vars
 
@@ -53,6 +52,30 @@ m_slotID = -1;
 m_slotStack = 0;
 m_oldSlotT = 0;
 m_oldSlot = -1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>x = view_xview[0] + view_wview[0] - ((sprite_width/2)+100);
+y = view_yview[0] + view_hview[0]/2 - sprite_height/2;
 </string>
           </argument>
         </arguments>
@@ -75,10 +98,7 @@ m_oldSlot = -1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = view_xview[0] + view_wview[0]/2 - sprite_width/2;
-y = view_yview[0] + view_hview[0]/2 - sprite_height/2;
-
-if (keyboard_check_pressed(ord('I')))
+            <string>if (keyboard_check_pressed(ord('I')))
 {
     active = -active;
 }
@@ -208,7 +228,7 @@ inv_freeslot_remove_empty();
     inv_draw();
     if (m_slotID != -1)
     {
-        draw_sprite(ITEM.item[m_slotID,3],0,mouse_x-8,mouse_y-8);
+        draw_sprite_ext(ITEM.item[m_slotID,2],0,mouse_x-8,mouse_y-8,1.1,1.1,0,c_white,1);
     }
 }
 </string>

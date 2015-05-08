@@ -9,8 +9,8 @@ global.wil = global.B_wil + (global.lvl*1) + global.I_wil;
 
 global.mhp = (global.str * 20);
 global.msp = (global.int * 25);
-global.movespeed = 1 + (global.agi*0.1);
+global.movespeed = 2 + (global.agi*0.01);
 global.phyres = (1 - 100/(100+global.aeg*2.5))*100; //procent
 global.magres = (1 - 100/(100+global.anc*2.5))*100; //procent
 
-global.dmg = global.weapondmg + (global.str*1);
+global.dmg = global.weapondmg + (global.str*1.2) + (global.agi*0.9);

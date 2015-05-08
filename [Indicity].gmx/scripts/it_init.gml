@@ -28,6 +28,27 @@ item[1,4] = 1
 //coins
 item[2,0] = "Coins"
 item[2,1] = "misc"
-item[2,2] = noone
+item[2,2] = spr_coin
 item[2,3] = spr_coin
 item[2,4] = 100
+
+// gs_gravity_1
+item[3,0] = "Graviton"
+item[3,1] = "main"
+item[3,2] = gs_gravity_1
+item[3,3] = gs_gravity_1_ico
+item[3,4] = 1
+
+// gs_zabuza_1
+item[4,0] = "Mighty Zabuza"
+item[4,1] = "main"
+item[4,2] = gs_zabuza_1
+item[4,3] = gs_zabuza_1_ico
+item[4,4] = 1
+
+// helmet zabuza
+item[5,0] = "Zabuza Helmet"
+item[5,1] = "helm"
+item[5,2] = helm_zabuza_1
+item[5,3] = helm_zabuza_1_ico
+item[5,4] = 1

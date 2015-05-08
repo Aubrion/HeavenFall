@@ -98,6 +98,7 @@
       </sprites>
       <sprites name="icons">
         <sprite>sprites\helm_gravity_1_ico</sprite>
+        <sprite>sprites\helm_zabuza_1_ico</sprite>
       </sprites>
     </sprites>
     <sprites name="cam">
@@ -134,8 +135,8 @@
       </sprites>
       <sprites name="Greatsword">
         <sprite>sprites\gs_cyber_1</sprite>
-        <sprite>sprites\ga_gravity_1</sprite>
-        <sprite>sprites\ga_zabuza_1</sprite>
+        <sprite>sprites\gs_gravity_1</sprite>
+        <sprite>sprites\gs_zabuza_1</sprite>
         <sprite>sprites\sprite51</sprite>
         <sprite>sprites\gs_encript_1</sprite>
         <sprite>sprites\gs_virus_1</sprite>
@@ -143,7 +144,6 @@
         <sprite>sprites\gs_wood_1</sprite>
         <sprite>sprites\gs_wood_2</sprite>
         <sprite>sprites\gs_goon_1</sprite>
-        <sprite>sprites\sprite77</sprite>
         <sprite>sprites\gs_lighting</sprite>
         <sprite>sprites\gs_megnetion</sprite>
         <sprite>sprites\gs_slicer</sprite>
@@ -194,6 +194,7 @@
       <sprite>sprites\mouse_block</sprite>
       <sprite>sprites\mouse_stun</sprite>
       <sprite>sprites\mouse_root</sprite>
+      <sprite>sprites\mouse_noweapon</sprite>
       <sprites name="design">
         <sprite>sprites\ui_normal</sprite>
         <sprite>sprites\ui_hit</sprite>
@@ -317,6 +318,9 @@
       <script>scripts\stats_set_itembonus.gml</script>
       <script>scripts\stats_update.gml</script>
       <script>scripts\stats_draw.gml</script>
+      <script>scripts\element_init_d.gml</script>
+      <script>scripts\element_init_r.gml</script>
+      <script>scripts\element_step.gml</script>
     </scripts>
     <scripts name="item">
       <script>scripts\it_init.gml</script>
@@ -331,6 +335,7 @@
       <script>scripts\inv_freeslot_item_add.gml</script>
       <script>scripts\inv_freeslot_remove_empty.gml</script>
     </scripts>
+    <script>scripts\advanced_collision.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\small_font</font>
@@ -345,7 +350,6 @@
     <object>objects\obj_player_other</object>
     <object>objects\obj_player</object>
     <object>objects\obj_player_shadow</object>
-    <object>objects\obj_helm</object>
     <objects name="critter">
       <object>objects\critter_frog</object>
       <object>objects\obj_firefly</object>
@@ -355,7 +359,6 @@
       <object>objects\obj_wall</object>
       <object>objects\obj_musictouch</object>
       <object>objects\obj_air</object>
-      <object>objects\obj_collision_parent</object>
     </objects>
     <objects name="level_design">
       <objects name="Decoration">
@@ -372,7 +375,8 @@
         </objects>
       </objects>
     </objects>
-    <objects name="Weapons">
+    <objects name="Gear">
+      <object>objects\obj_helm</object>
       <object>objects\obj_greatsword</object>
       <object>objects\obj_axe</object>
       <object>objects\obj_scythe</object>
@@ -403,6 +407,7 @@
         <object>objects\obj_light_control</object>
         <object>objects\ITEM</object>
       </objects>
+      <object>objects\obj_collision_parent</object>
     </objects>
     <object>objects\obj_light</object>
     <object>objects\obj_shadow</object>

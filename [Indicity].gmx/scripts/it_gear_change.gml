@@ -5,7 +5,7 @@ if (slotID[0] != -1)
 }
 else
 {
-    //obj_greatsword.sprite_index = nosprite;
+    obj_greatsword.sprite_index = nosprite
 }
 
 if (slotID[3] == -1) 
@@ -16,4 +16,3 @@ else
 {
     obj_helm.sprite_index = ITEM.item[slotID[3],2]
 }
-

@@ -42,9 +42,12 @@ global.xp=0
 global.mxp=10
 global.weapondmg=5
 global.dmg=0
+global.slow=0
 
-//class basic stats
+//basic stats
 stats_set_basic();
+element_init_d()
+element_init_r()
 
 //Item bonus
 stats_set_itembonus();
@@ -126,6 +129,50 @@ if !audio_is_playing(global.musicplaying)
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>///stats and level up
+
+//dont empty stats
+if global.hp&gt;global.mhp {global.hp=global.mhp}
+if global.sp&gt;global.msp {global.sp=global.msp}
+
+if global.hp&lt;0 {global.hp=0} //Die
+if global.sp&lt;0 {global.sp=0}
+
+//level up
+if (global.xp&gt;= global.mxp and global.lvl&lt;99)
+{
+    global.xp -= global.mxp;
+    global.lvl += 1;
+    global.mxp += global.lvl*5;
+    instance_create(x,y,obj_levelup);
+    //update stats
+    stats_update();
+}
+
+if (global.lvl=99) global.xp=0;
+
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>///camera zoom
 if keyboard_check(vk_add)
 {
@@ -163,6 +210,28 @@ if debug=true
  if keyboard_check(vk_down) {global.hp-=1}
  if keyboard_check(vk_right) {global.xp+=1000}
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///movementspeed
+global.movespeed =(2 + (global.agi*0.01))-global.slow;
 </string>
           </argument>
         </arguments>

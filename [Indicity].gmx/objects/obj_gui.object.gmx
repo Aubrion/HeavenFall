@@ -302,6 +302,7 @@ if global.attack=0
 }
  else
 {
+ if global.attack=-2 {draw_sprite(mouse_noweapon,-1,(mouse_x-view_xview)/view_wview*400,(mouse_y-view_yview)/view_hview*220)}
  if global.attack&gt;0 {draw_sprite(mouse_attack,0,(mouse_x-view_xview)/view_wview*400,(mouse_y-view_yview)/view_hview*220)}
  if global.attack=-1{draw_sprite(mouse_block,0,(mouse_x-view_xview)/view_wview*400,(mouse_y-view_yview)/view_hview*220)}
 }

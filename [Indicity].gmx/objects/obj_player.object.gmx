@@ -281,7 +281,7 @@ if (global.lvl=99) global.xp=0;
             <string>///player movement/animation
 
 ///look
-if global.attack=0
+if global.attack=0 or global.attack=-2
 {
 if mouse_x&lt;obj_player.x {look=-1}
 if mouse_x&gt;obj_player.x {look= 1}
@@ -291,13 +291,13 @@ if mouse_x&gt;obj_player.x {look= 1}
 //player movement
 if alarm[0]&lt;0 and alarm[1]&lt;0 and global.stun=false and global.root=false
 {
-    if(!global.hyChatActive &amp;&amp; !obj_inventory.active)
+    if(!global.hyChatActive /*&amp;&amp; !obj_inventory.active*/)
     {
         if keyboard_check(global.key1up)   and !keyboard_check(global.key1down) {if (place_free(x,y-(global.movespeed/2)-1) and jump=false and !place_meeting(obj_player_shadow.x,obj_player_shadow.y-(global.movespeed/2)-1,obj_wall)) or (jump=true and !place_meeting(obj_player_shadow.x,obj_player_shadow.y-(global.movespeed/2)-1,obj_wall)) {y-=((global.movespeed/2)) mspd=(global.movespeed/2)}}
         if keyboard_check(global.key1down) and !keyboard_check(global.key1up)   {if (place_free(x,y+(global.movespeed/2)) and jump=false and !place_meeting(obj_player_shadow.x,obj_player_shadow.y+(global.movespeed/2),obj_wall)) or (jump=true and !place_meeting(obj_player_shadow.x,obj_player_shadow.y+(global.movespeed/2),obj_wall)) {y+=((global.movespeed/2)) mspd=(global.movespeed/2)}}
         if keyboard_check(global.key1right)and !keyboard_check(global.key1left) {if ((place_free(x+(global.movespeed+24),y) and jump=false) and  !place_meeting(x+(global.movespeed),y,obj_wall)) or (jump=true and !place_meeting(obj_player_shadow.x+(global.movespeed),obj_player_shadow.y,obj_wall)) {if look=1 {x+=global.movespeed; mspd=global.movespeed} else {x+=global.movespeed/1.2 mspd=global.movespeed}}}
         if keyboard_check(global.key1left) and !keyboard_check(global.key1right){if ((place_free(x-(global.movespeed+24),y) and jump=false) and  !place_meeting(x-(global.movespeed),y,obj_wall)) or (jump=true and !place_meeting(obj_player_shadow.x-(global.movespeed),obj_player_shadow.y,obj_wall)) {if look=1 {x-=global.movespeed/1.2; mspd=global.movespeed} else {x-=global.movespeed mspd=global.movespeed}}}
-        if keyboard_check_pressed(global.key1jump) and global.attack=0 {if zspeed=0 and zgravity=0 {y-=5  zspeed=5;zgravity=.25 audio_play_sound(jump_5,0,0) hyComEmit("USER", "ANIMATION", "0")}}
+        if keyboard_check_pressed(global.key1jump) and (global.attack=0 or global.attack=-2) {if zspeed=0 and zgravity=0 {y-=5  zspeed=5;zgravity=.25 audio_play_sound(jump_5,0,0) hyComEmit("USER", "ANIMATION", "0")}}
     }
 }
 //image mirror and image sub_image
@@ -436,25 +436,7 @@ if(x!=xprevious or y!=yprevious){
             <string>///collision
 if jump=false
 {
- var a,xoff,yoff,om,mm,mag;
-  
- a = point_direction(x, y, other.x, other.y);    //Get the direction from the colliding object
- xoff = lengthdir_x(1, a);                       //Get the offset vector
- yoff = lengthdir_y(1, a);
- om = other.mass / mass;                         //start the fake "physics mass" calculations
- mm = mass / other.mass;
- mag = sqrt((om * om) + (mm * mm));
- om /= mag;
- mm /= mag;
- 
- //Move out of collision
- while (place_meeting(x, y, other))
- {
- x -= xoff * om; //Move the instance out of collision
- y -= yoff * om;
- other.x += xoff * mm; //Move the other instance out of the collision
- other.y += yoff * mm;
- }
+ advanced_collision()
 }
 </string>
           </argument>
