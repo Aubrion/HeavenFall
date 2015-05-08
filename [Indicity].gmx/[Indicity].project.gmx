@@ -240,7 +240,15 @@
       <sprite>sprites\spr_light_2</sprite>
     </sprites>
     <sprites name="Element Icons">
-      <sprite>sprites\e_water_icon</sprite>
+      <sprite>sprites\e_water_icon_1</sprite>
+      <sprite>sprites\e_ice_icon_1</sprite>
+      <sprite>sprites\e_ancient_icon_1</sprite>
+      <sprite>sprites\e_conduction_icon_1</sprite>
+      <sprite>sprites\e_poison_icon_1</sprite>
+      <sprite>sprites\e_sacrafice_icon_1</sprite>
+      <sprite>sprites\e_chaos_icon_1</sprite>
+      <sprite>sprites\e_darkness_icon_1</sprite>
+      <sprite>sprites\e_light_icon_1</sprite>
     </sprites>
     <sprite>sprites\spr_back_inv</sprite>
     <sprite>sprites\spr_coin</sprite>
