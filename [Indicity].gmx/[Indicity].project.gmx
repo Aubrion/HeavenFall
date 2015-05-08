@@ -336,6 +336,13 @@
       <script>scripts\inv_freeslot_item_add.gml</script>
       <script>scripts\inv_freeslot_remove_empty.gml</script>
     </scripts>
+    <scripts name="Lynx">
+      <script>scripts\lynx_element_define.gml</script>
+      <scripts name="Mind Lynx">
+        <script>scripts\lynx_mind_projectile.gml</script>
+      </scripts>
+      <script>scripts\lynx_damage.gml</script>
+    </scripts>
     <script>scripts\advanced_collision.gml</script>
   </scripts>
   <fonts name="fonts">
@@ -384,6 +391,7 @@
       <object>objects\obj_weapontrail</object>
       <object>objects\obj_orb</object>
       <object>objects\obj_orb_projectile</object>
+      <object>objects\obj_projectile</object>
       <object>objects\obj_orb_followeffect</object>
     </objects>
     <objects name="enemies">
@@ -409,6 +417,7 @@
         <object>objects\ITEM</object>
       </objects>
       <object>objects\obj_collision_parent</object>
+      <object>objects\obj_lynx_controller</object>
     </objects>
     <object>objects\obj_light</object>
     <object>objects\obj_shadow</object>
