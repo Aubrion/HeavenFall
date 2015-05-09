@@ -267,6 +267,10 @@
       <sprite>sprites\e_storm_icon</sprite>
       <sprite>sprites\e_dread_icon</sprite>
       <sprite>sprites\e_motion_icon</sprite>
+      <sprite>sprites\e_gravity_icon</sprite>
+      <sprite>sprites\e_carbon_icon</sprite>
+      <sprite>sprites\e_decay_icon</sprite>
+      <sprite>sprites\e_titan_icon</sprite>
     </sprites>
     <sprite>sprites\spr_back_inv</sprite>
     <sprite>sprites\spr_coin</sprite>
