@@ -253,6 +253,7 @@
     <sprite>sprites\spr_back_inv</sprite>
     <sprite>sprites\spr_coin</sprite>
     <sprite>sprites\sprite144</sprite>
+    <sprite>sprites\spr_bolt</sprite>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="tiles">
@@ -352,6 +353,23 @@
       <script>scripts\inv_freeslot_item_add.gml</script>
       <script>scripts\inv_freeslot_remove_empty.gml</script>
     </scripts>
+    <scripts name="Lynx">
+      <script>scripts\lynx_element_define.gml</script>
+      <script>scripts\lynx_mind_define.gml</script>
+      <script>scripts\lynx_artificial_define.gml</script>
+      <script>scripts\lynx_element_get_color.gml</script>
+      <script>scripts\lynx_damage.gml</script>
+      <script>scripts\lynx_spell_execute.gml</script>
+      <scripts name="Mind Lynx">
+        <script>scripts\MIND_LYNX_UITLEG.gml</script>
+        <script>scripts\lynx_mind_projectile.gml</script>
+        <script>scripts\lynx_mind_hexaShot.gml</script>
+      </scripts>
+      <scripts name="Artificial Lynx">
+        <script>scripts\lynx_artificial_bonusDamage.gml</script>
+        <script>scripts\lynx_artificial_bonusAoe.gml</script>
+      </scripts>
+    </scripts>
     <script>scripts\advanced_collision.gml</script>
   </scripts>
   <fonts name="fonts">
@@ -425,6 +443,10 @@
         <object>objects\ITEM</object>
       </objects>
       <object>objects\obj_collision_parent</object>
+    </objects>
+    <objects name="Lynx">
+      <object>objects\obj_lynx_controller</object>
+      <object>objects\obj_projectile</object>
     </objects>
     <object>objects\obj_light</object>
     <object>objects\obj_shadow</object>
