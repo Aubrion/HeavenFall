@@ -255,6 +255,13 @@
       <sprite>sprites\e_chaos_icon_1</sprite>
       <sprite>sprites\e_darkness_icon_1</sprite>
       <sprite>sprites\e_light_icon_1</sprite>
+      <sprite>sprites\e_flame_icon</sprite>
+      <sprite>sprites\e_blaze_icon</sprite>
+      <sprite>sprites\e_scorch_icon</sprite>
+      <sprite>sprites\e_blast_icon</sprite>
+      <sprite>sprites\e_smoke_icon</sprite>
+      <sprite>sprites\e_torment_icon</sprite>
+      <sprite>sprites\e_passion_icon</sprite>
     </sprites>
     <sprite>sprites\spr_back_inv</sprite>
     <sprite>sprites\spr_coin</sprite>
