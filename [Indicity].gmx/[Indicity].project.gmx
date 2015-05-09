@@ -271,6 +271,10 @@
       <sprite>sprites\e_carbon_icon</sprite>
       <sprite>sprites\e_decay_icon</sprite>
       <sprite>sprites\e_titan_icon</sprite>
+      <sprite>sprites\e_thunder_icon</sprite>
+      <sprite>sprites\e_voltage_icon</sprite>
+      <sprite>sprites\e_hope_icon</sprite>
+      <sprite>sprites\e_current_icon</sprite>
     </sprites>
     <sprite>sprites\spr_back_inv</sprite>
     <sprite>sprites\spr_coin</sprite>
