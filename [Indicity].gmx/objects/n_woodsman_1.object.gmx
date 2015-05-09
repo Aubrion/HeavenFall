@@ -68,6 +68,7 @@ damage=4
             <kind>1</kind>
             <string>///init
 attack=0
+attack_wait_time = 0.25 * room_speed;
 attacked=false
 starty=y
 startx=x
@@ -309,8 +310,8 @@ if (state != "dead" &amp;&amp; hp &lt;= 0)
           <argument>
             <kind>1</kind>
             <string>/// AI Calculations
-var distanceToPlayerX = abs(point_distance(x, y, obj_player_shadow.x, y));
-var distanceToPlayerY = abs(point_distance(x, y, x, obj_player_shadow.y+12));
+distanceToPlayerX = abs(point_distance(x, y, obj_player_shadow.x, y));
+distanceToPlayerY = abs(point_distance(x, y, x, obj_player_shadow.y+12));
 </string>
           </argument>
         </arguments>
@@ -332,16 +333,7 @@ var distanceToPlayerY = abs(point_distance(x, y, x, obj_player_shadow.y+12));
           <argument>
             <kind>1</kind>
             <string>/// Start following
-
-if (state == "idle" || state == "waiting" || state == "return")
-{
-    // Check if player is in range
-    if (AI_player_in_range(125, 40))
-    {
-        state = "follow";
-        exit;
-    }
-}
+AI_start_following(125, 40);
 </string>
           </argument>
         </arguments>
@@ -362,254 +354,16 @@ if (state == "idle" || state == "waiting" || state == "return")
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Idle state
+            <string>/// State Scripts
 
-if (state == "idle")
-{
-    // Set wander timer
-    if (alarm[1] == -1)
-        alarm[1] = irandom_range(wander_interval_min, wander_interval_max);
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Wander state
-
-if (state == "wander")
-{
-    // Arrived at destination
-    if (point_distance(x, y, wander_goalX, wander_goalY) &lt; mspeed)
-    {
-        x = wander_goalX;
-        y = wander_goalY;
-        state = "idle";
-    }
-    
-    // Move to goal
-    else
-    {
-        // Face direction
-        if (wander_goalX &lt; x)
-            image_xscale = -1;
-        else
-            image_xscale = 1;
-    
-        // Move
-        var wander_direction = point_direction(x, y, wander_goalX, wander_goalY);
-        x += lengthdir_x(mspeed, wander_direction);
-        y += lengthdir_y(mspeed, wander_direction);
-    }
-}
-
-// Stop wander timer
-if (state != "idle" &amp;&amp; alarm[1] &gt; -1)
-    alarm[1] = -1;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Follow, Hit &amp; Defend states
-if (state == "follow" || state == "defend" || state == "hit")
-{
-    // Player not in range
-    if (state == "follow" &amp;&amp; (distanceToPlayerX &gt; 150 || distanceToPlayerY &gt; 40))
-    {
-        if (point_in_territorium(x, y, territorium))
-            state = "idle";
-        else
-        {
-            state = "waiting";
-            alarm[2] = wait_time;
-        }
-    }
-    
-    // Move towards player
-    else
-    {
-        // Find goal location
-        if (obj_player_shadow.x &lt; x)
-            goalX = obj_player_shadow.x + 24;
-        else
-            goalX = obj_player_shadow.x - 24;
-        var goalY = obj_player_shadow.y + 12;
-        
-        // Face player
-        if (obj_player_shadow.x &lt; x)
-            image_xscale = -1;
-        else
-            image_xscale = 1;
-        
-        // Move
-        if (point_distance(x, y, goalX, goalY) &gt; mspeed)
-        {
-            var directionToGoal = point_direction(x, y, goalX, goalY);
-            x = x + lengthdir_x(mspeed, directionToGoal);
-            y = y + lengthdir_y(mspeed/2, directionToGoal);
-        }
-        
-        // Attack
-        else
-        {
-            state = "attack";
-            sprite_index = attacking;
-            image_index = 0;
-            image_speed = 0;
-            alarm[0] = room_speed * 0.25;
-        }
-    }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Return state
-
-if (state == "return")
-{
-    // Face direction
-    if (startx &lt; x)
-        image_xscale = -1;
-    else
-        image_xscale = 1;
-    
-    // Move
-    if (point_distance(x, y, startx, starty) &gt; mspeed)
-    {
-        var directionToStart = point_direction(x, y, startx, starty);
-        x = x + lengthdir_x(mspeed, directionToStart);
-        y = y + lengthdir_y(mspeed/2, directionToStart);
-    }
-    else
-    {
-        x = startx;
-        y = starty;
-        state = "idle";
-    }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Attack state
-
-if (state == "attack")
-{
-    // Check for attack frame
-    if (image_index == 15)
-    {
-        play_sound(attacksound) 
-    }
-    if (image_index == 20)
-    {
-        // If player is in reach
-        if (AI_player_in_range(50, 12))
-            n_attacking(punch_1,swordhit_2);
-        
-        // Reset Hit state
-        if (state == "hit")
-        {
-            state = "follow";
-            alarm[3] = -1;
-        }
-    }
-    
-    // Check if animation is finished
-    if (image_index == (sprite_get_number(sprite_index)-1))
-        state = "idle";
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Dead state
-if (state == "dead")
-{
-    if (sprite_index != n_woodsman_death)
-        sprite_index = n_woodsman_death;
-    if (image_index == sprite_get_number(death)-1)
-        instance_destroy();
-}
+AI_state_idle(1);
+AI_state_wander(1);
+AI_state_follow(150, 40, 2, 0, attack_wait_time);
+AI_state_hit(0, attack_wait_time);
+AI_state_defend(0, attack_wait_time);
+AI_state_return();
+AI_state_attack(15, 20, 50, 12, 3);
+AI_state_dead();
 </string>
           </argument>
         </arguments>
