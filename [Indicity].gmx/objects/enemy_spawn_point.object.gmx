@@ -45,8 +45,8 @@ enemy_max = 15;
 respawning = true;
 
 // Enemy respawn times
-respawn_time_min = room_speed * 5;
-respawn_time_max = room_speed * 15;
+respawn_time_min = room_speed * 3;
+respawn_time_max = room_speed * 10;
 </string>
           </argument>
         </arguments>
