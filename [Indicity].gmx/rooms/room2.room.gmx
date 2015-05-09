@@ -18,7 +18,7 @@ inst_E2D9C9A3.enemy_type = n_woodsman_1;</code>
   <makerSettings>
     <isSet>-1</isSet>
     <w>1059</w>
-    <h>600</h>
+    <h>695</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
     <showTiles>-1</showTiles>
@@ -28,8 +28,8 @@ inst_E2D9C9A3.enemy_type = n_woodsman_1;</code>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>0</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>-103</xoffset>
-    <yoffset>179</yoffset>
+    <xoffset>-71</xoffset>
+    <yoffset>-44</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="tile_forest_back" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -281,7 +281,7 @@ inst_E2D9C9A3.enemy_type = n_woodsman_1;</code>
     <instance objName="obj_deco_Esylia_mushrooms" x="1040" y="400" name="inst_4C80E2D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Esylia_mushrooms" x="1040" y="352" name="inst_9EFBEA42" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_Esylia_mushrooms" x="1008" y="432" name="inst_A6D4927E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_lynx_controller" x="80" y="48" name="inst_CB79D4B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_lynx_controller" x="16" y="0" name="inst_CB79D4B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="&lt;undefined&gt;" x="60" y="420" w="16" h="16" xo="0" yo="16" id="10005666" name="inst_D33E5A4A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
