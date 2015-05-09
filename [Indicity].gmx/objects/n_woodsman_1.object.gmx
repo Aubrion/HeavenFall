@@ -138,10 +138,8 @@ xx=x
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Reset Hit state
-
-if (state == "hit")
-    state = "follow";
+            <string>/// Alarm Hit
+AI_alarm_hit();
 </string>
           </argument>
         </arguments>
@@ -164,10 +162,8 @@ if (state == "hit")
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Return to start position
-
-if (state == "waiting")
-    state = "return";
+            <string>/// Alarm Return
+AI_alarm_return();
 </string>
           </argument>
         </arguments>
@@ -190,20 +186,8 @@ if (state == "waiting")
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Start wandering
-var wander_dir, wander_dist;
-
-// Find location
-do {
-    wander_dir = irandom(360);
-    wander_dist = irandom_range(wander_distance_min, wander_distance_max);
-    wander_goalX = x + lengthdir_x(wander_dist, wander_dir);
-    wander_goalY = y + lengthdir_y(wander_dist, wander_dir);
-}
-until (point_in_territorium(wander_goalX, wander_goalY, territorium));
-
-// Change state
-state = "wander";
+            <string>/// Alarm Wander
+AI_alarm_wander();
 </string>
           </argument>
         </arguments>
@@ -226,8 +210,8 @@ state = "wander";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Start animation
-image_speed = 1;
+            <string>/// Alarm Attack
+AI_alarm_attack();
 </string>
           </argument>
         </arguments>
