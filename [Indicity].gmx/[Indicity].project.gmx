@@ -240,7 +240,13 @@
       <sprite>sprites\spr_light_2</sprite>
     </sprites>
     <sprites name="Element Icons">
+      <sprite>sprites\e_fire_icon</sprite>
       <sprite>sprites\e_water_icon_1</sprite>
+      <sprite>sprites\e_earth_icon</sprite>
+      <sprite>sprites\e_wind_icon</sprite>
+      <sprite>sprites\e_electric_icon</sprite>
+      <sprite>sprites\e_life_icon</sprite>
+      <sprite>sprites\e_death_icon</sprite>
       <sprite>sprites\e_ice_icon_1</sprite>
       <sprite>sprites\e_ancient_icon_1</sprite>
       <sprite>sprites\e_conduction_icon_1</sprite>
