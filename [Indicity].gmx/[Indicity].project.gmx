@@ -262,6 +262,11 @@
       <sprite>sprites\e_smoke_icon</sprite>
       <sprite>sprites\e_torment_icon</sprite>
       <sprite>sprites\e_passion_icon</sprite>
+      <sprite>sprites\e_torndado_icon</sprite>
+      <sprite>sprites\e_gross_icon</sprite>
+      <sprite>sprites\e_storm_icon</sprite>
+      <sprite>sprites\e_dread_icon</sprite>
+      <sprite>sprites\e_motion_icon</sprite>
     </sprites>
     <sprite>sprites\spr_back_inv</sprite>
     <sprite>sprites\spr_coin</sprite>
