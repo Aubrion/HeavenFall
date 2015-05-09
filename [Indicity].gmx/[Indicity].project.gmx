@@ -246,7 +246,9 @@
       <sprite>sprites\e_wind_icon</sprite>
       <sprite>sprites\e_electric_icon</sprite>
       <sprite>sprites\e_life_icon</sprite>
+      <sprite>sprites\e_life_icon_1</sprite>
       <sprite>sprites\e_death_icon</sprite>
+      <sprite>sprites\e_death_icon_1</sprite>
       <sprite>sprites\e_ice_icon_1</sprite>
       <sprite>sprites\e_ancient_icon_1</sprite>
       <sprite>sprites\e_conduction_icon_1</sprite>
@@ -264,17 +266,22 @@
       <sprite>sprites\e_passion_icon</sprite>
       <sprite>sprites\e_torndado_icon</sprite>
       <sprite>sprites\e_gross_icon</sprite>
+      <sprite>sprites\sprite191</sprite>
       <sprite>sprites\e_storm_icon</sprite>
       <sprite>sprites\e_dread_icon</sprite>
+      <sprite>sprites\sprite189</sprite>
       <sprite>sprites\e_motion_icon</sprite>
+      <sprite>sprites\e_motion_icon_1</sprite>
       <sprite>sprites\e_gravity_icon</sprite>
+      <sprite>sprites\e_gravity_icon_1</sprite>
       <sprite>sprites\e_carbon_icon</sprite>
       <sprite>sprites\e_decay_icon</sprite>
       <sprite>sprites\e_titan_icon</sprite>
+      <sprite>sprites\e_titan_icon_1</sprite>
       <sprite>sprites\e_thunder_icon</sprite>
       <sprite>sprites\e_voltage_icon</sprite>
       <sprite>sprites\e_hope_icon</sprite>
-      <sprite>sprites\e_current_icon</sprite>
+      <sprite>sprites\e_whirl_icon</sprite>
     </sprites>
     <sprite>sprites\spr_back_inv</sprite>
     <sprite>sprites\spr_coin</sprite>

@@ -107,7 +107,7 @@ l_elemN[29] = "Titan";
 l_elemD[29] = 20;
 
 //water
-l_elemN[30] = "Current";
+l_elemN[30] = "Whirl";
 l_elemD[30] = 20;
 
 l_elemN[31] = "Poison";
