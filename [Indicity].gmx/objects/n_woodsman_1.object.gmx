@@ -75,6 +75,7 @@ startx=x
 mass=sprite_height+sprite_width
 i=instance_create(x,y,obj_shadow)
 i.creator=id
+xp_given = false;
 
 image_xscale=choose(1,-1)
 image_index=floor(random(20))
@@ -285,7 +286,12 @@ depth = 1 * -(y);
             <string>/// Change to dead state
 if (state != "dead" &amp;&amp; hp &lt;= 0)
 {
-    global.xp+=expgained
+    if (!xp_given)
+    {
+        global.xp += expgained;
+        xp_given = true;
+    }
+    
     state = "dead";
     sprite_index = death;
 }
