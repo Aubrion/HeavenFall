@@ -44,6 +44,9 @@ global.weapondmg=5
 global.dmg=0
 global.slow=0
 
+// Skills
+skills_init();
+
 //basic stats
 stats_set_basic();
 element_init_d()
@@ -156,8 +159,8 @@ if (global.xp&gt;= global.mxp and global.lvl&lt;99)
 
 if (global.lvl=99) global.xp=0;
 
-
-
+// Skills
+skills_level_up();
 </string>
           </argument>
         </arguments>

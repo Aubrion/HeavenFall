@@ -387,6 +387,11 @@
         <script>scripts\lynx_artificial_bonusAoe.gml</script>
       </scripts>
     </scripts>
+    <scripts name="Skills">
+      <script>scripts\skills_init.gml</script>
+      <script>scripts\skills_level_up.gml</script>
+      <script>scripts\skill_gain_xp.gml</script>
+    </scripts>
     <script>scripts\advanced_collision.gml</script>
   </scripts>
   <fonts name="fonts">
@@ -495,6 +500,13 @@
     <room>rooms\room3</room>
     <room>rooms\room0</room>
   </rooms>
+  <constants number="5">
+    <constant name="woodcutting">0</constant>
+    <constant name="mining">1</constant>
+    <constant name="hunting">2</constant>
+    <constant name="blacksmithing">3</constant>
+    <constant name="smelting">4</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
