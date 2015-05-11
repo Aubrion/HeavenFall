@@ -393,6 +393,8 @@
       <script>scripts\lynx_element_get_color.gml</script>
       <script>scripts\lynx_damage.gml</script>
       <script>scripts\lynx_spell_execute.gml</script>
+      <script>scripts\lynx_effect_burn.gml</script>
+      <script>scripts\lynx_effect_burst.gml</script>
       <scripts name="Mind Lynx">
         <script>scripts\MIND_LYNX_UITLEG.gml</script>
         <script>scripts\lynx_mind_projectile.gml</script>

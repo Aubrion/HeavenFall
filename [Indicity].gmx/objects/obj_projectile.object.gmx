@@ -36,7 +36,7 @@
 //bounce=0
 //play_sound(laser_1)
 
-alarm[0] = 30;
+alarm[0] = 45;
 
 image_speed = 0.5;
 
@@ -113,6 +113,7 @@ play_sound(laser_3)
             <string>///step
 depth=(1*-y)
 weapontrail(0.2,0.04)
+lynx_effect_burst();
 
 image_blend = color;
 </string>
