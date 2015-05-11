@@ -257,7 +257,11 @@
     <sprites name="Gathering Resources">
       <sprites name="Tools">
         <sprites name="Mining">
-          <sprite>sprites\spr_tool_pickaxe1</sprite>
+          <sprites name="Pickaxes">
+            <sprite>sprites\spr_tool_pickaxe1</sprite>
+          </sprites>
+          <sprite>sprites\spr_anvil</sprite>
+          <sprite>sprites\spr_smithinghammer</sprite>
         </sprites>
       </sprites>
       <sprites name="Nodes">
