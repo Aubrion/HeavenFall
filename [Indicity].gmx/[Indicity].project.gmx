@@ -266,10 +266,10 @@
       <sprite>sprites\e_passion_icon</sprite>
       <sprite>sprites\e_torndado_icon</sprite>
       <sprite>sprites\e_gross_icon</sprite>
-      <sprite>sprites\sprite191</sprite>
+      <sprite>sprites\e_gross_icon_1</sprite>
       <sprite>sprites\e_storm_icon</sprite>
       <sprite>sprites\e_dread_icon</sprite>
-      <sprite>sprites\sprite189</sprite>
+      <sprite>sprites\e_dread_icon_1</sprite>
       <sprite>sprites\e_motion_icon</sprite>
       <sprite>sprites\e_motion_icon_1</sprite>
       <sprite>sprites\e_gravity_icon</sprite>

@@ -10,3 +10,7 @@ if (argument0 == 0) i.aoe = 16 + l_aoeBonus;
 i.element = argument0;
 i.hspeed = obj_player.look*4;
 i.color = lynx_element_get_color(argument0);
+with(i)
+{
+    lynx_effect_burn(color);
+}

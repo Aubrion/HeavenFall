@@ -9,8 +9,11 @@ repeat (6)
     i.damageType = 1; //magical
     if (argument0 == 0) i.aoe = 16 + l_aoeBonus;
     i.element = argument0;
-    with (i) motion_set(A,4);
     i.color = lynx_element_get_color(argument0);
     A+=60;
+    with(i)
+    {
+        lynx_effect_burn(color);
+        motion_set(A,4);
+    }
 }
-
