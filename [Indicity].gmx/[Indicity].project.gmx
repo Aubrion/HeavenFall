@@ -262,12 +262,21 @@
       </sprites>
       <sprites name="Nodes">
         <sprite>sprites\spr_node_bronze</sprite>
+        <sprite>sprites\spr_node_iron</sprite>
+        <sprite>sprites\spr_node_silver</sprite>
+        <sprite>sprites\spr_node_gold</sprite>
       </sprites>
       <sprites name="Ores">
         <sprite>sprites\spr_ore_bronze</sprite>
+        <sprite>sprites\spr_ore_iron</sprite>
+        <sprite>sprites\spr_ore_silver</sprite>
+        <sprite>sprites\spr_ore_gold</sprite>
       </sprites>
       <sprites name="Ingots">
         <sprite>sprites\spr_ingot_bronze</sprite>
+        <sprite>sprites\spr_ingot_iron</sprite>
+        <sprite>sprites\spr_ingot_silver</sprite>
+        <sprite>sprites\spr_ingot_gold</sprite>
       </sprites>
     </sprites>
   </sprites>
