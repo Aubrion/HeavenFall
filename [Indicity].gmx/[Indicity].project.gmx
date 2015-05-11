@@ -254,6 +254,19 @@
     <sprite>sprites\spr_coin</sprite>
     <sprite>sprites\sprite144</sprite>
     <sprite>sprites\spr_bolt</sprite>
+    <sprites name="Gathering Resources">
+      <sprites name="Tools">
+        <sprites name="Mining">
+          <sprite>sprites\spr_tool_pickaxe1</sprite>
+        </sprites>
+      </sprites>
+      <sprites name="Nodes">
+        <sprite>sprites\spr_node_bronze</sprite>
+      </sprites>
+      <sprites name="Ores">
+        <sprite>sprites\spr_ore_bronze</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="tiles">
