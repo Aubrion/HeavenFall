@@ -44,6 +44,7 @@ inv_freeslot_item_add(4,24,8,1);
 inv_freeslot_item_add(3,8,24,1);
 inv_freeslot_item_add(1,24,24,1);
 inv_freeslot_item_add(5,40,8,1);
+inv_freeslot_item_add(6,40,40,1);
 
 //vars
 
@@ -141,8 +142,15 @@ else if (mouse_check_button_released(mb_left) &amp;&amp; m_slotID != -1)
     for (i=0; i&lt;slots; i+=1)
     {
         if (slotStack[i] == 0 &amp;&amp; point_in_rectangle(mouse_x,mouse_y,x+slotX[i],y+slotY[i],x+slotX[i]+16,y+slotY[i]+16))
-        {
-            if (ITEM.item[m_slotID, 1] == slotType[i])
+        {            
+            // Main slot accepts tools as well
+            var tool_accepted = (
+                slotType[i] == "main" &amp;&amp; (
+                ITEM.item[m_slotID, 1] == "pickaxe" ||
+                ITEM.item[m_slotID, 1] == "woodcutting_axe"
+            ));
+        
+            if (tool_accepted || ITEM.item[m_slotID, 1] == slotType[i])
             {
                 slotID[i] = m_slotID;
                 slotStack[i] = m_slotStack;

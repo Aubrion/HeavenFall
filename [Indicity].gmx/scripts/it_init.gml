@@ -52,3 +52,10 @@ item[5,1] = "helm"
 item[5,2] = helm_zabuza_1
 item[5,3] = helm_zabuza_1_ico
 item[5,4] = 1
+
+// Pickaxe
+item[6,0] = "Pickaxe"
+item[6,1] = "pickaxe"
+item[6,2] = spr_tool_pickaxe1
+item[6,3] = spr_tool_pickaxe1
+item[6,4] = 1
