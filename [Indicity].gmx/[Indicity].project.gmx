@@ -266,6 +266,9 @@
       <sprites name="Ores">
         <sprite>sprites\spr_ore_bronze</sprite>
       </sprites>
+      <sprites name="Ingots">
+        <sprite>sprites\spr_ingot_bronze</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background">
