@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>/// Set default parameters
 range = 50;
-interact_range = 20;
+interact_range = 25;
 interact_type = "none";
 in_range = false;
 outline_sprite = sprite_index;
