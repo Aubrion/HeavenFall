@@ -357,34 +357,63 @@ if alarm[0]&gt;0 or alarm[1]&gt;0
             <kind>1</kind>
             <string>/// Interacting
 
-// Find nearest object
-var nearest_obj = instance_nearest(obj_player_shadow.x, obj_player_shadow.y, obj_interactable);
-var obj_in_range = false;
-
-// Check if it is in range
-var distX = point_distance(obj_player_shadow.x, obj_player_shadow.y, nearest_obj.x, obj_player_shadow.y);
-var distY = point_distance(obj_player_shadow.x, obj_player_shadow.y, obj_player_shadow.x, nearest_obj.y);
-if (distX &lt; nearest_obj.range &amp;&amp; distY &lt; nearest_obj.range/2)
-    obj_in_range = true;
-
-// Make nearest object glow
-obj_interactable.in_range = false;
-if (obj_in_range)
-    nearest_obj.in_range = true;
-
-// Change interacting object
-if (interact_object == noone &amp;&amp; obj_in_range &amp;&amp; keyboard_check_pressed(global.key1interact))
+// Get interactable objects in range
+var interact_in_range = false;
+with(obj_interactable)
 {
-    // Set object as target
-    interact_object = nearest_obj;
+    // Add to list if player is in range
+    var distX = point_distance(x, y, obj_player_shadow.x, y);
+    var distY = point_distance(x, y, x, obj_player_shadow.y);
+    if (distX &lt; range &amp;&amp; distY &lt; range/2)
+        interact_in_range[array_length_1d(interact_in_range)] = id;
+}
+
+// Pick closest from list
+var nearest_obj = noone;
+if (array_length_1d(interact_in_range) &gt; 0)
+{
+    var nearest_obj_dist = 0;
+    for (var i = 0; i &lt; array_length_1d(interact_in_range); i++)
+    {
+        var temp_dist = point_distance(x, y, interact_in_range[i].x, interact_in_range[i].y);
+        if (nearest_obj == noone)
+        {
+            nearest_obj = interact_in_range[i];
+            nearest_obj_dist = temp_dist;
+        }
+        else
+        {
+            if (temp_dist &lt; nearest_obj_dist)
+            {
+                nearest_obj = interact_in_range[i];
+                nearest_obj_dist = temp_dist;
+            }
+        }
+    }
+}
+
+// Reset glow
+obj_interactable.in_range = false;
+
+if (nearest_obj != noone)
+{
+    // Set glow
+    nearest_obj.in_range = true;
     
-    // Find goal
-    if (obj_player_shadow.x &gt; interact_object.x)
-        interact_side = 1;
-    else
-        interact_side = -1;
-    interactGoalX = interact_object.x + (interact_object.interact_range * interact_side) + interact_object.offsetX;
-    interactGoalY = interact_object.y + interact_object.offsetY;
+    // Change interacting object
+    if (interact_object == noone &amp;&amp; nearest_obj != noone &amp;&amp; keyboard_check_pressed(global.key1interact))
+    {
+        // Set object as target
+        interact_object = nearest_obj;
+        
+        // Find goal
+        if (obj_player_shadow.x &gt; interact_object.x)
+            interact_side = 1;
+        else
+            interact_side = -1;
+        interactGoalX = interact_object.x + (interact_object.interact_range * interact_side) + interact_object.offsetX;
+        interactGoalY = interact_object.y + interact_object.offsetY;
+    }
 }
 
 if (interact_object != noone)
