@@ -277,7 +277,7 @@ if (global.lvl=99) global.xp=0;
             <string>///player movement/animation
 
 ///look
-if global.attack=0 or global.attack=-2
+if (interact_object == noone &amp;&amp; (global.attack=0 or global.attack=-2))
 {
 if mouse_x&lt;obj_player.x {look=-1}
 if mouse_x&gt;obj_player.x {look= 1}
@@ -421,6 +421,13 @@ if (interact_object != noone)
     // Move towards goal
     if (point_distance(obj_player_shadow.x, obj_player_shadow.y, interactGoalX, interactGoalY) &gt; mspd)
     {
+        // Look
+        if (interactGoalX &lt; x)
+            look = -1;
+        else
+            look = 1;
+        
+        // Move
         var interactGoalDir = point_direction(obj_player_shadow.x, obj_player_shadow.y, interactGoalX, interactGoalY);
         x += lengthdir_x(mspd, interactGoalDir);
         y += lengthdir_y(mspd/2, interactGoalDir);
