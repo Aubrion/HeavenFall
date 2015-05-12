@@ -39,7 +39,7 @@ jump=false
 sprite_normal=spr_player
 sprite_jump=spr_player_jump
 
-
+interact_object = noone;
 
 //grav
 z=0
@@ -312,6 +312,7 @@ and !keyboard_check(global.key1down)
  else
 {
  image_speed=(mspd/8)
+ interact_object = noone;
 }
 
 ///grav init
@@ -334,6 +335,75 @@ if alarm[0]&gt;0 or alarm[1]&gt;0
 
 
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Interacting
+
+show_debug_message(keyboard_check_pressed(global.key1interact));
+
+// Find nearest object
+var nearest_obj = instance_nearest(obj_player_shadow.x, obj_player_shadow.y, obj_interactable);
+var obj_in_range = false;
+
+// Check if it is in range
+var distX = point_distance(obj_player_shadow.x, obj_player_shadow.y, nearest_obj.x, obj_player_shadow.y);
+var distY = point_distance(obj_player_shadow.x, obj_player_shadow.y, obj_player_shadow.x, nearest_obj.y);
+if (distX &lt; nearest_obj.range &amp;&amp; distY &lt; nearest_obj.range/2)
+    obj_in_range = true;
+
+// Make nearest object glow
+obj_interactable.in_range = false;
+if (obj_in_range)
+    nearest_obj.in_range = true;
+
+// Change interacting object
+if (interact_object == noone &amp;&amp; obj_in_range &amp;&amp; keyboard_check_pressed(global.key1interact))
+{
+    // Set object as target
+    interact_object = nearest_obj;
+    
+    // Find goal
+    if (obj_player_shadow.x &gt; interact_object.x)
+        interact_side = 1;
+    else
+        interact_side = -1;
+    interactGoalX = interact_object.x + (interact_object.interact_range * interact_side) + interact_object.offsetX;
+    interactGoalY = interact_object.y + interact_object.offsetY;
+}
+
+if (interact_object != noone)
+{
+    // Move towards goal
+    if (point_distance(obj_player_shadow.x, obj_player_shadow.y, interactGoalX, interactGoalY) &gt; mspd)
+    {
+        var interactGoalDir = point_direction(obj_player_shadow.x, obj_player_shadow.y, interactGoalX, interactGoalY);
+        x += lengthdir_x(mspd, interactGoalDir);
+        y += lengthdir_y(mspd/2, interactGoalDir);
+    }
+    else
+    {
+        x = interactGoalX;
+        y = interactGoalY;
+    }
+}
 </string>
           </argument>
         </arguments>

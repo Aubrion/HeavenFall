@@ -265,6 +265,7 @@
         </sprites>
       </sprites>
       <sprites name="Nodes">
+        <sprite>sprites\spr_node_outline</sprite>
         <sprite>sprites\spr_node_bronze</sprite>
         <sprite>sprites\spr_node_iron</sprite>
         <sprite>sprites\spr_node_silver</sprite>
@@ -476,6 +477,15 @@
         </objects>
       </objects>
     </objects>
+    <objects name="Resources">
+      <objects name="Parents">
+        <object>objects\node_parent</object>
+        <object>objects\resource_parent</object>
+      </objects>
+      <objects name="Nodes">
+        <object>objects\node_bronze</object>
+      </objects>
+    </objects>
     <objects name="Gear">
       <object>objects\obj_helm</object>
       <object>objects\obj_greatsword</object>
@@ -509,6 +519,7 @@
         <object>objects\ITEM</object>
       </objects>
       <object>objects\obj_collision_parent</object>
+      <object>objects\obj_interactable</object>
     </objects>
     <objects name="Lynx">
       <object>objects\obj_lynx_controller</object>
