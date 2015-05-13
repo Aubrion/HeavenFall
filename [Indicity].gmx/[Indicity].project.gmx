@@ -410,10 +410,10 @@
       <script>scripts\inv_create.gml</script>
       <script>scripts\inv_slot_add.gml</script>
       <script>scripts\inv_draw.gml</script>
-      <script>scripts\inv_item_add.gml</script>
       <script>scripts\inv_freeslot_create.gml</script>
-      <script>scripts\inv_freeslot_item_add.gml</script>
+      <script>scripts\inv_item_add.gml</script>
       <script>scripts\inv_freeslot_remove_empty.gml</script>
+      <script>scripts\inv_first_empty.gml</script>
     </scripts>
     <scripts name="Lynx">
       <script>scripts\lynx_element_define.gml</script>

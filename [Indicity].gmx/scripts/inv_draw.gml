@@ -5,9 +5,10 @@ draw_set_font(font_inventory);
 //draw equipment
 for (i=0; i<slots; i+=1)
 {
-if (slotStack[i] > 0)
+if (slotID[i] != -1)
     {
-        draw_sprite_part(ITEM.item[slotID[i],2],0,0,0,16,16,x+slotX[i],y+slotY[i]);
+        //draw_sprite_part(ITEM.item[slotID[i],2],0,0,0,16,16,x+slotX[i],y+slotY[i]);
+        draw_sprite(ITEM.item[slotID[i],3], 0, x+slotX[i], y+slotY[i]);
         if (slotStack[i] > 1)
         {
         draw_set_color(c_black);
@@ -22,12 +23,11 @@ for (i=0; i<fs_slots; i+=1)
 {
 if (fs_slotID[i] != -1)
     {
-        draw_sprite(ITEM.item[fs_slotID[i],2],0,x+fs_x+fs_slotX[i]+sprite_get_xoffset(ITEM.item[fs_slotID[i],2]),y+fs_y+fs_slotY[i]+sprite_get_yoffset(ITEM.item[fs_slotID[i],2]));
-        //draw_circle(x+fs_x+fs_slotX[i],y+fs_y+fs_slotY[i],5,1) //voor de cirkel bij de inventory item
+        draw_sprite(ITEM.item[fs_slotID[i],3],0,x+fs_slotX[i],y+fs_slotY[i]);
         if (fs_slotStack[i] > 1)
         {
         draw_set_color(c_black);
-        draw_text(x+fs_x+fs_slotX[i]+14,y+fs_y+fs_slotY[i]+14,string(fs_slotStack[i]));
+        draw_text(x+fs_slotX[i]+14,y+fs_slotY[i]+14,string(fs_slotStack[i]));
         draw_set_color(c_white);
         }
     }

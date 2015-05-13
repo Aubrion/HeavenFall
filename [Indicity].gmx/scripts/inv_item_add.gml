@@ -1,4 +1,8 @@
-///inv_item_set(slot, ID, quantity)
+///inv_item_add(item ID, kwantiteit)
+var i = inv_first_empty();
 
-slotID[argument0] = argument1;
-slotStack[argument0] = argument2;
+if (i != -1)
+{
+    fs_slotID[i] = argument0;
+    fs_slotStack[i] = argument1;
+}
