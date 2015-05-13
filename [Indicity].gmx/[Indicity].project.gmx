@@ -437,6 +437,7 @@
       </scripts>
     </scripts>
     <script>scripts\advanced_collision.gml</script>
+    <script>scripts\ai_drop_loot.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\small_font</font>
@@ -498,6 +499,7 @@
       <objects name="projectiles">
         <object>objects\n_bot_1_laser</object>
       </objects>
+      <object>objects\obj_item_drop</object>
     </objects>
     <objects name="controllers">
       <object>objects\obj_hybrid_controller</object>

@@ -8,7 +8,9 @@ fs_y = 53;
 fs_slots = 25;
 
 for (j=0; j<4; j+=1)
-{
+{   
+    XX = 0;
+    YY = 0;
     for (i=0; i<fs_slots; i+=1)
     {
         if (XX > 17*4)
