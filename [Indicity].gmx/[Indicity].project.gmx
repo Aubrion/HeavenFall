@@ -250,10 +250,55 @@
       <sprite>sprites\e_darkness_icon_1</sprite>
       <sprite>sprites\e_light_icon_1</sprite>
     </sprites>
+    <sprite>sprites\spr_inventory_tab</sprite>
     <sprite>sprites\spr_back_inv</sprite>
     <sprite>sprites\spr_coin</sprite>
     <sprite>sprites\sprite144</sprite>
     <sprite>sprites\spr_bolt</sprite>
+    <sprites name="Gathering Resources">
+      <sprites name="Tools">
+        <sprites name="Mining">
+          <sprites name="Pickaxes">
+            <sprite>sprites\spr_tool_pickaxe1</sprite>
+          </sprites>
+          <sprite>sprites\spr_anvil</sprite>
+          <sprite>sprites\spr_smithinghammer</sprite>
+        </sprites>
+      </sprites>
+      <sprites name="Nodes">
+        <sprite>sprites\spr_node_bronze</sprite>
+        <sprite>sprites\spr_node_iron</sprite>
+        <sprite>sprites\spr_node_silver</sprite>
+        <sprite>sprites\spr_node_gold</sprite>
+        <sprite>sprites\spr_node_mithril</sprite>
+        <sprite>sprites\spr_node_adamantium</sprite>
+        <sprite>sprites\spr_node_magicite</sprite>
+        <sprite>sprites\spr_node_bloodstone</sprite>
+        <sprite>sprites\spr_node_darqantium</sprite>
+      </sprites>
+      <sprites name="Ores">
+        <sprite>sprites\spr_ore_bronze</sprite>
+        <sprite>sprites\spr_ore_iron</sprite>
+        <sprite>sprites\spr_ore_silver</sprite>
+        <sprite>sprites\spr_ore_gold</sprite>
+        <sprite>sprites\spr_ore_mithril</sprite>
+        <sprite>sprites\spr_ore_adamantium</sprite>
+        <sprite>sprites\spr_ore_magicite</sprite>
+        <sprite>sprites\spr_ore_bloodstone</sprite>
+        <sprite>sprites\spr_ore_darqantium</sprite>
+      </sprites>
+      <sprites name="Ingots">
+        <sprite>sprites\spr_ingot_bronze</sprite>
+        <sprite>sprites\spr_ingot_iron</sprite>
+        <sprite>sprites\spr_ingot_silver</sprite>
+        <sprite>sprites\spr_ingot_gold</sprite>
+        <sprite>sprites\spr_ingot_mithril</sprite>
+        <sprite>sprites\spr_ingot_adamantium</sprite>
+        <sprite>sprites\spr_ingot_magicite</sprite>
+        <sprite>sprites\spr_ingot_bloodstone</sprite>
+        <sprite>sprites\spr_ingot_darqantium</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="tiles">
