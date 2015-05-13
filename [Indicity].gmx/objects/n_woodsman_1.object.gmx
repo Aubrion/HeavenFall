@@ -290,8 +290,8 @@ if (state != "dead" &amp;&amp; hp &lt;= 0)
     {
         global.xp += expgained;
         xp_given = true;
+        ai_drop_loot();
     }
-    
     state = "dead";
     sprite_index = death;
 }

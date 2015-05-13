@@ -250,6 +250,11 @@
       <sprite>sprites\e_darkness_icon_1</sprite>
       <sprite>sprites\e_light_icon_1</sprite>
     </sprites>
+    <sprite>sprites\spr_inventory_tab</sprite>
+    <sprite>sprites\spr_inventory_tab_4</sprite>
+    <sprite>sprites\spr_inventory_tab_3</sprite>
+    <sprite>sprites\spr_inventory_tab_2</sprite>
+    <sprite>sprites\spr_inventory_tab_1</sprite>
     <sprite>sprites\spr_back_inv</sprite>
     <sprite>sprites\spr_coin</sprite>
     <sprite>sprites\sprite144</sprite>
@@ -410,10 +415,10 @@
       <script>scripts\inv_create.gml</script>
       <script>scripts\inv_slot_add.gml</script>
       <script>scripts\inv_draw.gml</script>
-      <script>scripts\inv_item_add.gml</script>
       <script>scripts\inv_freeslot_create.gml</script>
-      <script>scripts\inv_freeslot_item_add.gml</script>
-      <script>scripts\inv_freeslot_remove_empty.gml</script>
+      <script>scripts\inv_item_add.gml</script>
+      <script>scripts\inv_first_empty.gml</script>
+      <script>scripts\inv_first_empty_tab.gml</script>
     </scripts>
     <scripts name="Lynx">
       <script>scripts\lynx_element_define.gml</script>
@@ -438,6 +443,7 @@
       <script>scripts\skill_gain_xp.gml</script>
     </scripts>
     <script>scripts\advanced_collision.gml</script>
+    <script>scripts\ai_drop_loot.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\small_font</font>
@@ -508,6 +514,7 @@
       <objects name="projectiles">
         <object>objects\n_bot_1_laser</object>
       </objects>
+      <object>objects\obj_item_drop</object>
     </objects>
     <objects name="controllers">
       <object>objects\obj_hybrid_controller</object>
