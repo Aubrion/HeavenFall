@@ -21,14 +21,27 @@ if (slotID[i] != -1)
 //draw freeslot
 for (i=0; i<fs_slots; i+=1)
 {
-if (fs_slotID[i] != -1)
+if (fs_slotID[curr_tab,i] != -1)
     {
-        draw_sprite(ITEM.item[fs_slotID[i],3],0,x+fs_slotX[i],y+fs_slotY[i]);
-        if (fs_slotStack[i] > 1)
+        draw_sprite(ITEM.item[fs_slotID[curr_tab,i],3],0,x+fs_slotX[curr_tab,i],y+fs_slotY[curr_tab,i]);
+        if (fs_slotStack[curr_tab,i] > 1)
         {
         draw_set_color(c_black);
-        draw_text(x+fs_slotX[i]+14,y+fs_slotY[i]+14,string(fs_slotStack[i]));
+        draw_text(x+fs_slotX[curr_tab,i]+14,y+fs_slotY[curr_tab,i]+14,string(fs_slotStack[curr_tab,i]));
         draw_set_color(c_white);
         }
     }
+}
+//draw tabs
+draw_sprite(spr_inventory_tab_1,1,x-13,y+53)
+draw_sprite(spr_inventory_tab_2,1,x-13,y+53+19)
+draw_sprite(spr_inventory_tab_3,1,x-13,y+53+19+19)
+draw_sprite(spr_inventory_tab_4,1,x-13,y+53+19+19+19)
+
+switch (curr_tab)
+{
+    case 0: draw_sprite(spr_inventory_tab_1,0,x-13,y+53) break;
+    case 1: draw_sprite(spr_inventory_tab_2,0,x-13,y+53+19) break;
+    case 2: draw_sprite(spr_inventory_tab_3,0,x-13,y+53+19+19) break;
+    case 3: draw_sprite(spr_inventory_tab_4,0,x-13,y+53+19+19+19) break;
 }

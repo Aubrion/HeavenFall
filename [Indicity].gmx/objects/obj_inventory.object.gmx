@@ -25,7 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>inv_create();
+            <string>global.tab = 3; //all 4 tabs (0 till 3)
+curr_tab = 0;
+
+inv_create();
 inv_slot_add(24,24,"main");
 inv_slot_add(8,8,"jewel");
 inv_slot_add(8,24,"jewel");
@@ -96,13 +99,22 @@ y = view_yview[0] + view_hview[0]/2 - sprite_height/2;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (keyboard_check_pressed(ord('I')))
+            <string>//activate inventory
+if (keyboard_check_pressed(ord('I')))
 {
     active = -active;
 }
 
-//drag and drop
+//check if tab clicked
+if (mouse_check_button_pressed(mb_left))
+{
+    if (point_in_rectangle(mouse_x,mouse_y,x-13,y+53,x,y+53+18)) curr_tab = 0;
+    else if (point_in_rectangle(mouse_x,mouse_y,x-13,y+53+19,x,y+53+19+18) &amp;&amp; global.tab &gt;= 1) curr_tab = 1;
+    else if (point_in_rectangle(mouse_x,mouse_y,x-13,y+53+19+19,x,y+53+19+19+18)&amp;&amp; global.tab &gt;= 2) curr_tab = 2;
+    else if (point_in_rectangle(mouse_x,mouse_y,x-13,y+53+19+19+19,x,y+53+19+19+19+18)&amp;&amp; global.tab &gt;= 3) curr_tab = 3;
+}
 
+//drag and drop
 if (mouse_check_button_pressed(mb_left) &amp;&amp; m_slotID == -1)
 {
     for (i=0; i&lt;slots; i+=1)
@@ -122,14 +134,14 @@ if (mouse_check_button_pressed(mb_left) &amp;&amp; m_slotID == -1)
     
     for (i=0; i&lt;fs_slots; i+=1)
     {
-        if (fs_slotStack[i] != 0 &amp;&amp; point_in_rectangle(mouse_x,mouse_y,x+fs_slotX[i],y+fs_slotY[i],x+fs_slotX[i]+16,y+fs_slotY[i]+16))
+        if (fs_slotStack[curr_tab,i] != 0 &amp;&amp; point_in_rectangle(mouse_x,mouse_y,x+fs_slotX[curr_tab,i],y+fs_slotY[curr_tab,i],x+fs_slotX[curr_tab,i]+16,y+fs_slotY[curr_tab,i]+16))
         {
-            m_slotID = fs_slotID[i];
-            m_slotStack = fs_slotStack[i];
+            m_slotID = fs_slotID[curr_tab,i];
+            m_slotStack = fs_slotStack[curr_tab,i];
             m_oldSlotT = 1;
             m_oldSlot = i;
-            fs_slotID[i] = -1;
-            fs_slotStack[i] = 0;
+            fs_slotID[curr_tab,i] = -1;
+            fs_slotStack[curr_tab,i] = 0;
             break;
         }       
     }
@@ -154,19 +166,19 @@ else if (mouse_check_button_released(mb_left) &amp;&amp; m_slotID != -1)
     
     for (i=0; i&lt;fs_slots; i+=1)
     {
-        if (point_in_rectangle(mouse_x,mouse_y,x+fs_slotX[i],y+fs_slotY[i],x+fs_slotX[i]+16,y+fs_slotY[i]+16))
+        if (point_in_rectangle(mouse_x,mouse_y,x+fs_slotX[curr_tab,i],y+fs_slotY[curr_tab,i],x+fs_slotX[curr_tab,i]+16,y+fs_slotY[curr_tab,i]+16))
         {
-            if (fs_slotID[i] != -1)
+            if (fs_slotID[curr_tab,i] != -1)
             {
-                if (fs_slotStack[i]+m_slotStack &gt;= ITEM.item[fs_slotID[i],4])
+                if (fs_slotStack[curr_tab,i]+m_slotStack &gt;= ITEM.item[fs_slotID[curr_tab,i],4])
                 {
-                    m_slotStack -= ITEM.item[fs_slotID[i],4] - fs_slotStack[i];
-                    fs_slotStack[i] = ITEM.item[fs_slotID[i],4];
+                    m_slotStack -= ITEM.item[fs_slotID[curr_tab,i],4] - fs_slotStack[curr_tab,i];
+                    fs_slotStack[curr_tab,i] = ITEM.item[fs_slotID[curr_tab,i],4];
                     break;
                 }
                 else
                 {
-                    fs_slotStack[i] += m_slotStack;
+                    fs_slotStack[curr_tab,i] += m_slotStack;
                     m_slotID = -1;
                     m_slotStack = 0;
                     break;
@@ -174,8 +186,8 @@ else if (mouse_check_button_released(mb_left) &amp;&amp; m_slotID != -1)
             }
             else
             {
-                fs_slotID[i] = m_slotID;
-                fs_slotStack[i] = m_slotStack;
+                fs_slotID[curr_tab,i] = m_slotID;
+                fs_slotStack[curr_tab,i] = m_slotStack;
                 m_slotID = -1;
                 m_slotStack = 0;
                 break;
@@ -194,15 +206,13 @@ else if (mouse_check_button_released(mb_left) &amp;&amp; m_slotID != -1)
         }
         else if (m_oldSlotT == 1)
         {
-            fs_slotID[m_oldSlot] = m_slotID;
-            fs_slotStack[m_oldSlot] = m_slotStack;
+            fs_slotID[curr_tab,m_oldSlot] = m_slotID;
+            fs_slotStack[curr_tab,m_oldSlot] = m_slotStack;
             m_slotID = -1;
             m_slotStack = 0;
         }
     }
 }
-
-inv_freeslot_remove_empty();
 </string>
           </argument>
         </arguments>
@@ -230,7 +240,7 @@ inv_freeslot_remove_empty();
     inv_draw();
     if (m_slotID != -1)
     {
-        draw_sprite(ITEM.item[m_slotID,2],0,mouse_x-sprite_get_width(ITEM.item[m_slotID,2])/2+sprite_get_xoffset(ITEM.item[m_slotID,2]),mouse_y-sprite_get_height(ITEM.item[m_slotID,2])/2+sprite_get_yoffset(ITEM.item[m_slotID,2]));
+        draw_sprite(ITEM.item[m_slotID,3],0,mouse_x-8,mouse_y-8);
     }
 }
 </string>

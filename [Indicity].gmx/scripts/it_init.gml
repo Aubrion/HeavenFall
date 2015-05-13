@@ -50,7 +50,7 @@ item[2,5] = "common"
 item[3,0] = "Gravity Greatsword"
 item[3,1] = "main"
 item[3,2] = gs_gravity_1
-item[3,2] = gs_gravity_1_ico
+item[3,3] = gs_gravity_1_ico
 item[3,4] = 1
 item[3,5] = "mythical"
 item[3,10] = 30;
@@ -68,7 +68,7 @@ item[4,11] = -1;
 
 // helmet zabuza
 item[5,0] = "Zabuza Hat"
-item[5,1] = "main"
+item[5,1] = "helm"
 item[5,2] = helm_zabuza_1
 item[5,3] = helm_zabuza_1_ico
 item[5,4] = 1

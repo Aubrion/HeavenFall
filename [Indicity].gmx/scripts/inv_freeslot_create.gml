@@ -7,16 +7,19 @@ fs_y = 53;
 
 fs_slots = 25;
 
-for (i=0; i<fs_slots; i+=1)
+for (j=0; j<4; j+=1)
 {
-    if (XX > 17*4)
+    for (i=0; i<fs_slots; i+=1)
     {
-        XX = 0;
-        YY += 17;
+        if (XX > 17*4)
+        {
+            XX = 0;
+            YY += 17;
+        }
+        fs_slotID[j,i] = -1;
+        fs_slotX[j,i] = fs_x + XX;
+        fs_slotY[j,i] = fs_y + YY;
+        fs_slotStack[j,i] = 0;
+        XX+=17;
     }
-    fs_slotID[i] = -1;
-    fs_slotX[i] = fs_x + XX;
-    fs_slotY[i] = fs_y + YY;
-    fs_slotStack[i] = 0;
-    XX+=17;
 }
