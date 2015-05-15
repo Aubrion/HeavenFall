@@ -285,6 +285,15 @@
         <sprite>sprites\e_darkness_icon_1</sprite>
         <sprite>sprites\e_light_icon_1</sprite>
       </sprites>
+      <sprites name="Game Menu">
+        <sprite>sprites\ui_inventory_icon</sprite>
+        <sprite>sprites\ui_player_icon</sprite>
+        <sprite>sprites\ui_social_icon</sprite>
+        <sprite>sprites\ui_clans_icon</sprite>
+        <sprite>sprites\ui_options_icon</sprite>
+        <sprite>sprites\ui_chat_icon</sprite>
+        <sprite>sprites\ui_gamemenu_background</sprite>
+      </sprites>
     </sprites>
     <sprites name="Enemies">
       <sprites name="Melee">
