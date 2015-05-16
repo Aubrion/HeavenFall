@@ -206,16 +206,27 @@
           <sprites name="Mining">
             <sprites name="Pickaxes">
               <sprite>sprites\spr_pickaxe_rusty</sprite>
+              <sprite>sprites\spr_pickaxe_rusty_icon</sprite>
               <sprite>sprites\spr_pickaxe_bronze</sprite>
+              <sprite>sprites\spr_pickaxe_bronze_icon</sprite>
               <sprite>sprites\spr_pickaxe_iron</sprite>
+              <sprite>sprites\spr_pickaxe_iron_icon</sprite>
               <sprite>sprites\spr_pickaxe_steel</sprite>
+              <sprite>sprites\spr_pickaxe_steel_icon</sprite>
               <sprite>sprites\spr_pickaxe_silver</sprite>
+              <sprite>sprites\spr_pickaxe_silver_icon</sprite>
               <sprite>sprites\spr_pickaxe_gold</sprite>
+              <sprite>sprites\spr_pickaxe_gold_icon</sprite>
               <sprite>sprites\spr_pickaxe_mithril</sprite>
+              <sprite>sprites\spr_pickaxe_mithril_icon</sprite>
               <sprite>sprites\spr_pickaxe_adamant</sprite>
+              <sprite>sprites\spr_pickaxe_adamant_icon</sprite>
               <sprite>sprites\spr_pickaxe_magicite</sprite>
+              <sprite>sprites\spr_pickaxe_magicite_icon</sprite>
               <sprite>sprites\spr_pickaxe_blood</sprite>
+              <sprite>sprites\spr_pickaxe_blood_icon</sprite>
               <sprite>sprites\spr_pickaxe_darq</sprite>
+              <sprite>sprites\spr_pickaxe_darq_icon</sprite>
             </sprites>
             <sprite>sprites\spr_anvil</sprite>
             <sprite>sprites\spr_smithinghammer</sprite>
