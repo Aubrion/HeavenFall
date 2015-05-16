@@ -40,6 +40,8 @@ sprite_normal=spr_player
 sprite_jump=spr_player_jump
 
 interact_object = noone;
+interaction_started = false;
+interaction_finished = true;
 
 //grav
 z=0
@@ -357,6 +359,10 @@ if alarm[0]&gt;0 or alarm[1]&gt;0
             <kind>1</kind>
             <string>/// Interacting
 
+// Stop when attacking or blocking
+if (mouse_check_button(global.key1attack) || mouse_check_button(global.key1defend))
+    interact_object = noone;
+
 // Get interactable objects in range
 var interact_in_range = false;
 with(obj_interactable)
@@ -403,6 +409,15 @@ if (nearest_obj != noone)
     // Change interacting object
     if (interact_object == noone &amp;&amp; nearest_obj != noone &amp;&amp; keyboard_check_pressed(global.key1interact))
     {
+        // Sheat weapons
+        if (instance_exists(obj_greatsword)) obj_greatsword.sheat = true;
+        if (instance_exists(obj_axe)) obj_axe.sheat = true;
+        if (instance_exists(obj_scythe)) obj_scythe.sheat = true;
+        
+        // Reset interaction status
+        interaction_started = false;
+        interaction_finished = false;
+    
         // Set object as target
         interact_object = nearest_obj;
         
@@ -418,15 +433,15 @@ if (nearest_obj != noone)
 
 if (interact_object != noone)
 {
+    // Look
+    if (interact_object.x &lt; x)
+        look = -1;
+    else
+        look = 1;
+
     // Move towards goal
     if (point_distance(obj_player_shadow.x, obj_player_shadow.y, interactGoalX, interactGoalY) &gt; mspd)
-    {
-        // Look
-        if (interactGoalX &lt; x)
-            look = -1;
-        else
-            look = 1;
-        
+    {        
         // Move
         var interactGoalDir = point_direction(obj_player_shadow.x, obj_player_shadow.y, interactGoalX, interactGoalY);
         x += lengthdir_x(mspd, interactGoalDir);
@@ -434,8 +449,26 @@ if (interact_object != noone)
     }
     else
     {
+        // Jump to goal position
         x = interactGoalX;
         y = interactGoalY;
+        
+        // Start interaction
+        if (interaction_started == false)
+        {
+            with (interact_object)
+                event_user(0);
+            interaction_started = true;
+            interaction_finished = false;
+        }
+    }
+    
+    // Stop interaction
+    if (interaction_finished)
+    {
+        interact_object = noone;
+        interaction_started = false;
+        interaction_finished = false;
     }
 }
 </string>

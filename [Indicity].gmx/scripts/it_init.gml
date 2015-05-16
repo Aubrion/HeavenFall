@@ -74,3 +74,19 @@ item[5,3] = helm_zabuza_1_ico
 item[5,4] = 1
 item[5,5] = "rare"
 item[5,11] = -1;
+
+// Pickaxe
+item[6,0] = "Pickaxe"
+item[6,1] = "pickaxe"
+item[6,2] = spr_tool_pickaxe1
+item[6,3] = icon_tool_pickaxe1
+item[6,4] = 1
+item[6,5] = "common"
+
+// Bronze ore
+item[7,0] = "Bronze ore"
+item[7,1] = "misc"
+item[7,2] = spr_ore_bronze
+item[7,3] = spr_ore_bronze
+item[7,4] = 32
+item[7,5] = "common"

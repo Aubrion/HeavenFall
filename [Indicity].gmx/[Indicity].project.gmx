@@ -264,6 +264,7 @@
         <sprites name="Mining">
           <sprites name="Pickaxes">
             <sprite>sprites\spr_tool_pickaxe1</sprite>
+            <sprite>sprites\icon_tool_pickaxe1</sprite>
           </sprites>
           <sprite>sprites\spr_anvil</sprite>
           <sprite>sprites\spr_smithinghammer</sprite>
@@ -493,6 +494,7 @@
       </objects>
     </objects>
     <objects name="Gear">
+      <object>objects\obj_tool</object>
       <object>objects\obj_helm</object>
       <object>objects\obj_greatsword</object>
       <object>objects\obj_axe</object>
@@ -514,7 +516,6 @@
       <objects name="projectiles">
         <object>objects\n_bot_1_laser</object>
       </objects>
-      <object>objects\obj_item_drop</object>
     </objects>
     <objects name="controllers">
       <object>objects\obj_hybrid_controller</object>
@@ -538,6 +539,7 @@
     <object>objects\obj_counter</object>
     <object>objects\obj_statwindow</object>
     <object>objects\obj_inventory</object>
+    <object>objects\obj_item_drop</object>
   </objects>
   <timelines name="timelines">
     <timelines name="greatsword">
