@@ -169,7 +169,7 @@ if (!ready &amp;&amp; type != "none")
     switch (type)
     {
         case ("pickaxe"):
-            sprite = spr_tool_pickaxe1;
+            sprite = spr_pickaxe_rusty;
             break;
     }
     

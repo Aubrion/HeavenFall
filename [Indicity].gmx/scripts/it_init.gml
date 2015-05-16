@@ -78,8 +78,8 @@ item[5,11] = -1;
 // Pickaxe
 item[6,0] = "Pickaxe"
 item[6,1] = "pickaxe"
-item[6,2] = spr_tool_pickaxe1
-item[6,3] = icon_tool_pickaxe1
+item[6,2] = spr_pickaxe_rusty
+item[6,3] = spr_pickaxe_rusty
 item[6,4] = 1
 item[6,5] = "common"
 
