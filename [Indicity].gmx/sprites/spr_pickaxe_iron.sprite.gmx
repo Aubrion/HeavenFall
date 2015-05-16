@@ -20,6 +20,6 @@
   <width>23</width>
   <height>28</height>
   <frames>
-    <frame index="0">images\spr_tool_pickaxe1_0.png</frame>
+    <frame index="0">images\spr_pickaxe_iron_0.png</frame>
   </frames>
 </sprite>

@@ -58,6 +58,7 @@
       </sprites>
       <sprites name="Gathering Resources">
         <sprites name="Nodes">
+          <sprite>sprites\spr_node_empty</sprite>
           <sprite>sprites\spr_node_bronze</sprite>
           <sprite>sprites\spr_node_iron</sprite>
           <sprite>sprites\spr_node_silver</sprite>
@@ -67,7 +68,6 @@
           <sprite>sprites\spr_node_magicite</sprite>
           <sprite>sprites\spr_node_bloodstone</sprite>
           <sprite>sprites\spr_node_darqantium</sprite>
-          <sprite>sprites\spr_node_empty</sprite>
         </sprites>
       </sprites>
     </sprites>
@@ -204,7 +204,17 @@
         <sprites name="Gathering Tools">
           <sprites name="Mining">
             <sprites name="Pickaxes">
-              <sprite>sprites\spr_tool_pickaxe1</sprite>
+              <sprite>sprites\spr_pickaxe_rusty</sprite>
+              <sprite>sprites\spr_pickaxe_bronze</sprite>
+              <sprite>sprites\spr_pickaxe_iron</sprite>
+              <sprite>sprites\spr_pickaxe_steel</sprite>
+              <sprite>sprites\spr_pickaxe_silver</sprite>
+              <sprite>sprites\spr_pickaxe_gold</sprite>
+              <sprite>sprites\spr_pickaxe_mithril</sprite>
+              <sprite>sprites\spr_pickaxe_adamant</sprite>
+              <sprite>sprites\spr_pickaxe_magicite</sprite>
+              <sprite>sprites\spr_pickaxe_blood</sprite>
+              <sprite>sprites\spr_pickaxe_darq</sprite>
             </sprites>
             <sprite>sprites\spr_anvil</sprite>
             <sprite>sprites\spr_smithinghammer</sprite>
