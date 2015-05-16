@@ -48,9 +48,14 @@ event_inherited();
           <argument>
             <kind>1</kind>
             <string>/// Sprite settings
+
 image_speed = 0;
 image_index = irandom(sprite_get_number(sprite_index)-1);
 depth = 1 * -(y);
+
+// Empty animation
+empty_animation_repeats = 1;
+empty_animation_counter = 0;
 </string>
           </argument>
         </arguments>
@@ -98,6 +103,63 @@ offsetY = -4;
 
 durability_max = 10;
 durability = durability_max;
+oreItemID = -1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Parent code
+event_inherited();
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Empty animation
+
+if (!active &amp;&amp; image_index == sprite_get_number(sprite_index)-1)
+{
+    if (empty_animation_counter &gt;= empty_animation_repeats)
+    {
+        image_speed = 0;
+        image_index = 0;
+    }
+    else
+        empty_animation_counter++;
+}
 </string>
           </argument>
         </arguments>
@@ -139,10 +201,14 @@ if (durability &lt;= 0)
     }
     
     // Add item to inventory
-    //inv_item_add(itemID, count);
+    with(obj_inventory)
+        inv_item_add(oreItemID, count);
     
-    // Reset durability
-    durablility = durability_max;
+    // Deactivate
+    active = false;
+    sprite_index = spr_node_empty;
+    image_index = 0;
+    image_speed = 0.5;
 }
 </string>
           </argument>

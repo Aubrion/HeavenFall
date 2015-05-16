@@ -31,6 +31,7 @@ interact_range = 25;
 interact_type = "none";
 in_range = false;
 outline_sprite = sprite_index;
+active = true;
 
 // Where the player should stand. Relative to origin
 offsetX = 0;

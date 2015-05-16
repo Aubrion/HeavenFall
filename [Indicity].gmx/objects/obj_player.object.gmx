@@ -370,7 +370,7 @@ with(obj_interactable)
     // Add to list if player is in range
     var distX = point_distance(x, y, obj_player_shadow.x, y);
     var distY = point_distance(x, y, x, obj_player_shadow.y);
-    if (distX &lt; range &amp;&amp; distY &lt; range/2)
+    if (active &amp;&amp; distX &lt; range &amp;&amp; distY &lt; range/2)
         interact_in_range[array_length_1d(interact_in_range)] = id;
 }
 
@@ -407,7 +407,7 @@ if (nearest_obj != noone)
     nearest_obj.in_range = true;
     
     // Change interacting object
-    if (interact_object == noone &amp;&amp; nearest_obj != noone &amp;&amp; keyboard_check_pressed(global.key1interact))
+    if (interact_object == noone &amp;&amp; nearest_obj != noone &amp;&amp; keyboard_check(global.key1interact))
     {
         // Sheat weapons
         if (instance_exists(obj_greatsword)) obj_greatsword.sheat = true;

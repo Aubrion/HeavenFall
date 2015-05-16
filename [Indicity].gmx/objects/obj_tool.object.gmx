@@ -33,7 +33,7 @@ animating = false;
 animation_count = 0;
 depth = obj_player.depth -3;
 animation_duration = 15;
-end_wait_time = room_speed/2;
+end_wait_time = room_speed/4;
 rotation_direction = -obj_player.look;
 rotation_speed = 9;
 
@@ -66,6 +66,33 @@ else
             <kind>1</kind>
             <string>/// Mark interaction as finished
 obj_player.interaction_finished = true;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Reduce target durablility
+
+if (obj_player.interact_object != noone &amp;&amp; !animating)
+{
+    with(obj_player.interact_object)
+        event_user(1);
+}
 </string>
           </argument>
         </arguments>
