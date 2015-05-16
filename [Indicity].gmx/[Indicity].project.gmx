@@ -67,6 +67,7 @@
           <sprite>sprites\spr_node_magicite</sprite>
           <sprite>sprites\spr_node_bloodstone</sprite>
           <sprite>sprites\spr_node_darqantium</sprite>
+          <sprite>sprites\spr_node_empty</sprite>
         </sprites>
       </sprites>
     </sprites>
