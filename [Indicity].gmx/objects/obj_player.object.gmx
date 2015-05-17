@@ -361,7 +361,11 @@ if alarm[0]&gt;0 or alarm[1]&gt;0
 
 // Stop when attacking or blocking
 if (mouse_check_button(global.key1attack) || mouse_check_button(global.key1defend))
+{    
     interact_object = noone;
+    interaction_started = false;
+    interaction_finished = false;
+}
 
 // Get interactable objects in range
 var interact_in_range = false;
@@ -409,14 +413,14 @@ if (nearest_obj != noone)
     // Change interacting object
     if (jump != 1 &amp;&amp; interact_object == noone &amp;&amp; nearest_obj != noone &amp;&amp; keyboard_check(global.key1interact))
     {
+        // Reset interaction status
+        interaction_started = false;
+        interaction_finished = false;
+    
         // Sheat weapons
         if (instance_exists(obj_greatsword)) obj_greatsword.sheat = true;
         if (instance_exists(obj_axe)) obj_axe.sheat = true;
         if (instance_exists(obj_scythe)) obj_scythe.sheat = true;
-        
-        // Reset interaction status
-        interaction_started = false;
-        interaction_finished = false;
     
         // Set object as target
         interact_object = nearest_obj;

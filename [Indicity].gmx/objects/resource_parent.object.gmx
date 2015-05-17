@@ -29,7 +29,7 @@
 
 // Check equipped item
 var toolItemID = obj_inventory.slotID[1];
-if (toolItemID != -1)
+if (toolItemID != -1 &amp;&amp; !instance_exists(obj_tool))
 {
     instance_create(obj_player.x, obj_player.y, obj_tool);
     
