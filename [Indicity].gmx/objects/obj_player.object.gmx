@@ -411,7 +411,7 @@ if (nearest_obj != noone)
     nearest_obj.in_range = true;
     
     // Change interacting object
-    if (jump != 1 &amp;&amp; interact_object == noone &amp;&amp; nearest_obj != noone &amp;&amp; keyboard_check(global.key1interact))
+    if (!obj_inventory.active &amp;&amp; jump != 1 &amp;&amp; interact_object == noone &amp;&amp; nearest_obj != noone &amp;&amp; keyboard_check(global.key1interact))
     {
         // Reset interaction status
         interaction_started = false;
