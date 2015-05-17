@@ -59,6 +59,7 @@
       <sprites name="Gathering Resources">
         <sprites name="Nodes">
           <sprite>sprites\spr_node_outline</sprite>
+          <sprite>sprites\mask_node</sprite>
           <sprite>sprites\spr_node_empty</sprite>
           <sprite>sprites\spr_node_bronze</sprite>
           <sprite>sprites\spr_node_iron</sprite>

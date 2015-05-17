@@ -51,7 +51,7 @@ event_inherited();
 
 image_speed = 0;
 image_index = irandom(sprite_get_number(sprite_index)-1);
-depth = 1 * -(y);
+depth = 1 * -(y+6);
 
 // Empty animation
 empty_animation_repeats = 1;
