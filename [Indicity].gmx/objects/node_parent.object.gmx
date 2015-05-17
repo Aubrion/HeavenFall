@@ -103,7 +103,6 @@ offsetY = -4;
 
 durability_max = 10;
 durability = durability_max;
-oreItemID = -1;
 </string>
           </argument>
         </arguments>
@@ -196,13 +195,13 @@ if (durability &lt;= 0)
     switch (object_index)
     {
         case (node_bronze):
-            item_ID = 7;
+            itemID = 17;
             break;
     }
     
     // Add item to inventory
     with(obj_inventory)
-        inv_item_add(oreItemID, count);
+        inv_item_add(itemID, count);
     
     // Deactivate
     active = false;
