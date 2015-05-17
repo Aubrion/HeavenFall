@@ -407,7 +407,7 @@ if (nearest_obj != noone)
     nearest_obj.in_range = true;
     
     // Change interacting object
-    if (interact_object == noone &amp;&amp; nearest_obj != noone &amp;&amp; keyboard_check(global.key1interact))
+    if (jump != 1 &amp;&amp; interact_object == noone &amp;&amp; nearest_obj != noone &amp;&amp; keyboard_check(global.key1interact))
     {
         // Sheat weapons
         if (instance_exists(obj_greatsword)) obj_greatsword.sheat = true;
