@@ -26,6 +26,8 @@
       <sound>sound\roar_1</sound>
       <sound>sound\swordhit_2</sound>
       <sound>sound\levelup_1</sound>
+      <sound>sound\pickaxe_hit</sound>
+      <sound>sound\rock_crumble</sound>
     </sounds>
     <sounds name="Music Effects">
       <sound>sound\m_frog_forest</sound>

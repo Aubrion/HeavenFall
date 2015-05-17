@@ -243,6 +243,7 @@ if (animating)
     {
         animating = false;
         alarm[0] = end_wait_time;
+        audio_play_sound(pickaxe_hit, 1, false);
     }
 }
 </string>

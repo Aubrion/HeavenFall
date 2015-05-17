@@ -203,6 +203,9 @@ if (durability &lt;= 0)
     with(obj_inventory)
         inv_item_add(itemID, count);
     
+    // Play sound effect
+    audio_play_sound(rock_crumble, 1, false);
+    
     // Deactivate
     active = false;
     sprite_index = spr_node_empty;
