@@ -46,6 +46,42 @@ else
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///create particle system
+
+P_sys = part_system_create();
+part_system_depth(P_sys,-10000);
+
+P_part = part_type_create();
+part_type_sprite(P_part,spr_gathering_particle,false,false,true);
+part_type_direction(P_part,70,110,0,0);
+part_type_speed(P_part,1,3,0,0);
+part_type_life(P_part,15,20);
+part_type_alpha2(P_part,1,0.5);
+part_type_gravity(P_part,0.2, 270);
+part_type_orientation(P_part,0,359,random(10)*choose(-1,1),0,0);
+
+P_emit = part_emitter_create(P_sys);
+
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="1" enumb="0">
       <action>
@@ -244,6 +280,10 @@ if (animating)
         animating = false;
         alarm[0] = end_wait_time;
         audio_play_sound(pickaxe_hit, 1, false);
+        
+        //create particles
+        part_emitter_region(P_sys,P_emit,x+(obj_player.look*16),x+(obj_player.look*16),y,y,pt_shape_circle,ps_distr_gaussian);
+        part_emitter_burst(P_sys,P_emit,P_part,2+random(3));
     }
 }
 </string>
@@ -263,5 +303,8 @@ if (animating)
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints/>
+  <PhysicsShapePoints>
+    <point>0,0</point>
+    <point>0,0</point>
+  </PhysicsShapePoints>
 </object>

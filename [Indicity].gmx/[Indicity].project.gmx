@@ -73,6 +73,7 @@
           <sprite>sprites\spr_node_bloodstone</sprite>
           <sprite>sprites\spr_node_darqantium</sprite>
         </sprites>
+        <sprite>sprites\spr_gathering_particle</sprite>
       </sprites>
     </sprites>
     <sprites name="Player">
