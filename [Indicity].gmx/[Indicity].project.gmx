@@ -324,12 +324,18 @@
     </sprites>
     <sprites name="Enemies">
       <sprites name="Melee">
-        <sprite>sprites\n_woodsman_still</sprite>
-        <sprite>sprites\n_woodsman_attack</sprite>
-        <sprite>sprites\n_woodsman_walk</sprite>
-        <sprite>sprites\n_woodsman_hurt</sprite>
-        <sprite>sprites\n_woodsman_death</sprite>
-        <sprite>sprites\n_woodsman_without_shader</sprite>
+        <sprites name="Woodsman">
+          <sprite>sprites\n_woodsman_still</sprite>
+          <sprite>sprites\n_woodsman_attack</sprite>
+          <sprite>sprites\n_woodsman_walk</sprite>
+          <sprite>sprites\n_woodsman_hurt</sprite>
+          <sprite>sprites\n_woodsman_death</sprite>
+          <sprite>sprites\n_woodsman_without_shader</sprite>
+        </sprites>
+        <sprites name="Larvin">
+          <sprite>sprites\mob_larvin_walk</sprite>
+          <sprite>sprites\mob_larvin_attack</sprite>
+        </sprites>
       </sprites>
       <sprites name="Ranged">
         <sprite>sprites\bot_1</sprite>
