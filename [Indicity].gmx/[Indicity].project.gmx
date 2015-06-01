@@ -336,6 +336,13 @@
           <sprite>sprites\mob_larvin_walk</sprite>
           <sprite>sprites\mob_larvin_attack</sprite>
         </sprites>
+        <sprites name="Trufflin">
+          <sprite>sprites\mob_trufflin_idle</sprite>
+          <sprite>sprites\mob_trufflin_walk</sprite>
+          <sprite>sprites\mob_trufflin_attack</sprite>
+          <sprite>sprites\mob_trufflin_hit</sprite>
+          <sprite>sprites\mob_trufflin_die</sprite>
+        </sprites>
       </sprites>
       <sprites name="Ranged">
         <sprite>sprites\bot_1</sprite>
