@@ -534,6 +534,7 @@
     </objects>
     <objects name="Enemies">
       <object>objects\n_parent</object>
+      <object>objects\n_template_melee</object>
       <object>objects\enemy_spawn_point</object>
       <objects name="melee">
         <object>objects\n_woodsman_1</object>
