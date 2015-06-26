@@ -108,6 +108,7 @@ durability_max = 10;
 durability = durability_max;
 respawning = true;
 respawn_time = room_speed * 20;
+empty = false;
 </string>
           </argument>
         </arguments>
@@ -137,7 +138,37 @@ sprite_index = old_sprite;
 image_index = img_index;
 image_speed = 0;
 durability = durability_max;
-active = true;
+empty = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Evaluate active variable
+
+// Get equipped tool type
+var toolItemID = obj_inventory.slotID[1];
+var pickaxe_equiped = (toolItemID != -1 &amp;&amp; ITEM.item[toolItemID, 1] == "pickaxe");
+
+// Evaluate
+active = (!empty &amp;&amp; pickaxe_equiped);
 </string>
           </argument>
         </arguments>
@@ -240,7 +271,7 @@ if (durability &lt;= 0)
     old_sprite = sprite_index;
     
     // Deactivate
-    active = false;
+    empty = true;
     sprite_index = spr_node_empty;
     image_index = 0;
     image_speed = 0.5;

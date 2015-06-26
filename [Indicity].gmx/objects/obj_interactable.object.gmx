@@ -83,7 +83,7 @@ draw_self();
             <kind>1</kind>
             <string>/// Light up when in range
 
-if (in_range)
+if (in_range &amp;&amp; active)
     draw_sprite(outline_sprite, image_index, x, y);
 </string>
           </argument>
