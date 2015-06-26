@@ -488,6 +488,9 @@
       <script>scripts\skills_level_up.gml</script>
       <script>scripts\skill_gain_xp.gml</script>
     </scripts>
+    <scripts name="gathering">
+      <script>scripts\get_node_ore_id.gml</script>
+    </scripts>
     <script>scripts\advanced_collision.gml</script>
     <script>scripts\ai_drop_loot.gml</script>
   </scripts>
@@ -512,6 +515,14 @@
       </objects>
       <objects name="Nodes">
         <object>objects\node_bronze</object>
+        <object>objects\node_iron</object>
+        <object>objects\node_silver</object>
+        <object>objects\node_gold</object>
+        <object>objects\node_mithril</object>
+        <object>objects\node_adamantium</object>
+        <object>objects\node_magicite</object>
+        <object>objects\node_bloodstone</object>
+        <object>objects\node_darqantium</object>
       </objects>
     </objects>
     <objects name="Enemies">

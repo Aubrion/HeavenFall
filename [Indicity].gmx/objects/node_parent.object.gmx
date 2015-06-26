@@ -192,12 +192,7 @@ if (durability &lt;= 0)
     var itemID = -1;
         
     // Find correct ore
-    switch (object_index)
-    {
-        case (node_bronze):
-            itemID = 17;
-            break;
-    }
+    itemID = get_node_ore_id(object_index);
     
     // Add item to inventory
     with(obj_inventory)

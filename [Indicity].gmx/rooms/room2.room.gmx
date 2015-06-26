@@ -17,8 +17,8 @@ inst_E2D9C9A3.enemy_type = n_woodsman_1;</code>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1016</w>
-    <h>600</h>
+    <w>1476</w>
+    <h>868</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
     <showTiles>-1</showTiles>
@@ -27,9 +27,9 @@ inst_E2D9C9A3.enemy_type = n_woodsman_1;</code>
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>0</deleteUnderlyingTiles>
-    <page>1</page>
-    <xoffset>-103</xoffset>
-    <yoffset>179</yoffset>
+    <page>0</page>
+    <xoffset>-318</xoffset>
+    <yoffset>201</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="tile_forest_back" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -283,8 +283,14 @@ inst_E2D9C9A3.enemy_type = n_woodsman_1;</code>
     <instance objName="obj_deco_Esylia_mushrooms" x="1008" y="432" name="inst_A6D4927E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_lynx_controller" x="80" y="48" name="inst_CB79D4B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="node_bronze" x="128" y="400" name="inst_772E7936" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="node_bronze" x="176" y="432" name="inst_B2A71130" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="node_bronze" x="80" y="432" name="inst_B77288DD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="node_iron" x="80" y="416" name="inst_777E625D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="node_silver" x="160" y="432" name="inst_217231D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="node_gold" x="144" y="512" name="inst_58E36C10" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="node_mithril" x="176" y="368" name="inst_203A6602" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="node_adamantium" x="192" y="480" name="inst_C0A6332A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="node_magicite" x="80" y="480" name="inst_F3489D92" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="node_bloodstone" x="224" y="528" name="inst_4739C8EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="node_darqantium" x="208" y="400" name="inst_C59A12ED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="&lt;undefined&gt;" x="60" y="420" w="16" h="16" xo="0" yo="16" id="10005666" name="inst_D33E5A4A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
