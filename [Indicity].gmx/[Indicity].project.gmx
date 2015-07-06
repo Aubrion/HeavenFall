@@ -3,7 +3,9 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <NewExtensions/>
+  <NewExtensions>
+    <extension index="0">extensions\WinDev</extension>
+  </NewExtensions>
   <sounds name="sound">
     <sounds name="Music">
       <sound>sound\space_easy_1</sound>
@@ -452,6 +454,7 @@
       <script>scripts\hyComEmit.gml</script>
       <script>scripts\hyComRead.gml</script>
       <script>scripts\hyComNetwork.gml</script>
+      <script>scripts\string_explode.gml</script>
     </scripts>
     <scripts name="hyChat">
       <script>scripts\hyChatInit.gml</script>
