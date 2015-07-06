@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.HyDNSsocket = network_create_socket(network_socket_tcp);
+            <string>string_explode(":-:", file_text_get("C:\\Hybrid\\TempSession.txt"));
+
+global.HyDNSsocket = network_create_socket(network_socket_tcp);
 global.name=""
 alarm[4] = 150;
 global.status = 0;
@@ -34,8 +36,11 @@ if(network_connect_raw(global.HyDNSsocket, "77.72.150.188", 12801)==0){
     global.status = 1;
 }
 
+hyComEmit("LOGIN", arg[0], arg[1]);
+
+global.playerName = arg[0];
+
 hyChatInit();
-msghandle = string("test");
 </string>
           </argument>
         </arguments>
@@ -118,38 +123,6 @@ alarm[0] = 15;
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="63">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(msghandle==ds_map_find_value(async_load, "id")){
-    if(ds_map_find_value(async_load, "status")==true){
-        hyComEmit("LOGIN", ds_map_find_value(async_load, "result"));
-            if(!debug_mode){
-                //window_set_fullscreen(true);
-            }
-    }else{
-        game_end();
-    }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
@@ -167,7 +140,7 @@ alarm[0] = 15;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///hyChatDraw(0, display_get_gui_height()-20*12);
+            <string>hyChatDraw(0, display_get_gui_height()-20*12);
 </string>
           </argument>
         </arguments>

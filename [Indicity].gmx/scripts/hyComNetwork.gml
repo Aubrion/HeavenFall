@@ -75,6 +75,9 @@ if(ds_map_find_value(async_load, "type")==network_type_data){
             case "CHAT":
                 hyChatAdd(string(hyComRead()));
             break;
+            case "ERROR":
+                show_message(hyComRead());
+            break;
             case "HYCOMID":
                 show_message(hyComRead());
             break;
