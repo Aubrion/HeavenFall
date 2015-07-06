@@ -28,7 +28,7 @@
             <string>/// Settings
 
 startX = x;
-max_float_distance = 15;
+max_float_distance = 17;
 max_float_distance_shadow = 18;
 </string>
           </argument>
@@ -80,7 +80,7 @@ x = startX + obj_mainmenu_controller.mouse_location * max_float_distance;
 
 // Shadow
 var shadowX = startX+(obj_mainmenu_controller.mouse_location * max_float_distance_shadow);
-draw_sprite_ext(sprite_index, 0, shadowX, y, 1.02, 1.02, image_angle, c_black, 0.2);
+draw_sprite_ext(sprite_index, 0, shadowX, y+2, 1, 1, image_angle, c_black, 0.10);
 
 // Sprite
 draw_self();
