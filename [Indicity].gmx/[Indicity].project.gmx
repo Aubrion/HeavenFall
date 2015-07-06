@@ -35,6 +35,12 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\nosprite</sprite>
+    <sprites name="Main Menu">
+      <sprite>sprites\spr_mainmenu_titledeco</sprite>
+      <sprite>sprites\spr_mainmenu_characternew</sprite>
+      <sprite>sprites\spr_mainmenu_characterslot</sprite>
+      <sprite>sprites\spr_mainmenu_exit</sprite>
+    </sprites>
     <sprites name="Level Design">
       <sprites name="Decoration">
         <sprites name="Esylia">
@@ -512,6 +518,9 @@
     <font>fonts\font_hud_small</font>
   </fonts>
   <objects name="objects">
+    <objects name="Main Menu">
+      <object>objects\obj_mainmenu_titledeco</object>
+    </objects>
     <objects name="Room Design">
       <object>objects\obj_deco_Esylia_leaves_ani</object>
       <object>objects\obj_wall</object>
@@ -641,6 +650,9 @@
     <room>rooms\room2</room>
     <room>rooms\room3</room>
     <room>rooms\room0</room>
+    <rooms name="Main Menu">
+      <room>rooms\rm_characterselection</room>
+    </rooms>
   </rooms>
   <constants number="5">
     <constant name="woodcutting">0</constant>
