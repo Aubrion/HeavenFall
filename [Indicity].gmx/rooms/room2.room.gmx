@@ -17,8 +17,8 @@ inst_E2D9C9A3.enemy_type = n_woodsman_1;</code>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1016</w>
-    <h>600</h>
+    <w>1605</w>
+    <h>688</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
     <showTiles>-1</showTiles>
@@ -28,8 +28,8 @@ inst_E2D9C9A3.enemy_type = n_woodsman_1;</code>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>0</deleteUnderlyingTiles>
     <page>1</page>
-    <xoffset>-103</xoffset>
-    <yoffset>179</yoffset>
+    <xoffset>-86</xoffset>
+    <yoffset>-25</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="tile_forest_back" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
