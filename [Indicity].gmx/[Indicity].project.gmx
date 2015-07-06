@@ -3,7 +3,9 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <NewExtensions/>
+  <NewExtensions>
+    <extension index="0">extensions\WinDev</extension>
+  </NewExtensions>
   <sounds name="sound">
     <sounds name="Music">
       <sound>sound\space_easy_1</sound>
@@ -36,11 +38,11 @@
   <sprites name="sprites">
     <sprite>sprites\nosprite</sprite>
     <sprites name="Main Menu">
-      <sprite>sprites\spr_mainmenu_titledeco</sprite>
+      <sprite>sprites\main_menu_cursor</sprite>
       <sprite>sprites\spr_mainmenu_characternew</sprite>
       <sprite>sprites\spr_mainmenu_characterslot</sprite>
       <sprite>sprites\spr_mainmenu_exit</sprite>
-      <sprite>sprites\main_menu_cursor</sprite>
+      <sprite>sprites\spr_mainmenu_titledeco</sprite>
     </sprites>
     <sprites name="Level Design">
       <sprites name="Decoration">
