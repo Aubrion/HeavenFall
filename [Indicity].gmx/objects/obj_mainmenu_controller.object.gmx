@@ -52,6 +52,9 @@ window_set_position(0,0)
             <string>/// Settings
 
 mouse_location = 0;
+title = "Character Selection";
+title_deco_y = 23;
+title_deco_offset = (string_width(title)/2) - 22;
 </string>
           </argument>
         </arguments>
@@ -87,6 +90,40 @@ var mouse_distance = abs((room_width/2) - mouse_x);
 
 // Store the relative position as a number from -1 (left border) to 1 (right border)
 mouse_location = side * (mouse_distance / (room_width/2));
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Draw Room Title
+
+// Title
+draw_set_font(fnt_Title);
+draw_set_halign(fa_middle);
+draw_text_colour(room_width/2, 15, title, c_black, c_black, c_black, c_black, 0.4);
+
+// Deco sprite left
+draw_sprite(spr_mainmenu_titledeco, 0, room_width/2-title_deco_offset, title_deco_y);
+
+// Deco sprite right
+draw_sprite_ext(spr_mainmenu_titledeco, 0, room_width/2+title_deco_offset, title_deco_y, -1, 1, 0, c_white, 1);
 </string>
           </argument>
         </arguments>

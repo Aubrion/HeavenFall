@@ -527,7 +527,6 @@
       <object>objects\obj_mainmenu_controller</object>
       <object>objects\obj_mainmenu_cursor</object>
       <object>objects\obj_mainmenu_exit</object>
-      <object>objects\obj_mainmenu_titledeco</object>
     </objects>
     <objects name="Room Design">
       <object>objects\obj_deco_Esylia_leaves_ani</object>
