@@ -517,6 +517,7 @@
     <font>fonts\font_inventory</font>
     <font>fonts\font_hud</font>
     <font>fonts\font_hud_small</font>
+    <font>fonts\fnt_Title</font>
   </fonts>
   <objects name="objects">
     <objects name="Main Menu">
