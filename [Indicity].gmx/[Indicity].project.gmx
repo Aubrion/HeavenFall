@@ -509,7 +509,6 @@
       <script>scripts\skills_level_up.gml</script>
       <script>scripts\skill_gain_xp.gml</script>
     </scripts>
-    <script>scripts\advanced_collision.gml</script>
     <script>scripts\ai_drop_loot.gml</script>
   </scripts>
   <fonts name="fonts">
