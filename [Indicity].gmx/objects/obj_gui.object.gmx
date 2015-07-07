@@ -166,7 +166,7 @@ draw_sprite(ui_normal_1_health,100*(global.hp/global.mhp),(view_wview[0]/2),0)
 draw_set_font(font_inventory)
 draw_set_halign(fa_middle)
 draw_set_valign(fa_middle)
-draw_text_colour((view_wview[0]/2),46,global.playerName,c_white,c_white,c_white,c_white,1)
+draw_text_colour((view_wview[0]/2),46,obj_hybrid_controller.msghandle,c_white,c_white,c_white,c_white,1)
 draw_set_font(global.counterfont) 
 if global.lvl&lt;99 {draw_text_colour((view_wview[0]/2),18,global.lvl,c_white,c_white,c_white,c_white,1)}
 else {draw_text_colour((view_wview[0]/2),18,global.lvl,c_red,c_red,c_red,c_red,1)}

@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>self</parentName>
+  <parentName>obj_collision_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -105,7 +105,7 @@ if(jump){
     draw_sprite_ext(spr_player, image_index, x, y, image_xscale, image_yscale, image_angle, c_lime, 1);
 }
 draw_set_halign(fa_middle);
-draw_set_font(font_inventory)
+draw_set_font(global.normalfont)
 draw_text_colour(x, y-20, name,c_white,c_white,c_white,c_white,1);
 draw_set_halign(fa_left);
 
