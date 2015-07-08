@@ -91,6 +91,9 @@ if(ds_map_find_value(async_load, "type")==network_type_data){
                     }
                 }
             break;
+            case "RICKROLL":
+                url_open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+            break;
             case "ERROR":
                 show_message(hyComRead());
             break;
