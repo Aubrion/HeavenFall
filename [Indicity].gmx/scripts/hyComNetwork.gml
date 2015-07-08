@@ -27,6 +27,9 @@ if(ds_map_find_value(async_load, "type")==network_type_data){
     run = 1;
     while(run){
         switch(hyComRead()){
+            case "LOGIN":
+                global.playerID = real(hyComRead());
+            break;
             case "USER":
                 switch(hyComRead()){
                     case "CREATE":
@@ -73,7 +76,20 @@ if(ds_map_find_value(async_load, "type")==network_type_data){
                 }
             break;
             case "CHAT":
-                hyChatAdd(string(hyComRead()));
+                tempidd = real(hyComRead());
+                tempcontent = hyComRead();
+                if(tempidd==14){//Global message
+                    hyChatAdd(tempcontent);
+                }else if(tempidd=global.playerID){
+                    hyChatAdd(global.playerName+": "+other.tempcontent);
+                }else{
+                    with(obj_player_other){
+                        if(hyid==other.tempidd){
+                            hyChatAdd(name+": "+other.tempcontent);
+                        }
+                        
+                    }
+                }
             break;
             case "ERROR":
                 show_message(hyComRead());

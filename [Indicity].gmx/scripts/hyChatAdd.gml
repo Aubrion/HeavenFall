@@ -5,5 +5,5 @@ var i;
     }
     
 global.hychat_time[7] = 300;
-global.hychat_row[9] = argument0;
+global.hychat_row[9] = string(argument0);
 global.hychat_time[9] = 600;
