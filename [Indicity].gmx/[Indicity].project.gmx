@@ -5,13 +5,13 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sounds name="music">
+    <sounds name="Music">
       <sound>sound\space_easy_1</sound>
       <sound>sound\space_heavy_1</sound>
       <sound>sound\space_heavy_2</sound>
       <sound>sound\fight2</sound>
     </sounds>
-    <sounds name="effects">
+    <sounds name="Sound Effects">
       <sound>sound\block_2</sound>
       <sound>sound\block_1</sound>
       <sound>sound\jump_5</sound>
@@ -26,190 +26,16 @@
       <sound>sound\roar_1</sound>
       <sound>sound\swordhit_2</sound>
       <sound>sound\levelup_1</sound>
+      <sound>sound\pickaxe_hit</sound>
+      <sound>sound\rock_crumble</sound>
     </sounds>
-    <sounds name="music_fx">
+    <sounds name="Music Effects">
       <sound>sound\m_frog_forest</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\nosprite</sprite>
-    <sprites name="player">
-      <sprite>sprites\spr_levelup</sprite>
-      <sprite>sprites\spr_player</sprite>
-      <sprite>sprites\spr_player_jump</sprite>
-      <sprites name="hair">
-        <sprite>sprites\example_hair</sprite>
-        <sprite>sprites\spr_hair_1</sprite>
-        <sprite>sprites\spr_hair_2</sprite>
-        <sprite>sprites\spr_hair_2_helm</sprite>
-        <sprite>sprites\spr_hair_3</sprite>
-        <sprite>sprites\spr_hair_3_helm</sprite>
-        <sprite>sprites\spr_hair_4</sprite>
-        <sprite>sprites\spr_hair_5</sprite>
-        <sprite>sprites\spr_hair_6</sprite>
-        <sprite>sprites\spr_hair_7</sprite>
-        <sprite>sprites\spr_hair_8</sprite>
-      </sprites>
-      <sprites name="eyes">
-        <sprite>sprites\spr_eyes_1</sprite>
-        <sprite>sprites\spr_eyes_2</sprite>
-        <sprite>sprites\spr_eyes_3</sprite>
-        <sprite>sprites\spr_eyes_4</sprite>
-        <sprite>sprites\spr_eyes_5</sprite>
-        <sprite>sprites\spr_eyes_6</sprite>
-        <sprite>sprites\spr_eyes_7</sprite>
-        <sprite>sprites\spr_eyes_8</sprite>
-        <sprite>sprites\spr_eyes_9</sprite>
-        <sprite>sprites\spr_eyes_10</sprite>
-        <sprite>sprites\spr_eyes_11</sprite>
-        <sprite>sprites\spr_eyes_12</sprite>
-        <sprite>sprites\spr_eyes_13</sprite>
-        <sprite>sprites\spr_eyes_14</sprite>
-        <sprite>sprites\spr_eyes_15</sprite>
-      </sprites>
-    </sprites>
-    <sprites name="helmets">
-      <sprite>sprites\helm_example</sprite>
-      <sprite>sprites\helm_gravity_1</sprite>
-      <sprite>sprites\helm_zabuza_1</sprite>
-      <sprite>sprites\helm_encript_1</sprite>
-      <sprite>sprites\helm_virus_1</sprite>
-      <sprite>sprites\helm_laser_1</sprite>
-      <sprite>sprites\helm_knight_1</sprite>
-      <sprite>sprites\helm_purplehaze_1</sprite>
-      <sprite>sprites\helm_woodsteel_1</sprite>
-      <sprites name="user">
-        <sprite>sprites\helm_user1_1</sprite>
-        <sprite>sprites\helm_user2_1</sprite>
-        <sprite>sprites\helm_user3_1</sprite>
-        <sprite>sprites\helm_user4_1</sprite>
-        <sprite>sprites\helm_user5_1</sprite>
-        <sprite>sprites\helm_user5_2</sprite>
-        <sprite>sprites\helm_user5_3</sprite>
-        <sprite>sprites\helm_user5_4</sprite>
-        <sprite>sprites\helm_user5_5</sprite>
-        <sprite>sprites\helm_user5_6</sprite>
-        <sprite>sprites\helm_user6_1</sprite>
-        <sprite>sprites\helm_user6_2</sprite>
-        <sprite>sprites\helm_user8_1</sprite>
-        <sprite>sprites\helm_user8_2</sprite>
-        <sprite>sprites\helm_user8_3</sprite>
-        <sprite>sprites\helm_user9_1</sprite>
-      </sprites>
-      <sprites name="icons">
-        <sprite>sprites\helm_gravity_1_ico</sprite>
-        <sprite>sprites\helm_zabuza_1_ico</sprite>
-      </sprites>
-    </sprites>
-    <sprites name="cam">
-      <sprite>sprites\spr_cam_1</sprite>
-      <sprite>sprites\spr_cam_2</sprite>
-    </sprites>
-    <sprites name="blocks">
-      <sprite>sprites\spr_block_1</sprite>
-      <sprite>sprites\spr_block_2</sprite>
-      <sprite>sprites\spr_block_3</sprite>
-    </sprites>
-    <sprites name="weapons">
-      <sprites name="User Content">
-        <sprite>sprites\gs_user1_1</sprite>
-        <sprite>sprites\gs_user3_1</sprite>
-        <sprite>sprites\gs_user4_1</sprite>
-        <sprite>sprites\gs_user4_2</sprite>
-        <sprite>sprites\gs_user4_3</sprite>
-        <sprite>sprites\gs_user4_4</sprite>
-        <sprite>sprites\gs_user5_1</sprite>
-        <sprite>sprites\gs_user5_2</sprite>
-        <sprite>sprites\gs_user5_3</sprite>
-        <sprite>sprites\gs_user6_1</sprite>
-        <sprite>sprites\wh_user6_1</sprite>
-        <sprite>sprites\gs_user10_1</sprite>
-        <sprite>sprites\gs_user10_2</sprite>
-        <sprite>sprites\dg_user10_3</sprite>
-      </sprites>
-      <sprites name="Axe">
-        <sprite>sprites\axe_cyber_1</sprite>
-      </sprites>
-      <sprites name="Scythe">
-        <sprite>sprites\sc_cyber_1</sprite>
-      </sprites>
-      <sprites name="Greatsword">
-        <sprite>sprites\gs_cyber_1</sprite>
-        <sprite>sprites\gs_gravity_1</sprite>
-        <sprite>sprites\gs_zabuza_1</sprite>
-        <sprite>sprites\sprite51</sprite>
-        <sprite>sprites\gs_encript_1</sprite>
-        <sprite>sprites\gs_virus_1</sprite>
-        <sprite>sprites\gs_pruplehaze_1</sprite>
-        <sprite>sprites\gs_wood_1</sprite>
-        <sprite>sprites\gs_wood_2</sprite>
-        <sprite>sprites\gs_goon_1</sprite>
-        <sprite>sprites\gs_lighting</sprite>
-        <sprite>sprites\gs_megnetion</sprite>
-        <sprite>sprites\gs_slicer</sprite>
-        <sprites name="icons">
-          <sprite>sprites\gs_zabuza_1_ico</sprite>
-          <sprite>sprites\gs_slicer_ico</sprite>
-          <sprite>sprites\gs_gravity_1_ico</sprite>
-        </sprites>
-      </sprites>
-      <sprites name="Spear">
-        <sprite>sprites\sp_user7_1</sprite>
-        <sprite>sprites\sp_user5_1</sprite>
-        <sprite>sprites\sp_user5_2</sprite>
-      </sprites>
-      <sprites name="keyblade">
-        <sprite>sprites\kb_test</sprite>
-      </sprites>
-      <sprites name="Hammers">
-        <sprite>sprites\hm_justice</sprite>
-        <sprite>sprites\hm_purplun</sprite>
-      </sprites>
-      <sprites name="Orb">
-        <sprite>sprites\or_fire</sprite>
-      </sprites>
-      <sprite>sprites\spr_orb_projectile</sprite>
-    </sprites>
-    <sprites name="enemies">
-      <sprite>sprites\spawn_point_icon</sprite>
-      <sprites name="melee">
-        <sprite>sprites\n_woodsman_still</sprite>
-        <sprite>sprites\n_woodsman_attack</sprite>
-        <sprite>sprites\n_woodsman_walk</sprite>
-        <sprite>sprites\n_woodsman_hurt</sprite>
-        <sprite>sprites\n_woodsman_death</sprite>
-        <sprite>sprites\n_woodsman_without_shader</sprite>
-      </sprites>
-      <sprites name="ranged">
-        <sprite>sprites\bot_1</sprite>
-        <sprite>sprites\bot_1_laser</sprite>
-      </sprites>
-    </sprites>
-    <sprites name="UI">
-      <sprite>sprites\spr_font</sprite>
-      <sprite>sprites\spr_font_2</sprite>
-      <sprite>sprites\spr_mouse_2</sprite>
-      <sprite>sprites\mouse_normal</sprite>
-      <sprite>sprites\mouse_attack</sprite>
-      <sprite>sprites\mouse_block</sprite>
-      <sprite>sprites\mouse_stun</sprite>
-      <sprite>sprites\mouse_root</sprite>
-      <sprite>sprites\mouse_noweapon</sprite>
-      <sprites name="design">
-        <sprite>sprites\ui_normal</sprite>
-        <sprite>sprites\ui_hit</sprite>
-        <sprite>sprites\ui_block</sprite>
-        <sprite>sprites\ui_gs</sprite>
-        <sprite>sprites\ui_sparkle</sprite>
-        <sprite>sprites\ui_level</sprite>
-        <sprite>sprites\ui_name</sprite>
-        <sprite>sprites\ui_normal_1</sprite>
-        <sprite>sprites\ui_normal_1_exp</sprite>
-        <sprite>sprites\ui_normal_1_mana</sprite>
-        <sprite>sprites\ui_normal_1_health</sprite>
-      </sprites>
-    </sprites>
-    <sprites name="level_design">
+    <sprites name="Level Design">
       <sprites name="Decoration">
         <sprites name="Esylia">
           <sprites name="Animations">
@@ -227,70 +53,361 @@
           <sprite>sprites\deco_esylia_leaves</sprite>
         </sprites>
       </sprites>
+      <sprites name="Critters">
+        <sprite>sprites\spr_frog</sprite>
+        <sprite>sprites\spr_firefly</sprite>
+      </sprites>
+      <sprites name="Gathering Resources">
+        <sprites name="Nodes">
+          <sprite>sprites\spr_node_outline</sprite>
+          <sprite>sprites\mask_node</sprite>
+          <sprite>sprites\spr_node_empty</sprite>
+          <sprite>sprites\spr_node_bronze</sprite>
+          <sprite>sprites\spr_node_iron</sprite>
+          <sprite>sprites\spr_node_silver</sprite>
+          <sprite>sprites\spr_node_gold</sprite>
+          <sprite>sprites\spr_node_mithril</sprite>
+          <sprite>sprites\spr_node_adamantium</sprite>
+          <sprite>sprites\spr_node_magicite</sprite>
+          <sprite>sprites\spr_node_bloodstone</sprite>
+          <sprite>sprites\spr_node_darqantium</sprite>
+        </sprites>
+        <sprite>sprites\spr_gathering_particle</sprite>
+      </sprites>
     </sprites>
-    <sprites name="critter">
-      <sprite>sprites\spr_frog</sprite>
-      <sprite>sprites\spr_firefly</sprite>
+    <sprites name="Player">
+      <sprite>sprites\spr_levelup</sprite>
+      <sprite>sprites\spr_player</sprite>
+      <sprite>sprites\spr_player_jump</sprite>
+      <sprites name="Hair">
+        <sprite>sprites\example_hair</sprite>
+        <sprite>sprites\spr_hair_1</sprite>
+        <sprite>sprites\spr_hair_2</sprite>
+        <sprite>sprites\spr_hair_2_helm</sprite>
+        <sprite>sprites\spr_hair_3</sprite>
+        <sprite>sprites\spr_hair_3_helm</sprite>
+        <sprite>sprites\spr_hair_4</sprite>
+        <sprite>sprites\spr_hair_5</sprite>
+        <sprite>sprites\spr_hair_6</sprite>
+        <sprite>sprites\spr_hair_7</sprite>
+        <sprite>sprites\spr_hair_8</sprite>
+      </sprites>
+      <sprites name="Eyes">
+        <sprite>sprites\spr_eyes_1</sprite>
+        <sprite>sprites\spr_eyes_2</sprite>
+        <sprite>sprites\spr_eyes_3</sprite>
+        <sprite>sprites\spr_eyes_4</sprite>
+        <sprite>sprites\spr_eyes_5</sprite>
+        <sprite>sprites\spr_eyes_6</sprite>
+        <sprite>sprites\spr_eyes_7</sprite>
+        <sprite>sprites\spr_eyes_8</sprite>
+        <sprite>sprites\spr_eyes_9</sprite>
+        <sprite>sprites\spr_eyes_10</sprite>
+        <sprite>sprites\spr_eyes_11</sprite>
+        <sprite>sprites\spr_eyes_12</sprite>
+        <sprite>sprites\spr_eyes_13</sprite>
+        <sprite>sprites\spr_eyes_14</sprite>
+        <sprite>sprites\spr_eyes_15</sprite>
+      </sprites>
     </sprites>
-    <sprites name="animated backs">
-      <sprite>sprites\lava_1</sprite>
+    <sprites name="Items">
+      <sprites name="Equipable Items">
+        <sprites name="Helmets">
+          <sprite>sprites\helm_example</sprite>
+          <sprite>sprites\helm_gravity_1</sprite>
+          <sprite>sprites\helm_zabuza_1</sprite>
+          <sprite>sprites\helm_encript_1</sprite>
+          <sprite>sprites\helm_virus_1</sprite>
+          <sprite>sprites\helm_laser_1</sprite>
+          <sprite>sprites\helm_knight_1</sprite>
+          <sprite>sprites\helm_purplehaze_1</sprite>
+          <sprite>sprites\helm_woodsteel_1</sprite>
+          <sprites name="user">
+            <sprite>sprites\helm_user1_1</sprite>
+            <sprite>sprites\helm_user2_1</sprite>
+            <sprite>sprites\helm_user3_1</sprite>
+            <sprite>sprites\helm_user4_1</sprite>
+            <sprite>sprites\helm_user5_1</sprite>
+            <sprite>sprites\helm_user5_2</sprite>
+            <sprite>sprites\helm_user5_3</sprite>
+            <sprite>sprites\helm_user5_4</sprite>
+            <sprite>sprites\helm_user5_5</sprite>
+            <sprite>sprites\helm_user5_6</sprite>
+            <sprite>sprites\helm_user6_1</sprite>
+            <sprite>sprites\helm_user6_2</sprite>
+            <sprite>sprites\helm_user8_1</sprite>
+            <sprite>sprites\helm_user8_2</sprite>
+            <sprite>sprites\helm_user8_3</sprite>
+            <sprite>sprites\helm_user9_1</sprite>
+          </sprites>
+          <sprites name="icons">
+            <sprite>sprites\helm_gravity_1_ico</sprite>
+            <sprite>sprites\helm_zabuza_1_ico</sprite>
+          </sprites>
+        </sprites>
+        <sprites name="Weapons">
+          <sprite>sprites\weapon_template</sprite>
+          <sprites name="User Content">
+            <sprite>sprites\gs_user1_1</sprite>
+            <sprite>sprites\gs_user3_1</sprite>
+            <sprite>sprites\gs_user4_1</sprite>
+            <sprite>sprites\gs_user4_2</sprite>
+            <sprite>sprites\gs_user4_3</sprite>
+            <sprite>sprites\gs_user4_4</sprite>
+            <sprite>sprites\gs_user5_1</sprite>
+            <sprite>sprites\gs_user5_2</sprite>
+            <sprite>sprites\gs_user5_3</sprite>
+            <sprite>sprites\gs_user6_1</sprite>
+            <sprite>sprites\wh_user6_1</sprite>
+            <sprite>sprites\gs_user10_1</sprite>
+            <sprite>sprites\gs_user10_2</sprite>
+            <sprite>sprites\dg_user10_3</sprite>
+          </sprites>
+          <sprites name="Axe">
+            <sprite>sprites\axe_cyber_1</sprite>
+          </sprites>
+          <sprites name="Scythe">
+            <sprite>sprites\sc_cyber_1</sprite>
+          </sprites>
+          <sprites name="Greatsword">
+            <sprite>sprites\gs_cyber_1</sprite>
+            <sprite>sprites\gs_gravity_1</sprite>
+            <sprite>sprites\gs_zabuza_1</sprite>
+            <sprite>sprites\sprite51</sprite>
+            <sprite>sprites\gs_encript_1</sprite>
+            <sprite>sprites\gs_virus_1</sprite>
+            <sprite>sprites\gs_pruplehaze_1</sprite>
+            <sprite>sprites\gs_wood_1</sprite>
+            <sprite>sprites\gs_wood_2</sprite>
+            <sprite>sprites\gs_goon_1</sprite>
+            <sprite>sprites\gs_lighting</sprite>
+            <sprite>sprites\gs_megnetion</sprite>
+            <sprite>sprites\gs_slicer</sprite>
+            <sprites name="icons">
+              <sprite>sprites\gs_zabuza_1_ico</sprite>
+              <sprite>sprites\gs_slicer_ico</sprite>
+              <sprite>sprites\gs_gravity_1_ico</sprite>
+            </sprites>
+          </sprites>
+          <sprites name="Spear">
+            <sprite>sprites\sp_user7_1</sprite>
+            <sprite>sprites\sp_user5_1</sprite>
+            <sprite>sprites\sp_user5_2</sprite>
+          </sprites>
+          <sprites name="keyblade">
+            <sprite>sprites\kb_test</sprite>
+          </sprites>
+          <sprites name="Hammers">
+            <sprite>sprites\hm_justice</sprite>
+            <sprite>sprites\hm_purplun</sprite>
+          </sprites>
+          <sprites name="Orb">
+            <sprite>sprites\or_fire</sprite>
+          </sprites>
+          <sprite>sprites\spr_orb_projectile</sprite>
+          <sprites name="Rapier">
+            <sprite>sprites\ra_redstone</sprite>
+            <sprite>sprites\ra_gravity_1</sprite>
+          </sprites>
+        </sprites>
+        <sprites name="Gathering Tools">
+          <sprites name="Mining">
+            <sprites name="Pickaxes">
+              <sprite>sprites\spr_pickaxe_rusty</sprite>
+              <sprite>sprites\spr_pickaxe_rusty_icon</sprite>
+              <sprite>sprites\spr_pickaxe_bronze</sprite>
+              <sprite>sprites\spr_pickaxe_bronze_icon</sprite>
+              <sprite>sprites\spr_pickaxe_iron</sprite>
+              <sprite>sprites\spr_pickaxe_iron_icon</sprite>
+              <sprite>sprites\spr_pickaxe_steel</sprite>
+              <sprite>sprites\spr_pickaxe_steel_icon</sprite>
+              <sprite>sprites\spr_pickaxe_silver</sprite>
+              <sprite>sprites\spr_pickaxe_silver_icon</sprite>
+              <sprite>sprites\spr_pickaxe_gold</sprite>
+              <sprite>sprites\spr_pickaxe_gold_icon</sprite>
+              <sprite>sprites\spr_pickaxe_mithril</sprite>
+              <sprite>sprites\spr_pickaxe_mithril_icon</sprite>
+              <sprite>sprites\spr_pickaxe_adamant</sprite>
+              <sprite>sprites\spr_pickaxe_adamant_icon</sprite>
+              <sprite>sprites\spr_pickaxe_magicite</sprite>
+              <sprite>sprites\spr_pickaxe_magicite_icon</sprite>
+              <sprite>sprites\spr_pickaxe_blood</sprite>
+              <sprite>sprites\spr_pickaxe_blood_icon</sprite>
+              <sprite>sprites\spr_pickaxe_darq</sprite>
+              <sprite>sprites\spr_pickaxe_darq_icon</sprite>
+            </sprites>
+            <sprite>sprites\spr_anvil</sprite>
+            <sprite>sprites\spr_smithinghammer</sprite>
+          </sprites>
+        </sprites>
+      </sprites>
+      <sprites name="Non-Equipable Items">
+        <sprites name="Gathering Resources">
+          <sprites name="Ores">
+            <sprite>sprites\spr_ore_bronze</sprite>
+            <sprite>sprites\spr_ore_iron</sprite>
+            <sprite>sprites\spr_ore_silver</sprite>
+            <sprite>sprites\spr_ore_gold</sprite>
+            <sprite>sprites\spr_ore_mithril</sprite>
+            <sprite>sprites\spr_ore_adamantium</sprite>
+            <sprite>sprites\spr_ore_magicite</sprite>
+            <sprite>sprites\spr_ore_bloodstone</sprite>
+            <sprite>sprites\spr_ore_darqantium</sprite>
+          </sprites>
+          <sprites name="Ingots">
+            <sprite>sprites\spr_ingot_bronze</sprite>
+            <sprite>sprites\spr_ingot_iron</sprite>
+            <sprite>sprites\spr_ingot_silver</sprite>
+            <sprite>sprites\spr_ingot_gold</sprite>
+            <sprite>sprites\spr_ingot_mithril</sprite>
+            <sprite>sprites\spr_ingot_adamantium</sprite>
+            <sprite>sprites\spr_ingot_magicite</sprite>
+            <sprite>sprites\spr_ingot_bloodstone</sprite>
+            <sprite>sprites\spr_ingot_darqantium</sprite>
+          </sprites>
+        </sprites>
+        <sprite>sprites\spr_coin</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="User Interface">
+      <sprites name="Camera">
+        <sprite>sprites\spr_cam_1</sprite>
+        <sprite>sprites\spr_cam_2</sprite>
+      </sprites>
+      <sprites name="Mouses">
+        <sprite>sprites\spr_mouse_2</sprite>
+        <sprite>sprites\mouse_normal</sprite>
+        <sprite>sprites\mouse_attack</sprite>
+        <sprite>sprites\mouse_block</sprite>
+        <sprite>sprites\mouse_stun</sprite>
+        <sprite>sprites\mouse_root</sprite>
+        <sprite>sprites\mouse_noweapon</sprite>
+      </sprites>
+      <sprites name="Player Mini HUD">
+        <sprite>sprites\ui_hit</sprite>
+        <sprite>sprites\ui_block</sprite>
+        <sprite>sprites\ui_level</sprite>
+        <sprite>sprites\ui_name</sprite>
+        <sprite>sprites\ui_normal_1</sprite>
+        <sprite>sprites\ui_normal_1_exp</sprite>
+        <sprite>sprites\ui_normal_1_mana</sprite>
+        <sprite>sprites\ui_normal_1_health</sprite>
+      </sprites>
+      <sprites name="Font Sprites">
+        <sprite>sprites\spr_font</sprite>
+        <sprite>sprites\spr_font_2</sprite>
+      </sprites>
+      <sprites name="Inventory">
+        <sprite>sprites\spr_inventory_tab</sprite>
+        <sprite>sprites\spr_inventory_tab_1</sprite>
+        <sprite>sprites\spr_inventory_tab_2</sprite>
+        <sprite>sprites\spr_inventory_tab_3</sprite>
+        <sprite>sprites\spr_inventory_tab_4</sprite>
+        <sprite>sprites\spr_back_inv</sprite>
+      </sprites>
+      <sprites name="Element Icons">
+        <sprite>sprites\e_fire_icon</sprite>
+        <sprite>sprites\e_water_icon_1</sprite>
+        <sprite>sprites\e_earth_icon</sprite>
+        <sprite>sprites\e_wind_icon</sprite>
+        <sprite>sprites\e_electric_icon</sprite>
+        <sprite>sprites\e_life_icon</sprite>
+        <sprite>sprites\e_life_icon_1</sprite>
+        <sprite>sprites\e_death_icon</sprite>
+        <sprite>sprites\e_death_icon_1</sprite>
+        <sprite>sprites\e_ice_icon_1</sprite>
+        <sprite>sprites\e_ancient_icon_1</sprite>
+        <sprite>sprites\e_conduction_icon_1</sprite>
+        <sprite>sprites\e_poison_icon_1</sprite>
+        <sprite>sprites\e_sacrafice_icon_1</sprite>
+        <sprite>sprites\e_chaos_icon_1</sprite>
+        <sprite>sprites\e_darkness_icon_1</sprite>
+        <sprite>sprites\e_light_icon_1</sprite>
+        <sprite>sprites\e_flame_icon</sprite>
+        <sprite>sprites\e_blaze_icon</sprite>
+        <sprite>sprites\e_scorch_icon</sprite>
+        <sprite>sprites\e_blast_icon</sprite>
+        <sprite>sprites\e_smoke_icon</sprite>
+        <sprite>sprites\e_torment_icon</sprite>
+        <sprite>sprites\e_passion_icon</sprite>
+        <sprite>sprites\e_torndado_icon</sprite>
+        <sprite>sprites\e_gross_icon</sprite>
+        <sprite>sprites\e_gross_icon_1</sprite>
+        <sprite>sprites\e_storm_icon</sprite>
+        <sprite>sprites\e_dread_icon</sprite>
+        <sprite>sprites\e_dread_icon_1</sprite>
+        <sprite>sprites\e_motion_icon</sprite>
+        <sprite>sprites\e_motion_icon_1</sprite>
+        <sprite>sprites\e_gravity_icon</sprite>
+        <sprite>sprites\e_gravity_icon_1</sprite>
+        <sprite>sprites\e_carbon_icon</sprite>
+        <sprite>sprites\e_decay_icon</sprite>
+        <sprite>sprites\e_titan_icon</sprite>
+        <sprite>sprites\e_titan_icon_1</sprite>
+        <sprite>sprites\e_thunder_icon</sprite>
+        <sprite>sprites\e_voltage_icon</sprite>
+        <sprite>sprites\e_hope_icon</sprite>
+        <sprite>sprites\e_whirl_icon</sprite>
+      </sprites>
+      <sprites name="Game Menu">
+        <sprite>sprites\ui_inventory_icon</sprite>
+        <sprite>sprites\ui_player_icon</sprite>
+        <sprite>sprites\ui_social_icon</sprite>
+        <sprite>sprites\ui_clans_icon</sprite>
+        <sprite>sprites\ui_options_icon</sprite>
+        <sprite>sprites\ui_chat_icon</sprite>
+        <sprite>sprites\ui_gamemenu_background</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="Enemies">
+      <sprites name="Melee">
+        <sprites name="Woodsman">
+          <sprite>sprites\n_woodsman_still</sprite>
+          <sprite>sprites\n_woodsman_attack</sprite>
+          <sprite>sprites\n_woodsman_walk</sprite>
+          <sprite>sprites\n_woodsman_hurt</sprite>
+          <sprite>sprites\n_woodsman_death</sprite>
+          <sprite>sprites\n_woodsman_without_shader</sprite>
+        </sprites>
+        <sprites name="Larvin">
+          <sprite>sprites\mob_larvin_walk</sprite>
+          <sprite>sprites\mob_larvin_attack</sprite>
+        </sprites>
+        <sprites name="Trufflin">
+          <sprite>sprites\mob_trufflin_idle</sprite>
+          <sprite>sprites\mob_trufflin_walk</sprite>
+          <sprite>sprites\mob_trufflin_attack</sprite>
+          <sprite>sprites\mob_trufflin_hit</sprite>
+          <sprite>sprites\mob_trufflin_die</sprite>
+        </sprites>
+      </sprites>
+      <sprites name="Ranged">
+        <sprite>sprites\bot_1</sprite>
+        <sprite>sprites\bot_1_laser</sprite>
+      </sprites>
     </sprites>
     <sprites name="lights">
       <sprite>sprites\spr_light</sprite>
       <sprite>sprites\spr_light_2</sprite>
     </sprites>
-    <sprites name="Element Icons">
-      <sprite>sprites\e_fire_icon</sprite>
-      <sprite>sprites\e_water_icon_1</sprite>
-      <sprite>sprites\e_earth_icon</sprite>
-      <sprite>sprites\e_wind_icon</sprite>
-      <sprite>sprites\e_electric_icon</sprite>
-      <sprite>sprites\e_life_icon</sprite>
-      <sprite>sprites\e_life_icon_1</sprite>
-      <sprite>sprites\e_death_icon</sprite>
-      <sprite>sprites\e_death_icon_1</sprite>
-      <sprite>sprites\e_ice_icon_1</sprite>
-      <sprite>sprites\e_ancient_icon_1</sprite>
-      <sprite>sprites\e_conduction_icon_1</sprite>
-      <sprite>sprites\e_poison_icon_1</sprite>
-      <sprite>sprites\e_sacrafice_icon_1</sprite>
-      <sprite>sprites\e_chaos_icon_1</sprite>
-      <sprite>sprites\e_darkness_icon_1</sprite>
-      <sprite>sprites\e_light_icon_1</sprite>
-      <sprite>sprites\e_flame_icon</sprite>
-      <sprite>sprites\e_blaze_icon</sprite>
-      <sprite>sprites\e_scorch_icon</sprite>
-      <sprite>sprites\e_blast_icon</sprite>
-      <sprite>sprites\e_smoke_icon</sprite>
-      <sprite>sprites\e_torment_icon</sprite>
-      <sprite>sprites\e_passion_icon</sprite>
-      <sprite>sprites\e_torndado_icon</sprite>
-      <sprite>sprites\e_gross_icon</sprite>
-      <sprite>sprites\e_gross_icon_1</sprite>
-      <sprite>sprites\e_storm_icon</sprite>
-      <sprite>sprites\e_dread_icon</sprite>
-      <sprite>sprites\e_dread_icon_1</sprite>
-      <sprite>sprites\e_motion_icon</sprite>
-      <sprite>sprites\e_motion_icon_1</sprite>
-      <sprite>sprites\e_gravity_icon</sprite>
-      <sprite>sprites\e_gravity_icon_1</sprite>
-      <sprite>sprites\e_carbon_icon</sprite>
-      <sprite>sprites\e_decay_icon</sprite>
-      <sprite>sprites\e_titan_icon</sprite>
-      <sprite>sprites\e_titan_icon_1</sprite>
-      <sprite>sprites\e_thunder_icon</sprite>
-      <sprite>sprites\e_voltage_icon</sprite>
-      <sprite>sprites\e_hope_icon</sprite>
-      <sprite>sprites\e_whirl_icon</sprite>
+    <sprites name="Room Design">
+      <sprites name="Blocks">
+        <sprite>sprites\spr_block_1</sprite>
+        <sprite>sprites\spr_block_2</sprite>
+        <sprite>sprites\spr_block_3</sprite>
+      </sprites>
+      <sprites name="Animated Backs">
+        <sprite>sprites\lava_1</sprite>
+      </sprites>
+      <sprites name="Spawners">
+        <sprite>sprites\spawn_point_icon</sprite>
+      </sprites>
     </sprites>
-    <sprite>sprites\spr_back_inv</sprite>
-    <sprite>sprites\spr_coin</sprite>
-    <sprite>sprites\sprite144</sprite>
-    <sprite>sprites\spr_bolt</sprite>
   </sprites>
   <backgrounds name="background">
-    <backgrounds name="tiles">
-      <backgrounds name="space">
+    <background>background\Firija_language</background>
+    <backgrounds name="Tiles">
+      <backgrounds name="Space">
         <background>background\tile_space</background>
       </backgrounds>
       <backgrounds name="Esylia">
@@ -304,15 +421,15 @@
         <background>background\vulcano_1</background>
       </backgrounds>
     </backgrounds>
-    <backgrounds name="background">
+    <backgrounds name="Backgrounds">
       <background>background\background_stars_1</background>
     </backgrounds>
-    <background>background\banner</background>
-    <background>background\logo_1_klein</background>
-    <background>background\logo_1_giga</background>
-    <background>background\logo_1_groot</background>
-    <background>background\Firija_language</background>
-    <background>background\soundcloud_indicity</background>
+    <backgrounds name="Other">
+      <background>background\logo_1_klein</background>
+      <background>background\logo_1_groot</background>
+      <background>background\logo_1_giga</background>
+      <background>background\banner</background>
+    </backgrounds>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -360,7 +477,24 @@
       <script>scripts\fade_in.gml</script>
     </scripts>
     <scripts name="Enemy AI">
+      <scripts name="Alarms">
+        <script>scripts\AI_alarm_attack.gml</script>
+        <script>scripts\AI_alarm_hit.gml</script>
+        <script>scripts\AI_alarm_return.gml</script>
+        <script>scripts\AI_alarm_wander.gml</script>
+      </scripts>
+      <scripts name="States">
+        <script>scripts\AI_state_idle.gml</script>
+        <script>scripts\AI_state_wander.gml</script>
+        <script>scripts\AI_state_follow.gml</script>
+        <script>scripts\AI_state_hit.gml</script>
+        <script>scripts\AI_state_defend.gml</script>
+        <script>scripts\AI_state_return.gml</script>
+        <script>scripts\AI_state_attack.gml</script>
+        <script>scripts\AI_state_dead.gml</script>
+      </scripts>
       <script>scripts\AI_player_in_range.gml</script>
+      <script>scripts\AI_start_following.gml</script>
       <script>scripts\point_in_territorium.gml</script>
       <script>scripts\spawn_enemy.gml</script>
     </scripts>
@@ -381,10 +515,10 @@
       <script>scripts\inv_create.gml</script>
       <script>scripts\inv_slot_add.gml</script>
       <script>scripts\inv_draw.gml</script>
-      <script>scripts\inv_item_add.gml</script>
       <script>scripts\inv_freeslot_create.gml</script>
-      <script>scripts\inv_freeslot_item_add.gml</script>
-      <script>scripts\inv_freeslot_remove_empty.gml</script>
+      <script>scripts\inv_item_add.gml</script>
+      <script>scripts\inv_first_empty.gml</script>
+      <script>scripts\inv_first_empty_tab.gml</script>
     </scripts>
     <scripts name="Lynx">
       <script>scripts\lynx_element_define.gml</script>
@@ -404,7 +538,12 @@
         <script>scripts\lynx_artificial_bonusAoe.gml</script>
       </scripts>
     </scripts>
-    <script>scripts\advanced_collision.gml</script>
+    <scripts name="Skills">
+      <script>scripts\skills_init.gml</script>
+      <script>scripts\skills_level_up.gml</script>
+      <script>scripts\skill_gain_xp.gml</script>
+    </scripts>
+    <script>scripts\ai_drop_loot.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\small_font</font>
@@ -414,22 +553,52 @@
     <font>fonts\font_hud_small</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_cam</object>
-    <object>objects\obj_levelup</object>
-    <object>objects\obj_player_other</object>
-    <object>objects\obj_player</object>
-    <object>objects\obj_player_shadow</object>
-    <objects name="critter">
-      <object>objects\critter_frog</object>
-      <object>objects\obj_firefly</object>
-    </objects>
-    <objects name="room_design">
+    <objects name="Room Design">
       <object>objects\obj_deco_Esylia_leaves_ani</object>
       <object>objects\obj_wall</object>
       <object>objects\obj_musictouch</object>
       <object>objects\obj_air</object>
     </objects>
-    <objects name="level_design">
+    <objects name="Resources">
+      <objects name="Parents">
+        <object>objects\node_parent</object>
+        <object>objects\resource_parent</object>
+      </objects>
+      <objects name="Nodes">
+        <object>objects\node_bronze</object>
+      </objects>
+    </objects>
+    <objects name="Enemies">
+      <object>objects\n_parent</object>
+      <object>objects\n_template_melee</object>
+      <object>objects\enemy_spawn_point</object>
+      <objects name="melee">
+        <object>objects\n_woodsman_1</object>
+      </objects>
+      <objects name="ranged">
+        <object>objects\n_bot_1</object>
+      </objects>
+      <objects name="projectiles">
+        <object>objects\n_bot_1_laser</object>
+      </objects>
+    </objects>
+    <objects name="Lynx">
+      <object>objects\obj_lynx_controller</object>
+      <object>objects\obj_projectile</object>
+    </objects>
+    <objects name="Controlers">
+      <object>objects\obj_hybrid_controller</object>
+      <object>objects\obj_regelaar</object>
+      <object>objects\obj_collision_parent</object>
+      <object>objects\obj_counter</object>
+      <object>objects\obj_cam</object>
+      <object>objects\obj_interactable</object>
+      <objects name="obj_regelaar+">
+        <object>objects\obj_background</object>
+        <object>objects\obj_light_control</object>
+      </objects>
+    </objects>
+    <objects name="Level Design">
       <objects name="Decoration">
         <objects name="Esylia">
           <object>objects\obj_torch_1</object>
@@ -443,75 +612,86 @@
           <object>objects\obj_deco_Esylia_leaves</object>
         </objects>
       </objects>
-    </objects>
-    <objects name="Gear">
-      <object>objects\obj_helm</object>
-      <object>objects\obj_greatsword</object>
-      <object>objects\obj_axe</object>
-      <object>objects\obj_scythe</object>
-      <object>objects\obj_weapontrail</object>
-      <object>objects\obj_orb</object>
-      <object>objects\obj_orb_projectile</object>
-      <object>objects\obj_orb_followeffect</object>
-    </objects>
-    <objects name="enemies">
-      <object>objects\n_parent</object>
-      <object>objects\enemy_spawn_point</object>
-      <objects name="melee">
-        <object>objects\n_woodsman_1</object>
-      </objects>
-      <objects name="ranged">
-        <object>objects\n_bot_1</object>
-      </objects>
-      <objects name="projectiles">
-        <object>objects\n_bot_1_laser</object>
+      <objects name="Critters">
+        <object>objects\critter_frog</object>
+        <object>objects\obj_firefly</object>
       </objects>
     </objects>
-    <objects name="controllers">
-      <object>objects\obj_hybrid_controller</object>
-      <object>objects\obj_regelaar</object>
-      <objects name="obj_regelaar+">
-        <object>objects\obj_background</object>
-        <object>objects\obj_gui</object>
-        <object>objects\obj_light_control</object>
-        <object>objects\ITEM</object>
+    <objects name="Player">
+      <object>objects\obj_levelup</object>
+      <object>objects\obj_player</object>
+      <object>objects\obj_player_shadow</object>
+      <object>objects\obj_player_other</object>
+    </objects>
+    <objects name="Items">
+      <object>objects\ITEM</object>
+      <object>objects\obj_item_drop</object>
+      <objects name="Equipable Items">
+        <object>objects\obj_tool</object>
+        <object>objects\obj_helm</object>
+        <object>objects\obj_greatsword</object>
+        <object>objects\obj_rapier</object>
+        <object>objects\obj_axe</object>
+        <object>objects\obj_scythe</object>
+        <object>objects\obj_orb</object>
+        <object>objects\obj_orb_projectile</object>
+        <objects name="Effects">
+          <object>objects\obj_orb_followeffect</object>
+          <object>objects\obj_weapontrail</object>
+        </objects>
       </objects>
-      <object>objects\obj_collision_parent</object>
     </objects>
-    <objects name="Lynx">
-      <object>objects\obj_lynx_controller</object>
-      <object>objects\obj_projectile</object>
+    <objects name="Effects">
+      <object>objects\obj_light</object>
+      <object>objects\obj_shadow</object>
+      <object>objects\obj_shadow_props</object>
     </objects>
-    <object>objects\obj_light</object>
-    <object>objects\obj_shadow</object>
-    <object>objects\obj_shadow_props</object>
-    <object>objects\obj_counter</object>
-    <object>objects\obj_statwindow</object>
-    <object>objects\obj_inventory</object>
+    <objects name="User Interface">
+      <object>objects\obj_gui</object>
+      <object>objects\obj_statwindow</object>
+      <object>objects\obj_inventory</object>
+    </objects>
   </objects>
   <timelines name="timelines">
-    <timelines name="greatsword">
-      <timeline>timelines\greatsword_attack_1</timeline>
-      <timeline>timelines\greatsword_attack_2</timeline>
-      <timeline>timelines\greatsword_attack_3</timeline>
-      <timeline>timelines\greatsword_attack_air</timeline>
+    <timelines name="Weapons">
+      <timelines name="Greatsword">
+        <timeline>timelines\greatsword_attack_1</timeline>
+        <timeline>timelines\greatsword_attack_2</timeline>
+        <timeline>timelines\greatsword_attack_3</timeline>
+        <timeline>timelines\greatsword_attack_air</timeline>
+      </timelines>
+      <timelines name="Orb">
+        <timeline>timelines\orb_attack_1</timeline>
+        <timeline>timelines\orb_attack_2</timeline>
+        <timeline>timelines\orb_attack_3</timeline>
+      </timelines>
+      <timelines name="Scythe">
+        <timeline>timelines\scythe_attack_1</timeline>
+      </timelines>
+      <timelines name="Axe">
+        <timeline>timelines\axe_attack_1</timeline>
+      </timelines>
+      <timelines name="Warhammer">
+        <timeline>timelines\warhammer_attack_1</timeline>
+        <timeline>timelines\warhammer_run_attack</timeline>
+      </timelines>
+      <timelines name="Polearm">
+        <timeline>timelines\polearm_attack_1</timeline>
+      </timelines>
     </timelines>
-    <timelines name="orb">
-      <timeline>timelines\orb_attack_1</timeline>
-      <timeline>timelines\orb_attack_2</timeline>
-      <timeline>timelines\orb_attack_3</timeline>
-    </timelines>
-    <timeline>timelines\scythe_attack_1</timeline>
-    <timeline>timelines\axe_attack_1</timeline>
-    <timeline>timelines\warhammer_attack_1</timeline>
-    <timeline>timelines\warhammer_run_attack</timeline>
-    <timeline>timelines\polearm_attack_1</timeline>
   </timelines>
   <rooms name="rooms">
     <room>rooms\room2</room>
     <room>rooms\room3</room>
     <room>rooms\room0</room>
   </rooms>
+  <constants number="5">
+    <constant name="woodcutting">0</constant>
+    <constant name="mining">1</constant>
+    <constant name="hunting">2</constant>
+    <constant name="blacksmithing">3</constant>
+    <constant name="smelting">4</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
