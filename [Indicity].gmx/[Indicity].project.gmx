@@ -44,6 +44,9 @@
     </sprites>
     <sprites name="Level Design">
       <sprites name="Decoration">
+        <sprites name="General">
+          <sprite>sprites\spr_deco_grass</sprite>
+        </sprites>
         <sprites name="Esylia">
           <sprites name="Animations">
             <sprite>sprites\deco_esylia_leaves_ani</sprite>
