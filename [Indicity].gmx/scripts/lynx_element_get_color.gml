@@ -1,4 +1,4 @@
-///lynx_element_get_color(argument0)
+///lynx_element_get_color(elementID)
 var A;
 switch (argument0)
 {

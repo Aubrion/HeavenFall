@@ -391,6 +391,7 @@
       <script>scripts\lynx_mind_define.gml</script>
       <script>scripts\lynx_artificial_define.gml</script>
       <script>scripts\lynx_element_get_color.gml</script>
+      <script>scripts\lynx_element_get_damage.gml</script>
       <script>scripts\lynx_damage.gml</script>
       <script>scripts\lynx_spell_execute.gml</script>
       <scripts name="Mind Lynx">

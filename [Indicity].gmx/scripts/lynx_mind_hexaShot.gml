@@ -5,7 +5,7 @@ var A = 0;
 repeat (6)
 {
     var i = instance_create(obj_player.x+6,obj_player.y+12,obj_projectile);
-    i.damage = (l_elemD[argument0] + l_damBonus)/3;
+    i.damage = (lynx_element_get_damage(argument0) + l_damBonus)/3;
     i.damageType = 1; //magical
     if (argument0 == 0) i.aoe = 16 + l_aoeBonus;
     i.element = argument0;
