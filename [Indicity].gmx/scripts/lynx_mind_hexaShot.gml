@@ -13,7 +13,8 @@ repeat (6)
     A+=60;
     with(i)
     {
-        lynx_effect_burn(color);
+        // Script does not (yet) exist
+        //lynx_effect_burn(color);
         motion_set(A,4);
     }
 }

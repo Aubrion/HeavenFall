@@ -12,5 +12,6 @@ i.hspeed = obj_player.look*4;
 i.color = lynx_element_get_color(argument0);
 with(i)
 {
-    lynx_effect_burn(color);
+    // Script does not (yet) exist
+    //lynx_effect_burn(color);
 }
