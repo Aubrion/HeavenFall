@@ -31,6 +31,91 @@
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_player">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///player_advanced_collision()
+ var a,xoff,yoff,om,mm,mag;
+  
+ a =  point_direction(x, y, other.x, other.y+12);    //Get the direction from the colliding object
+ xoff = lengthdir_x(1, a);                       //Get the offset vector
+ yoff = lengthdir_y(1, a);
+ om = other.mass / mass;                         //start the fake "physics mass" calculations
+ mm = mass / other.mass;
+ mag = sqrt((om * om) + (mm * mm));
+ om /= mag;
+ mm /= mag;
+
+ //Move out of collision
+ while (place_meeting(x, y, other))
+ {
+ x -= xoff * om; //Move the instance out of collision
+ y -= yoff * om;
+ other.x += xoff * mm; //Move the other instance out of the collision
+ other.y += yoff * mm; 
+ }
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_collision_parent">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///advanced_collision()
+ var a,xoff,yoff,om,mm,mag;
+  
+ a = point_direction(x, y, other.x, other.y);    //Get the direction from the colliding object
+ xoff = lengthdir_x(1, a);                       //Get the offset vector
+ yoff = lengthdir_y(1, a);
+ om = other.mass / mass;                         //start the fake "physics mass" calculations
+ mm = mass / other.mass;
+ mag = sqrt((om * om) + (mm * mm));
+ om /= mag;
+ mm /= mag;
+
+ //Move out of collision
+ while (place_meeting(x, y, other))
+ {
+ x -= xoff * om; //Move the instance out of collision
+ y -= yoff * om;
+ other.x += xoff * mm; //Move the other instance out of the collision
+ other.y += yoff * mm; 
+ }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
   </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
