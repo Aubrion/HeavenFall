@@ -84,6 +84,14 @@
           <sprite>sprites\spr_node_darqantium</sprite>
         </sprites>
         <sprite>sprites\spr_gathering_particle</sprite>
+        <sprites name="Trees">
+          <sprite>sprites\spr_treeshadow</sprite>
+          <sprite>sprites\spr_tree1_top</sprite>
+          <sprite>sprites\spr_tree2_top</sprite>
+          <sprite>sprites\spr_tree3_top</sprite>
+          <sprite>sprites\spr_tree1_middle</sprite>
+          <sprite>sprites\spr_tree1_bottom</sprite>
+        </sprites>
       </sprites>
     </sprites>
     <sprites name="Player">
@@ -271,6 +279,9 @@
             <sprite>sprites\spr_ingot_bloodstone</sprite>
             <sprite>sprites\spr_ingot_darqantium</sprite>
           </sprites>
+          <sprites name="Wood Logs">
+            <sprite>sprites\spr_log_aspen</sprite>
+          </sprites>
         </sprites>
         <sprite>sprites\spr_coin</sprite>
       </sprites>
@@ -385,6 +396,7 @@
         <background>background\tile_forest_2</background>
         <background>background\background11</background>
         <background>background\tile_forest_back</background>
+        <background>background\tile_grounds</background>
       </backgrounds>
       <backgrounds name="Hydra">
         <background>background\vulcano_1</background>
