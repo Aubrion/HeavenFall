@@ -252,6 +252,7 @@
             </sprites>
             <sprite>sprites\spr_anvil</sprite>
             <sprite>sprites\spr_smithinghammer</sprite>
+            <sprite>sprites\spr_smeltingoven</sprite>
           </sprites>
         </sprites>
       </sprites>
