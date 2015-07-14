@@ -25,6 +25,28 @@
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>/// Parent code
+event_inherited();
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>/// Sprites and sound
 
 // Add sprites for each state:
@@ -55,11 +77,11 @@ attacksound = roar_1
             <kind>1</kind>
             <string>/// Stats
 
-str = 1;
-def = 1;
-agi = 1;
-int = 1;
-will = 1;
+base_str = 1;
+base_def = 1;
+base_agi = 1;
+base_int = 1;
+base_will = 1;
 </string>
           </argument>
         </arguments>
@@ -90,8 +112,8 @@ hp = mhp; // HP
 msp = 30; // Max SP
 sp = msp; // SP
 level = 3; // Monser level
-mspeed = 0.8; // Movement speed
-damage = 4; // Attack damage
+base_mspeed = 0.8; // Movement speed
+base_damage = 4; // Attack damage
 
 // State settings
 attack_wait_time = 0.25 * room_speed; // Time between attacks
@@ -317,6 +339,28 @@ if hp&lt;=0 {hp=0}
       </action>
     </event>
     <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Parent code
+event_inherited();
+</string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>

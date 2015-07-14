@@ -499,6 +499,12 @@
       <script>scripts\spawn_enemy.gml</script>
     </scripts>
     <scripts name="stats">
+      <scripts name="buff">
+        <script>scripts\BUFF_EXPLANATION.gml</script>
+        <script>scripts\buff_add.gml</script>
+        <script>scripts\buff_get_stat_base.gml</script>
+        <script>scripts\buff_set_stat.gml</script>
+      </scripts>
       <script>scripts\stats_set_basic.gml</script>
       <script>scripts\stats_set_itembonus.gml</script>
       <script>scripts\stats_update.gml</script>
@@ -685,12 +691,13 @@
     <room>rooms\room3</room>
     <room>rooms\room0</room>
   </rooms>
-  <constants number="5">
+  <constants number="6">
     <constant name="woodcutting">0</constant>
     <constant name="mining">1</constant>
     <constant name="hunting">2</constant>
     <constant name="blacksmithing">3</constant>
     <constant name="smelting">4</constant>
+    <constant name="movement_speed_factor">0.2</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

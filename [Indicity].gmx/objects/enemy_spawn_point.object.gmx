@@ -39,7 +39,7 @@ defend_time = room_speed * 5;
 enemy_type = noone;
 
 // Max enemies (will not spawn more when reached)
-enemy_max = 15;
+enemy_max = 1; // DEBUG - REDUCED FROM 15 TO 1
 
 // Enable or disable respawning
 respawning = true;

@@ -17,8 +17,8 @@ inst_E2D9C9A3.enemy_type = n_woodsman_1;</code>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1059</w>
-    <h>695</h>
+    <w>1008</w>
+    <h>600</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
     <showTiles>-1</showTiles>
