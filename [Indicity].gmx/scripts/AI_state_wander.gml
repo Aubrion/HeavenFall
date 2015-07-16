@@ -1,7 +1,7 @@
 /// AI_state_wander(wander_alarm)
 var wander_alarm = argument0;
 
-if (state == "wander")
+if (state == "wander" && can_move)
 {
     // Arrived at destination
     if (point_distance(x, y, wander_goalX, wander_goalY) < mspeed)

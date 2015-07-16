@@ -20,13 +20,16 @@ if (state == "defend")
     // Move
     if (point_distance(x, y, goalX, goalY) > mspeed)
     {
-        var directionToGoal = point_direction(x, y, goalX, goalY);
-        x = x + lengthdir_x(mspeed, directionToGoal);
-        y = y + lengthdir_y(mspeed/2, directionToGoal);
+        if (can_move)
+        {
+            var directionToGoal = point_direction(x, y, goalX, goalY);
+            x = x + lengthdir_x(mspeed, directionToGoal);
+            y = y + lengthdir_y(mspeed/2, directionToGoal);
+        }
     }
     
     // Attack
-    else
+    else if (can_attack)
     {
         state = "attack";
         sprite_index = attacking;

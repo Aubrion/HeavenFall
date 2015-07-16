@@ -26,7 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>/// Init
+
 buffs = 0; // 2D array. Second dimension contains: [0]stat, [1]type, [2]value, [3]duration
+
+// Status array
+status_init();
 
 // Base Stats
 base_str = 0;
@@ -140,12 +144,8 @@ for (var i = 0; i &lt; array_height_2d(buff_values); i++)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// DEBUG - Test buffs
-
-if (keyboard_check_pressed(ord("B")))
-{
-    buff_add(self, true, 5, 1, 50, room_speed*5);
-}
+            <string>/// Status effects
+status_step();
 </string>
           </argument>
         </arguments>

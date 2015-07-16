@@ -10,7 +10,6 @@ with (argument0)
         case 2: return base_agi; break;
         case 3: return base_int; break;
         case 4: return base_will; break;
-        case 5: return base_mspeed; break;
-        case 6: return base_damage ; break;
+        case 5: return base_damage ; break;
     } 
 }

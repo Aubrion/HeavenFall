@@ -505,6 +505,24 @@
         <script>scripts\buff_get_stat_base.gml</script>
         <script>scripts\buff_set_stat.gml</script>
       </scripts>
+      <scripts name="Status Effects">
+        <scripts name="Status Scripts">
+          <script>scripts\status_script_blind.gml</script>
+          <script>scripts\status_script_burn.gml</script>
+          <script>scripts\status_script_cursed.gml</script>
+          <script>scripts\status_script_poison.gml</script>
+          <script>scripts\status_script_root.gml</script>
+          <script>scripts\status_script_silence.gml</script>
+          <script>scripts\status_script_sleep.gml</script>
+          <script>scripts\status_script_slow.gml</script>
+          <script>scripts\status_script_stun.gml</script>
+        </scripts>
+        <script>scripts\status_add.gml</script>
+        <script>scripts\status_declaration.gml</script>
+        <script>scripts\status_init.gml</script>
+        <script>scripts\status_remove.gml</script>
+        <script>scripts\status_step.gml</script>
+      </scripts>
       <script>scripts\stats_set_basic.gml</script>
       <script>scripts\stats_set_itembonus.gml</script>
       <script>scripts\stats_update.gml</script>
@@ -603,6 +621,7 @@
         <object>objects\obj_background</object>
         <object>objects\obj_light_control</object>
       </objects>
+      <object>objects\obj_status_controller</object>
     </objects>
     <objects name="Level Design">
       <objects name="Decoration">
@@ -691,13 +710,22 @@
     <room>rooms\room3</room>
     <room>rooms\room0</room>
   </rooms>
-  <constants number="6">
-    <constant name="woodcutting">0</constant>
-    <constant name="mining">1</constant>
-    <constant name="hunting">2</constant>
+  <constants number="15">
     <constant name="blacksmithing">3</constant>
-    <constant name="smelting">4</constant>
+    <constant name="hunting">2</constant>
+    <constant name="mining">1</constant>
     <constant name="movement_speed_factor">0.2</constant>
+    <constant name="smelting">4</constant>
+    <constant name="woodcutting">0</constant>
+    <constant name="status_stun">0</constant>
+    <constant name="status_root">1</constant>
+    <constant name="status_silence">2</constant>
+    <constant name="status_blind">3</constant>
+    <constant name="status_sleep">4</constant>
+    <constant name="status_slow">5</constant>
+    <constant name="status_poison">6</constant>
+    <constant name="status_burn">7</constant>
+    <constant name="status_cursed">8</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

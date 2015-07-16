@@ -18,7 +18,7 @@ if (state == "hit")
         image_xscale = 1;
     
     // Move
-    if (point_distance(x, y, goalX, goalY) > mspeed)
+    if (point_distance(x, y, goalX, goalY) > mspeed && can_move)
     {
         var directionToGoal = point_direction(x, y, goalX, goalY);
         x = x + lengthdir_x(mspeed, directionToGoal);
@@ -26,7 +26,7 @@ if (state == "hit")
     }
     
     // Attack
-    else
+    else if (can_attack)
     {
         state = "attack";
         sprite_index = attacking;

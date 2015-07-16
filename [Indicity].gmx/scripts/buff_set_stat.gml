@@ -10,7 +10,6 @@ with (argument0)
         case 2: agi = argument2; break;
         case 3: int = argument2; break;
         case 4: will = argument2; break;
-        case 5: mspeed = argument2; break;
-        case 6: damage = argument2; break;
+        case 5: damage = argument2; break;
     } 
 }

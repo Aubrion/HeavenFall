@@ -16,8 +16,7 @@ Stats (used to reference them, for example as script arguments or the buffs arra
 2 = agi
 3 = int
 4 = will
-5 = mspeed
-6 = damage
+5 = damage
 
 ------------------------------------------------------
 
