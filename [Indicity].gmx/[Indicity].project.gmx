@@ -544,24 +544,6 @@
       <script>scripts\inv_first_empty.gml</script>
       <script>scripts\inv_first_empty_tab.gml</script>
     </scripts>
-    <scripts name="Lynx">
-      <script>scripts\lynx_element_define.gml</script>
-      <script>scripts\lynx_mind_define.gml</script>
-      <script>scripts\lynx_artificial_define.gml</script>
-      <script>scripts\lynx_element_get_color.gml</script>
-      <script>scripts\lynx_element_get_damage.gml</script>
-      <script>scripts\lynx_damage.gml</script>
-      <script>scripts\lynx_spell_execute.gml</script>
-      <scripts name="Mind Lynx">
-        <script>scripts\MIND_LYNX_UITLEG.gml</script>
-        <script>scripts\lynx_mind_projectile.gml</script>
-        <script>scripts\lynx_mind_hexaShot.gml</script>
-      </scripts>
-      <scripts name="Artificial Lynx">
-        <script>scripts\lynx_artificial_bonusDamage.gml</script>
-        <script>scripts\lynx_artificial_bonusAoe.gml</script>
-      </scripts>
-    </scripts>
     <scripts name="Skills">
       <script>scripts\skills_init.gml</script>
       <script>scripts\skills_level_up.gml</script>
