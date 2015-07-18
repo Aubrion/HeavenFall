@@ -571,6 +571,8 @@ if(x!=xprevious or y!=yprevious){
           <argument>
             <kind>1</kind>
             <string>///advanced_collision()
+if jump=false
+{
  var a,xoff,yoff,om,mm,mag;
   
  a = point_direction(x, y+12, other.x, other.y);    //Get the direction from the colliding object
@@ -590,7 +592,7 @@ if(x!=xprevious or y!=yprevious){
  other.x += xoff * mm; //Move the other instance out of the collision
  other.y += yoff * mm; 
  }
-
+}
 </string>
           </argument>
         </arguments>

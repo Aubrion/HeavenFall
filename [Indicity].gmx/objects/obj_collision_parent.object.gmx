@@ -49,6 +49,7 @@
           <argument>
             <kind>1</kind>
             <string>///player_advanced_collision()
+/*
  var a,xoff,yoff,om,mm,mag;
   
  a =  point_direction(x, y, other.x, other.y+12);    //Get the direction from the colliding object
