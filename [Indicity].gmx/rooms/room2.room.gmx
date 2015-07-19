@@ -118,7 +118,6 @@ inst_E2D9C9A3.enemy_type = n_woodsman_1;</code>
     <instance objName="critter_frog" x="1188" y="324" name="inst_DBA98CF7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="1200" y="336" name="inst_F1836C43" locked="0" code="" scaleX="1" scaleY="19" colour="4294967295" rotation="0"/>
     <instance objName="obj_musictouch" x="24" y="348" name="inst_1D2A635D" locked="0" code="music=m_frog_forest&#xA;" scaleX="1" scaleY="18" colour="4294967295" rotation="0"/>
-    <instance objName="obj_hybrid_controller" x="-24" y="-12" name="inst_F34F5844" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_musictouch" x="852" y="348" name="inst_24DB7460" locked="0" code="music=fight2&#xA;" scaleX="1" scaleY="18" colour="4294967295" rotation="0"/>
     <instance objName="obj_musictouch" x="360" y="348" name="inst_1DF98397" locked="0" code="music=m_frog_forest&#xA;" scaleX="1" scaleY="18" colour="4294967295" rotation="0"/>
     <instance objName="obj_firefly" x="168" y="504" name="inst_3800F510" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

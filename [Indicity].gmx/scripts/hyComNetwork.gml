@@ -29,6 +29,16 @@ if(ds_map_find_value(async_load, "type")==network_type_data){
         switch(hyComRead()){
             case "LOGIN":
                 global.playerID = real(hyComRead());
+                var i;
+                    for(i=0; i<4; i+=1){
+                        var a = instance_create(96+i*96, 144, obj_mainmenu_character);
+                        a.characterID = real(hyComRead());
+                        a.characterName = hyComRead();
+                        
+                            if(a.characterID==-1){
+                                a.sprite_index = spr_mainmenu_characternew;
+                            }
+                    }
             break;
             case "USER":
                 switch(hyComRead()){
@@ -39,6 +49,7 @@ if(ds_map_find_value(async_load, "type")==network_type_data){
                         idd.name = hyComRead();
                         idd.x = obj_player.xstart;
                         idd.y = obj_player.ystart;
+                        
                     break;
                     case "DATA":
                         tempidd = real(hyComRead());
@@ -71,6 +82,25 @@ if(ds_map_find_value(async_load, "type")==network_type_data){
                                 if(hyid==other.tempidd){
                                     instance_destroy();
                                 }
+                            }
+                    break;
+                }
+            break;
+            case "CHARACTER":
+                switch(hyComRead()){
+                    case "SCREENUPDATE":
+                        with(obj_mainmenu_character){
+                            instance_destroy();
+                        }
+                        var i;
+                            for(i=0; i<4; i+=1){
+                                var a = instance_create(96+i*96, 144, obj_mainmenu_character);
+                                a.characterID = real(hyComRead());
+                                a.characterName = hyComRead();
+                                
+                                    if(a.characterID==-1){
+                                        a.sprite_index = spr_mainmenu_characternew;
+                                    }
                             }
                     break;
                 }

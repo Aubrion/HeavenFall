@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>-20</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -37,6 +37,9 @@ if(network_connect_raw(global.HyDNSsocket, "77.72.150.188", 12801)==0){
 }
 
 hyComEmit("LOGIN", arg[0], arg[1]);
+
+global.playerID = -1;
+global.playerName = "Unkown";
 
 global.playerName = arg[0];
 
@@ -141,6 +144,29 @@ alarm[0] = 15;
           <argument>
             <kind>1</kind>
             <string>hyChatDraw(0, display_get_gui_height()-20*12);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="17">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>show_message(global.playerName);
 </string>
           </argument>
         </arguments>

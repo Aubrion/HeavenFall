@@ -544,7 +544,7 @@
   </fonts>
   <objects name="objects">
     <objects name="Main Menu">
-      <object>objects\obj_mainmenu_character_parent</object>
+      <object>objects\obj_mainmenu_character</object>
       <object>objects\obj_mainmenu_characternew</object>
       <object>objects\obj_mainmenu_characterslot</object>
       <object>objects\obj_mainmenu_controller</object>
@@ -680,12 +680,10 @@
     </timelines>
   </timelines>
   <rooms name="rooms">
+    <room>rooms\rm_characterselection</room>
     <room>rooms\room2</room>
     <room>rooms\room3</room>
     <room>rooms\room0</room>
-    <rooms name="Main Menu">
-      <room>rooms\rm_characterselection</room>
-    </rooms>
   </rooms>
   <constants number="5">
     <constant name="woodcutting">0</constant>
