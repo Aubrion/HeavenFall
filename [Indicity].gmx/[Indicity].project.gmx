@@ -588,6 +588,7 @@
     <objects name="Controlers">
       <object>objects\obj_hybrid_controller</object>
       <object>objects\obj_regelaar</object>
+      <object>objects\obj_collision_parent_2</object>
       <object>objects\obj_collision_parent</object>
       <object>objects\obj_counter</object>
       <object>objects\obj_cam</object>
