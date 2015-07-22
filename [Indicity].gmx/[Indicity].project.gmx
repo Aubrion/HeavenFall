@@ -545,8 +545,6 @@
   <objects name="objects">
     <objects name="Main Menu">
       <object>objects\obj_mainmenu_character</object>
-      <object>objects\obj_mainmenu_characternew</object>
-      <object>objects\obj_mainmenu_characterslot</object>
       <object>objects\obj_mainmenu_controller</object>
       <object>objects\obj_mainmenu_cursor</object>
       <object>objects\obj_mainmenu_exit</object>

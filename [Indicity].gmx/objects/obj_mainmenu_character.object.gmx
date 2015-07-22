@@ -103,7 +103,7 @@ image_alpha = obj_mainmenu_fade_controller.opacity;
     global.playerName = characterName;
     
     room_goto_next();
-    hyComEmit("CHARACTER", "USE", characterID);
+    hyComEmit("CHARACTER", "LOGIN", characterID);
 }else{
    hyComEmit("CHARACTER", "CREATE", get_string("Character name:", global.playerName));
 }
