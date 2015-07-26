@@ -47,8 +47,8 @@ if(ds_map_find_value(async_load, "type")==network_type_data){
                         idd = instance_create(0, 0, obj_player_other);
                         idd.hyid = real(hyComRead());
                         idd.name = hyComRead();
-                        idd.x = obj_player.xstart;
-                        idd.y = obj_player.ystart;
+                        idd.x = 0;//obj_player.xstart;
+                        idd.y = 0;//obj_player.ystart;
                         
                     break;
                     case "DATA":
@@ -126,6 +126,9 @@ if(ds_map_find_value(async_load, "type")==network_type_data){
             break;
             case "ERROR":
                 show_message(hyComRead());
+            break;
+            case "KICK":
+                game_end();
             break;
             case "HYCOMID":
                 show_message(hyComRead());
