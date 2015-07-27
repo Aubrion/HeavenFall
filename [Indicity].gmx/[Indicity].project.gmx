@@ -263,7 +263,10 @@
           </sprites>
         </sprites>
         <sprites name="Legendary weapons">
-          <sprite>sprites\spr_shihozo</sprite>
+          <sprite>sprites\spr_shihozo_normal</sprite>
+          <sprite>sprites\spr_shihozo_trans1</sprite>
+          <sprite>sprites\spr_shihozo_trans2</sprite>
+          <sprite>sprites\spr_shihozo_shikai</sprite>
         </sprites>
       </sprites>
       <sprites name="Non-Equipable Items">

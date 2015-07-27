@@ -9,8 +9,8 @@
   <bboxmode>0</bboxmode>
   <bbox_left>0</bbox_left>
   <bbox_right>61</bbox_right>
-  <bbox_top>0</bbox_top>
-  <bbox_bottom>14</bbox_bottom>
+  <bbox_top>1</bbox_top>
+  <bbox_bottom>5</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -20,6 +20,6 @@
   <width>62</width>
   <height>15</height>
   <frames>
-    <frame index="0">images\spr_shihozo_0.png</frame>
+    <frame index="0">images\spr_shihozo_normal_0.png</frame>
   </frames>
 </sprite>
