@@ -262,6 +262,9 @@
             <sprite>sprites\spr_smeltingoven</sprite>
           </sprites>
         </sprites>
+        <sprites name="Legendary weapons">
+          <sprite>sprites\spr_shihozo</sprite>
+        </sprites>
       </sprites>
       <sprites name="Non-Equipable Items">
         <sprites name="Gathering Resources">
