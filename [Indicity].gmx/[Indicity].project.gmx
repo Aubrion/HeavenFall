@@ -293,6 +293,7 @@
         </sprites>
         <sprite>sprites\spr_coin</sprite>
       </sprites>
+      <sprite>sprites\spr_null</sprite>
     </sprites>
     <sprites name="User Interface">
       <sprites name="Camera">
@@ -422,6 +423,17 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
+    <scripts name="GameData Scripts">
+      <script>scripts\gd_init.gml</script>
+      <script>scripts\gd_game_get_item_sprite.gml</script>
+      <script>scripts\gd_item_get_name.gml</script>
+      <script>scripts\gd_item_get_sprite.gml</script>
+      <script>scripts\gd_get_sprite.gml</script>
+      <script>scripts\gd_inventory_get_name.gml</script>
+      <script>scripts\gd_inventory_get_sprite.gml</script>
+      <script>scripts\gd_inventory_get_amount.gml</script>
+      <script>scripts\gd_inventory_temp_add.gml</script>
+    </scripts>
     <script>scripts\Patch_Notes.gml</script>
     <script>scripts\User_Content.gml</script>
     <script>scripts\scr_controls_mouse.gml</script>

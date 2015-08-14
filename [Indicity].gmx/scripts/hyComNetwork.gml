@@ -105,6 +105,26 @@ if(ds_map_find_value(async_load, "type")==network_type_data){
                     break;
                 }
             break;
+            case "GD":
+                switch(hyComRead()){
+                    case "ITEMARRAY":
+                        var i;
+                        var size = real(hyComRead());
+                            for(i=0; i<size; i+=1){
+                                global.h_item_sprite[i] = real(hyComRead());
+                                global.h_item_name[i] = hyComRead();
+                            }
+                    break;
+                    case "UPDATE":
+                        var slot = real(hyComRead());
+                        var value = real(hyComRead());
+                        var amount = real(hyComRead());
+                        
+                        global.h_gd_value[slot] = value;
+                        global.h_gd_amount[slot] = amount;
+                    break;
+                }
+            break;
             case "CHAT":
                 tempidd = real(hyComRead());
                 tempcontent = hyComRead();

@@ -54,6 +54,11 @@ m_slotID = -1;
 m_slotStack = 0;
 m_oldSlotT = 0;
 m_oldSlot = -1;
+
+drag = false;
+drag_start_i = 0;
+
+gd_init();
 </string>
           </argument>
         </arguments>
@@ -107,6 +112,7 @@ if (keyboard_check_pressed(ord('I')))
 }
 
 //check if tab clicked
+/*
 if (mouse_check_button_pressed(mb_left))
 {
     if (point_in_rectangle(mouse_x,mouse_y,x-13,y+53,x,y+53+18)) curr_tab = 0;
@@ -218,7 +224,7 @@ else if (mouse_check_button_released(mb_left) &amp;&amp; m_slotID != -1)
             m_slotStack = 0;
         }
     }
-}
+}*/
 </string>
           </argument>
         </arguments>
@@ -243,11 +249,63 @@ else if (mouse_check_button_released(mb_left) &amp;&amp; m_slotID != -1)
             <kind>1</kind>
             <string>if (active)
 {
-    inv_draw();
+    /*inv_draw();
     if (m_slotID != -1)
     {
         draw_sprite(ITEM.item[m_slotID,3],0,mouse_x-8,mouse_y-8);
-    }
+    }*/
+    draw_set_font(font_inventory);
+    draw_sprite(spr_back_inv, 0, x, y);
+    var dx, dy;
+    dx = x-sprite_get_width(spr_back_inv)/2+64;
+    dy = y+64+2;
+    var cell_size, cell_offset;
+    cell_size = 16;
+    cell_offset = 1;
+    
+    var i;
+        for(i=16; i&lt;16+30; i+=1){
+            var a, b, j;
+            j = i-16;
+            a = j % 5;
+            b = floor(j/5);
+            
+            var slot_x, slot_y;
+            slot_x = dx+a*(cell_size+cell_offset);
+            slot_y = dy+b*(cell_size+cell_offset);
+            
+            if(drag and drag_start_i==i){
+                draw_sprite_ext(gd_inventory_get_sprite(i), 0, slot_x, slot_y, 1, 1, 0, c_red, 0.5);
+            }else{
+                draw_sprite(gd_inventory_get_sprite(i), 0, slot_x, slot_y);
+            }
+            
+            
+                if(gd_inventory_get_amount(i)&gt;1){
+                    draw_text(slot_x, slot_y, gd_inventory_get_amount(i));
+                }
+            if(point_in_rectangle(mouse_x, mouse_y, slot_x, slot_y, slot_x+cell_size, slot_y+cell_size)){
+                if(mouse_check_button_pressed(mb_left) or mouse_check_button_pressed(mb_right)){
+                    drag = true;
+                    drag_start_i = i;
+                }
+                if(mouse_check_button_released(mb_left)){
+                    drag = false;
+                    if(drag_start_i!=i){
+                        hyComEmit("GD", "SWAPNORMAL", drag_start_i, i);
+                    }
+                }
+                if(mouse_check_button_released(mb_right)){
+                    drag = false;
+                    if(drag_start_i!=i){
+                        hyComEmit("GD", "SWAPSPECIAL", drag_start_i, i);
+                    }
+                }
+            }
+        }
+}
+if(mouse_check_button_released(mb_left)){
+    drag = false;
 }
 </string>
           </argument>
