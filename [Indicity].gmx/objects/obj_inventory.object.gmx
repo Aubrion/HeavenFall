@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.tab = 3; //all 4 tabs (0 till 3)
+            <string>/*global.tab = 3; //all 4 tabs (0 till 3)
 curr_tab = 0;
 
 inv_create();
@@ -49,11 +49,45 @@ inv_item_add(6,1);
 
 //vars
 
-active = -1;
+
 m_slotID = -1;
 m_slotStack = 0;
 m_oldSlotT = 0;
-m_oldSlot = -1;
+m_oldSlot = -1;*/
+
+eq_slot[0] = 8;
+eq_slot_x[0] = 0;
+eq_slot_y[0] = 0;
+
+eq_slot[1] = 9;
+eq_slot_x[1] = 32;
+eq_slot_y[1] = 0;
+
+eq_slot[2] = 10;
+eq_slot_x[2] = 64;
+eq_slot_y[2] = 0;
+
+eq_slot[3] = 11;
+eq_slot_x[3] = 0;
+eq_slot_y[3] = 16;
+
+eq_slot[4] = 12;
+eq_slot_x[4] = 16;
+eq_slot_y[4] = 16;
+
+eq_slot[5] = 13;
+eq_slot_x[5] = 32;
+eq_slot_y[5] = 16;
+
+eq_slot[6] = 14;
+eq_slot_x[6] = 48;
+eq_slot_y[6] = 16;
+
+eq_slot[7] = 15;
+eq_slot_x[7] = 64;
+eq_slot_y[7] = 16;
+
+active = -1;
 
 drag = false;
 drag_start_i = 0;
@@ -247,7 +281,9 @@ else if (mouse_check_button_released(mb_left) &amp;&amp; m_slotID != -1)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (active)
+            <string>//je hebt Helm, Back, Main en offhand weapon, Accesories
+
+if (active)
 {
     /*inv_draw();
     if (m_slotID != -1)
@@ -257,12 +293,48 @@ else if (mouse_check_button_released(mb_left) &amp;&amp; m_slotID != -1)
     draw_set_font(font_inventory);
     draw_sprite(spr_back_inv, 0, x, y);
     var dx, dy;
-    dx = x-sprite_get_width(spr_back_inv)/2+64;
+    dx = x-sprite_get_width(spr_back_inv)/2+64-3;
     dy = y+64+2;
     var cell_size, cell_offset;
     cell_size = 16;
     cell_offset = 1;
-    
+    var i;
+        for(i=0; i&lt;8; i+=1){
+            var slot_x, slot_y;
+            slot_x = dx+eq_slot_x[i]+2;
+            slot_y = dy+eq_slot_y[i]-44;
+            
+            draw_rectangle(slot_x, slot_y, slot_x+cell_size, slot_y+cell_size, true);
+            
+            if(drag and drag_start_i==eq_slot[i]){
+                draw_sprite_ext(gd_inventory_get_sprite(eq_slot[i]), 0, slot_x, slot_y, 1, 1, 0, c_red, 0.5);
+            }else{
+                draw_sprite(gd_inventory_get_sprite(eq_slot[i]), 0, slot_x, slot_y);
+            }
+
+            if(gd_inventory_get_amount(eq_slot[i])&gt;1){
+                draw_text(slot_x, slot_y, gd_inventory_get_amount(eq_slot[i]));
+            }
+            
+            if(point_in_rectangle(mouse_x, mouse_y, slot_x, slot_y, slot_x+cell_size, slot_y+cell_size)){
+                if(mouse_check_button_pressed(mb_left) or mouse_check_button_pressed(mb_right)){
+                    drag = true;
+                    drag_start_i = eq_slot[i];
+                }
+                if(mouse_check_button_released(mb_left)){
+                    drag = false;
+                    if(drag_start_i!=eq_slot[i]){
+                        hyComEmit("GD", "SWAPNORMAL", drag_start_i, eq_slot[i]);
+                    }
+                }
+                if(mouse_check_button_released(mb_right)){
+                    drag = false;
+                    if(drag_start_i!=eq_slot[i]){
+                        hyComEmit("GD", "SWAPSPECIAL", drag_start_i, eq_slot[i]);
+                    }
+                }
+            }
+        }
     var i;
         for(i=16; i&lt;16+30; i+=1){
             var a, b, j;
@@ -303,10 +375,36 @@ else if (mouse_check_button_released(mb_left) &amp;&amp; m_slotID != -1)
                 }
             }
         }
+    if(drag){
+        draw_sprite_ext(gd_inventory_get_sprite(drag_start_i), 0, mouse_x-4, mouse_y-4, 1, 1, 0, c_white, 0.2);
+    }
 }
 if(mouse_check_button_released(mb_left)){
     drag = false;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="81">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>show_message(gd_inventory_local_check_item(3, get_integer("Amount:", 1)));
 </string>
           </argument>
         </arguments>
