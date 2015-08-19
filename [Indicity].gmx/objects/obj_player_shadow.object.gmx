@@ -86,10 +86,10 @@ if obj_player.jump=false
             <string>///follow player keys
 if obj_player.jump=true
 {
- if keyboard_check(global.key1up)    and !keyboard_check(global.key1down) {if !place_free(x,y-(movespeed/2)) and !place_meeting(x,y-(movespeed/2),obj_wall){y-=((movespeed/2)+0.1); mspd=movespeed/2;}}
- if keyboard_check(global.key1down)  and !keyboard_check(global.key1up)   {if !place_free(x,y+(movespeed/2)) and !place_meeting(x,y+(movespeed/2),obj_wall){y+=((movespeed/2)+0.1); mspd=movespeed/2;}}
- if keyboard_check(global.key1right) and !keyboard_check(global.key1left) {if ((!place_free(x+(movespeed+24),y) and obj_player.jump=false) and  !place_meeting(x+(movespeed),y,obj_wall)) or (obj_player.jump=true and !place_meeting(obj_player_shadow.x+(movespeed),obj_player_shadow.y,obj_wall)) {if look=1 {x+=movespeed; mspd=movespeed} else {x+=movespeed/1.2 mspd=movespeed}}}
- if keyboard_check(global.key1left)  and !keyboard_check(global.key1right){if ((!place_free(x-(movespeed+24),y) and obj_player.jump=false) and  !place_meeting(x-(movespeed),y,obj_wall)) or (obj_player.jump=true and !place_meeting(obj_player_shadow.x-(movespeed),obj_player_shadow.y,obj_wall)) {if look=1 {x-=movespeed/1.2; mspd=movespeed} else {x-=movespeed mspd=movespeed}}}
+ if keyboard_check(global.key1up)    and !keyboard_check(global.key1down) {if place_free(x,y-(movespeed/2)) and !place_meeting(x,y-(movespeed/2),obj_wall){y-=((movespeed/2)+0.1); mspd=movespeed/2;}}
+ if keyboard_check(global.key1down)  and !keyboard_check(global.key1up)   {if place_free(x,y+(movespeed/2)) and !place_meeting(x,y+(movespeed/2),obj_wall){y+=((movespeed/2)+0.1); mspd=movespeed/2;}}
+ if keyboard_check(global.key1right) and !keyboard_check(global.key1left) {if ((place_free(x+(movespeed+24),y) and obj_player.jump=false) and  !place_meeting(x+(movespeed),y,obj_wall)) or (obj_player.jump=true and !place_meeting(obj_player_shadow.x+(movespeed),obj_player_shadow.y,obj_wall)) {if look=1 {x+=movespeed; mspd=movespeed} else {x+=movespeed/1.2 mspd=movespeed}}}
+ if keyboard_check(global.key1left)  and !keyboard_check(global.key1right){if ((place_free(x-(movespeed+24),y) and obj_player.jump=false) and  !place_meeting(x-(movespeed),y,obj_wall)) or (obj_player.jump=true and !place_meeting(obj_player_shadow.x-(movespeed),obj_player_shadow.y,obj_wall)) {if look=1 {x-=movespeed/1.2; mspd=movespeed} else {x-=movespeed mspd=movespeed}}}
 }
 </string>
           </argument>
@@ -134,13 +134,13 @@ depth=(1*-(y+12))+100
           <argument>
             <kind>1</kind>
             <string>///show
-if collision_rectangle(x,y,x,y-3,obj_floor,0,0)
+if collision_rectangle(x,y,x,y-3,obj_air,0,0)
 {
- visible=true
+ visible=false
 }
  else
 {
- visible=false
+ visible=true
 }
 </string>
           </argument>

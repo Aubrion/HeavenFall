@@ -7,3 +7,4 @@ global.key1attack=mb_left
 global.key1jump=vk_space
 global.key1defend=mb_right
 global.key1sheat=mb_middle
+global.key1interact=ord("E")

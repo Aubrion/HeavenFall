@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_collision_parent</parentName>
+  <parentName>n_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -68,12 +68,14 @@ damage=4
             <kind>1</kind>
             <string>///init
 attack=0
+attack_wait_time = 0.25 * room_speed;
 attacked=false
 starty=y
 startx=x
 mass=sprite_height+sprite_width
 i=instance_create(x,y,obj_shadow)
 i.creator=id
+xp_given = false;
 
 image_xscale=choose(1,-1)
 image_index=floor(random(20))
@@ -81,6 +83,16 @@ xx=x
 yy=y
 
 state = "idle";
+wait_time = room_speed * 5;
+hit_follow_time = room_speed * 5;
+
+// Wandering
+wander_interval_min = room_speed * 3;
+wander_interval_max = room_speed * 10;
+wander_distance_min = 10;
+wander_distance_max = 25;
+wander_goalX = x;
+wander_goalY = y;
 </string>
           </argument>
         </arguments>
@@ -111,6 +123,78 @@ xx=x
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Alarm Hit
+AI_alarm_hit();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Alarm Return
+AI_alarm_return();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Alarm Wander
+AI_alarm_wander();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
@@ -128,8 +212,8 @@ xx=x
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Start animation
-image_speed = 1;
+            <string>/// Alarm Attack
+AI_alarm_attack();
 </string>
           </argument>
         </arguments>
@@ -199,10 +283,15 @@ depth = 1 * -(y);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Change to dead state when hp=0
+            <string>/// Change to dead state
 if (state != "dead" &amp;&amp; hp &lt;= 0)
 {
-    global.xp+=expgained
+    if (!xp_given)
+    {
+        global.xp += expgained;
+        xp_given = true;
+        ai_drop_loot();
+    }
     state = "dead";
     sprite_index = death;
 }
@@ -227,8 +316,8 @@ if (state != "dead" &amp;&amp; hp &lt;= 0)
           <argument>
             <kind>1</kind>
             <string>/// AI Calculations
-var distanceToPlayerX = abs(point_distance(x, y, obj_player_shadow.x, y));
-var distanceToPlayerY = abs(point_distance(x, y, x, obj_player_shadow.y+12));
+distanceToPlayerX = abs(point_distance(x, y, obj_player_shadow.x, y));
+distanceToPlayerY = abs(point_distance(x, y, x, obj_player_shadow.y+12));
 </string>
           </argument>
         </arguments>
@@ -249,13 +338,8 @@ var distanceToPlayerY = abs(point_distance(x, y, x, obj_player_shadow.y+12));
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Idle state
-if (state == "idle")
-{
-    // Check if player is in range
-    if (distanceToPlayerX &lt; 125 &amp;&amp; distanceToPlayerY &lt; 40)
-        state = "follow";
-}
+            <string>/// Start following
+AI_start_following(125, 40);
 </string>
           </argument>
         </arguments>
@@ -276,118 +360,16 @@ if (state == "idle")
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Follow state
-if (state == "follow")
-{
-    // Go idle if player is not in range
-    if (distanceToPlayerX &gt; 150 || distanceToPlayerY &gt; 40)
-        state = "idle";
-    
-    // Move towards player
-    else
-    {
-        // Find goal location
-        if (obj_player_shadow.x &lt; x)
-            goalX = obj_player_shadow.x + 24;
-        else
-            goalX = obj_player_shadow.x - 24;
-        var goalY = obj_player_shadow.y + 12;
-        
-        // Face player
-        if (obj_player_shadow.x &lt; x)
-            image_xscale = -1;
-        else
-            image_xscale = 1;
-        
-        // Move
-        if (point_distance(x, y, goalX, goalY) &gt; mspeed)
-        {
-            var directionToGoal = point_direction(x, y, goalX, goalY);
-            x = x + lengthdir_x(mspeed, directionToGoal);
-            y = y + lengthdir_y(mspeed/2, directionToGoal);
-        }
-        
-        // Attack
-        else
-        {
-            state = "attack";
-            sprite_index = attacking;
-            image_index = 0;
-            image_speed = 0;
-            alarm[0] = room_speed * 0.25;
-        }
-    }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Attack state
+            <string>/// State Scripts
 
-if (state == "attack")
-{
-    // Check for attack frame
-    if (image_index == 15)
-    {
-        play_sound(attacksound) 
-    }
-    if (image_index == 20)
-    {
-        // If player is in reach
-        if (distanceToPlayerX &lt; 50 &amp;&amp; distanceToPlayerY &lt; 12)
-            n_attacking(punch_1,swordhit_2);
-    }
-    
-    // Check if animation is finished
-    if (image_index == (sprite_get_number(sprite_index)-1))
-        state = "idle";
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Dead state
-if (state == "dead")
-{
-    show_debug_message(sprite_get_name(sprite_index));
-
-    if (sprite_index != n_woodsman_death)
-        sprite_index = n_woodsman_death;
-    if (image_index == sprite_get_number(death)-1)
-        instance_destroy();
-}
+AI_state_idle(1);
+AI_state_wander(1);
+AI_state_follow(150, 40, 2, 0, attack_wait_time);
+AI_state_hit(0, attack_wait_time);
+AI_state_defend(0, attack_wait_time);
+AI_state_return();
+AI_state_attack(15, 20, 50, 12, 3);
+AI_state_dead();
 </string>
           </argument>
         </arguments>
@@ -451,51 +433,6 @@ if (state != "dead")
     {
         alarm[11]=-1
     }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_collision_parent">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///move out collision
-if (state!="dead")
-{
- var a,xoff,yoff,om,mm,mag;
- 
- a = point_direction(x, y, other.x, other.y);    //Get the direction from the colliding object
- xoff = lengthdir_x(1, a);                       //Get the offset vector
- yoff = lengthdir_y(1, a);
- om = other.mass / mass;                         //start the fake "physics mass" calculations
- mm = mass / other.mass;
- mag = sqrt((om * om) + (mm * mm));
- om /= mag;
- mm /= mag;
- 
- //Move out of collision
- while (place_meeting(x, y, other))
- {
- x -= xoff * om; //Move the instance out of collision
- y -= yoff * om;
- other.x += xoff * mm; //Move the other instance out of the collision
- other.y += yoff * mm;
- }
 }
 </string>
           </argument>

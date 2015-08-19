@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///surface creation
 surf=surface_create(room_width,room_height)
-darkness=0.2
+darkness=0.4
 
 </string>
           </argument>
