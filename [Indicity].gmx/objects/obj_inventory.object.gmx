@@ -281,9 +281,7 @@ else if (mouse_check_button_released(mb_left) &amp;&amp; m_slotID != -1)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//je hebt Helm, Back, Main en offhand weapon, Accesories
-
-if (active)
+            <string>if (active)
 {
     /*inv_draw();
     if (m_slotID != -1)
@@ -325,12 +323,16 @@ if (active)
                     drag = false;
                     if(drag_start_i!=eq_slot[i]){
                         hyComEmit("GD", "SWAPNORMAL", drag_start_i, eq_slot[i]);
+                    }else{
+                        hyComEmit("GD", "USE", eq_slot[i]);
                     }
                 }
                 if(mouse_check_button_released(mb_right)){
                     drag = false;
                     if(drag_start_i!=eq_slot[i]){
                         hyComEmit("GD", "SWAPSPECIAL", drag_start_i, eq_slot[i]);
+                    }else{
+                        hyComEmit("GD", "USE", eq_slot[i]);
                     }
                 }
             }
@@ -365,12 +367,16 @@ if (active)
                     drag = false;
                     if(drag_start_i!=i){
                         hyComEmit("GD", "SWAPNORMAL", drag_start_i, i);
+                    }else{
+                        hyComEmit("GD", "USE", i);
                     }
                 }
                 if(mouse_check_button_released(mb_right)){
                     drag = false;
                     if(drag_start_i!=i){
                         hyComEmit("GD", "SWAPSPECIAL", drag_start_i, i);
+                    }else{
+                        hyComEmit("GD", "USE", i);
                     }
                 }
             }
@@ -382,29 +388,6 @@ if (active)
 if(mouse_check_button_released(mb_left)){
     drag = false;
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="81">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>show_message(gd_inventory_local_check_item(3, get_integer("Amount:", 1)));
 </string>
           </argument>
         </arguments>

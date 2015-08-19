@@ -433,6 +433,7 @@
       <script>scripts\gd_inventory_get_sprite.gml</script>
       <script>scripts\gd_inventory_get_amount.gml</script>
       <script>scripts\gd_inventory_temp_add.gml</script>
+      <script>scripts\gd_inventory_temp_delete.gml</script>
       <script>scripts\gd_inventory_local_check_empty_slot.gml</script>
       <script>scripts\gd_inventory_local_check_item.gml</script>
     </scripts>
